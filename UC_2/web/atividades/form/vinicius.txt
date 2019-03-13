@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <article>
+            <section>
+                <form id="form1" action="#" >
+                    <label for="nome">Nome:</label>
+                    <input id="nome" name="nome" type="text" placeholder="Nome">
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input id="telefone" name="telefone" type="tel" placeholder="Telefone">
+
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail">
+
+                    <label for="dataNascimento">Data Nascimento:</label>
+                    <input id="dataNascimento" name="dataNascimento" type="date" placeholder="Data Nascimento">
+
+                    <input id="btnEnviar" type="subimit" value="Enviar">
+                </form>
+            </section>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>

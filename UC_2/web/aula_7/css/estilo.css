@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body {
+    background-color:#F7DA58;
+    font-family: 'Trebuchet MS', tahoma, Verdana, arial;
+    margin: 0px;
+    font-size: 1em;
+}
+
+menu {
+    background-color: #ffffff;
+    padding: 2px 3em;
+}
+
+nav  {
+    background-color: burlywood;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #E1C57F;
+    /*margin: 1em 3em 2em 4em;
+    padding: 1em 1.5em 2em 4em;*/
+
+    /*margin: 1em;
+    margin-left: 5em;
+    padding: 1em;
+    padding-top: 2em;*/
+    /*width: auto; *//*tela toda*/
+    margin: 2px auto;
+    width: 90%;
+    height: 12em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+}
+
+article {
+    width: 95%;
+    margin: 3px auto;
+    padding: 3px;
+    background-color: #cbe8b6;
+}
+
+article section h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3em;
+    color: brown;
+    text-align: center;
+}
+
+article section img {
+    width: 80%;
+}
+
+article section div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+main {
+    background-color: #E1C57F;
+    margin: 2px auto;
+    width: 90%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+footer {
+    background-color: #E1C57F;
+    margin: 2px auto;
+    width: 90%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
