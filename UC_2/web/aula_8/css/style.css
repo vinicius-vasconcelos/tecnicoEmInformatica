@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: none;
+}
+
+
+body {
+    background-color: #636e72;
+    font-family: Tahoma, Arial;
+    font-size: 1em;
+}
+
+header {
+    width: 90%;
+    height: 12em;
+    margin: 2px auto;
+    padding: 2px;
+    background-color: #ffeaa7;
+}
+
+nav {
+    width: 90%;
+    height: 12em;
+    margin: 2px auto;
+    padding: 2px;
+    background-color: #ffeaa7;
+}
+
+main {
+    width: 90%;
+    height: auto;
+    min-height: 25em;
+    margin: 2px auto;
+    padding: 2px;
+    background-color: #ffeaa7;
+    display: table;
+}
+
+article {
+    width: 70%;
+    margin: 0px 5px;
+    float: left;
+    height: auto;
+    min-height: 40em;
+    background-color: violet;
+    padding: 1px;
+}
+
+/*#dest {
+    width: 100%;
+    background-color: white;
+    margin: 2px auto;
+    height: auto;
+    min-height: 11.05em;
+}
+
+#others {
+    width: 100%;
+    background-color: white;
+    margin: 2px auto;
+    height: auto;
+    min-height: 11.05em;
+}*/
+
+article section {
+    width: 100%;
+    background-color: white;
+    margin: 2px auto;
+    height: auto;
+    min-height: 20em;
+    display: table;
+    clear: both;
+}
+
+#dest .news {
+    width: 30%;
+    border: 1px dotted #000000;
+    margin: 2px;
+    height: auto;
+    min-height: 10em;
+    float: left; 
+}
+
+#dest .news .ft {
+    width: 25%;
+    border: 1px dotted #000000;
+    margin: 2px;
+    height: auto;
+    min-height: 5em;
+    float: left; 
+}
+
+#others .other {
+    width: 98%;
+    border: 1px dotted #000000;
+    margin: 2px auto;
+    height: auto;
+    min-height: 5em;
+
+}
+
+#others .other .ftother {
+    width: 25%;
+    border: 1px dotted #000000;
+    margin: 2px;
+    height: auto;
+    min-height: 3em;
+}
+
+
+aside section {
+    width: 85%;
+    border: 1px dotted #000000;
+    margin: 2px auto;
+    height: auto;
+    min-height: 11.05em;
+}
+
+aside {
+    width: 29%;
+    float: left;
+    height: auto;
+    min-height: 23em;
+    background-color: violet;
+    padding: 1px;
+}
+
+/*section {
+    width: 100%;
+    background-color: white;
+    margin: 2px auto;
+    height: auto;
+    min-height: 11.05em;
+}*/
+
+
+footer {
+    width: 90%;
+    height: 12em;
+    margin: 2px auto 0px auto;
+    padding: 2px;
+    background-color: #ffeaa7;
+}
