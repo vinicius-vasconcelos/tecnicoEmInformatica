@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript na veia !!!</title>
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <menu>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li> <a href="#oqueejava">O que é javascript</a></li>
+                        <li><a href="#linksUteis">Links úteis</a></li>
+                        <li>
+                            Exercício
+                            <ul>
+                                <li><a href="./tabuada.html" target="_blank">Tabuada</a></li>
+                                <li>Par ou impar</li>
+                                <li>Calculadora Simples</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <article>
+                <section>
+                    <form>
+                        
+                        <p>
+                            <label for="n1">Número 1: </label>
+                            <input type="number" name="n1" id="n1">
+                        </p>
+
+                        <p>
+                            <label for="n2">Número 2: </label>
+                            <input type="number" name="n2" id="n2">
+                        </p>
+
+                        <p>
+                            <label for="op">Operação: </label>
+                            <input type="radio" name="operacao" id="operacao" value="*" checked>*
+                            <input type="radio" name="operacao" id="operacao" value="/">/
+                            <input type="radio" name="operacao" id="operacao" value="-">-
+                            <input type="radio" name="operacao" id="operacao" value="+">+
+                        <p>
+
+                        <input type="button" value="Calcular">
+                    </form>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <!--Colocar códigp js que exiba data atual-->
+            <strong id="exibeHora"></strong>
+        </footer>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        let date = new Date();
+        let dia = date.getDate();
+        let mes = date.getMonth();
+        let ano = date.getFullYear();
+
+        document.getElementById('exibeHora').innerHTML = `Data atual ${dia} \\ ${mes + 1} \\ ${ano}`;
+
+        $('#')
+    </script>
+</html>

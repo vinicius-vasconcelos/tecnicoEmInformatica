@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript na veia !!!</title>
+    </head>
+    <body>
+        <header>
+            <menu>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li> <a href="#oqueejava">O que é javascript</a></li>
+                        <li><a href="#linksUteis">Links úteis</a></li>
+                        <li> 
+                            Exercício
+                            <ul>
+                                <li>Tabuada</li>
+                                <li>Par ou impar</li>
+                                <li>Calculadora Simples</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <article>
+               <section>
+                   <form>
+                       <select name="tipos" id="tipos">
+                            <option value="0" selected>Tabuada do 0</option>
+                            <option value="1">Tabuada do 1</option>
+                            <option value="2">Tabuada do 2</option>
+                            <option value="3">Tabuada do 3</option>
+                            <option value="4">Tabuada do 4</option>
+                            <option value="5">Tabuada do 5</option>
+                            <option value="6">Tabuada do 6</option>
+                            <option value="7">Tabuada do 7</option>
+                            <option value="8">Tabuada do 8</option>
+                            <option value="9">Tabuada do 9</option>
+                            <option value="10">Tabuada do 10</option>
+                       </select>
+                       <button id="calcular" type="submit">Calcular</button>
+                       <hr>
+                       <div id="result">
+                           
+                       </div>
+                   </form>
+               </section>
+            </article>
+        </main>
+
+        <hr>
+        <footer>
+            <!--Colocar códigp js que exiba data atual-->
+            <strong id="exibeHora"></strong>
+        </footer>
+    </body>
+
+    <script 
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous"></script>
+
+    <script>
+        let date = new Date();
+        let dia = date.getDate();
+        let mes = date.getMonth();
+        let ano = date.getFullYear();
+
+        document.getElementById('exibeHora').innerHTML = `Data atual ${dia} \\ ${mes+1} \\ ${ano}`
+
+        $(document).ready(() => {
+
+            $('#calcular').click(() => {
+                $('#result').html('');
+
+                let valor  = $('#tipos').val();
+                
+                for(let i = 0; i <= 10; i++)
+                    $('#result').append(`<p>${i} * ${valor} = ${i * valor}</p>`);
+                
+                return false;
+            });
+        });
+        
+    </script>
+</html>
