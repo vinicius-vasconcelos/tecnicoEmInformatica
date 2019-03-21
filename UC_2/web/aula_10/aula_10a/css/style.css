@@ -1,0 +1,180 @@
+/* ----------------------------------------- ALL -----------------------------------------*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body{
+	background-color: #FF0000;
+	font-family: tahoma, arial;
+	font-size: 1em;
+}
+
+/* ----------------------------------------- HEADER -----------------------------------------*/
+header{
+	background-color: #FFFFFF;
+	width:95%;
+	height: 12em;
+	margin: 0px auto;
+}
+
+nav{
+	background-color: #FFFFFF;
+	width:95%;
+	height: 5em;
+	margin: 5px auto 5px auto;
+}
+
+nav menu {
+	width: auto;
+	height: 4.8em;
+}
+
+nav menu ul {
+	width: 100%;
+	margin: 3px auto;
+	height: 4.6em;
+	display: inline-flex;
+	justify-content: center;
+	
+}
+
+nav menu li {
+	width: 24%;
+	min-width: 256px;
+	height: 4.4em;
+	background-color: coral;
+	margin: 1px;
+	line-height: 4em;
+	border-radius: 1em;
+}
+
+nav menu ul li a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+nav menu ul li:hover {
+	transition: all;
+	transition-delay: 100ms;
+	transition-duration: 800ms;
+	transform: scale(1.2, 1.2);
+	background-color: #000;
+	color: #ccc;
+	border-bottom: 1px solid yellow;
+}
+
+/* ----------------------------------------- BODY-MAIN -----------------------------------------*/
+
+main{
+	background-color: #FFFFFF;
+	width:95%;
+	height:auto;
+	min-height: 25em;
+	margin: 0px auto;
+	padding-top: 5px;
+	display: table;
+}
+
+article{
+	width: 70%;
+	background-color: #8F006F;
+	height: auto;
+	min-height: 45em;
+	margin: 5px;
+	float: left;
+}
+
+article section{
+	width: 96%;
+	background-color: #FFC3F1;
+	height: auto;
+	min-height: 22em;
+	margin: 5px;
+}
+
+#others{
+	background-color: #B2B79F
+}
+
+#dest{
+	color:#FF0004;
+	display: flex;
+	justify-content: center;
+	clear: both;
+	flex-wrap: wrap; 
+}
+
+#dest h1{
+	width: 80%;
+	margin: 10px;
+	height: 2em;
+	border-bottom:1px solid #000;
+	box-shadow: 1px 1px 6px 1px #ccc;
+}
+
+aside{
+	width: 28%;
+	background-color: #8F006F;
+	height: auto;
+	min-height: 23em;
+	margin: 5px;
+	float: left;
+}
+
+aside section{
+	width: 85%;
+	border:1px solid #000000;
+	height: auto;
+	min-height: 22em;
+	margin: 5px auto;
+}
+
+#dest .news{
+	width: 30%;
+	height: 10em;
+	border:1px dashed #000000;
+	float:left;
+	margin:3px;
+}
+
+#dest .news .ft{
+	width: 50%;
+	height: 6em;
+	border:1px dashed #940002;
+	float:left;
+	margin:3px;
+}
+
+#others .other{
+	width: 95%;
+	height: 4em;
+	border:1px dotted #000000;
+	margin:3px auto;
+}
+#others .other .ftother{
+	width: 30%;
+	height: 3.5em;
+	border:1px solid #000000;
+	margin:3px;
+	float: left;
+}
+
+.peso{
+	clear: both;
+}
+
+/* ----------------------------------------- FOOTER -----------------------------------------*/
+footer{
+	background-color: #FFFFFF;
+	width:95%;
+	height: 4em;
+	margin: 5px auto 0px auto;
+}
+
+
+

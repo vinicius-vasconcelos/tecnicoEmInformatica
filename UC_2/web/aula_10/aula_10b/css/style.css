@@ -1,0 +1,83 @@
+/* --------------------------------- ALL --------------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Tahoma;
+}
+
+body {
+    background-color: #b33939;
+}
+
+/* --------------------------------- NAV --------------------------------- */
+nav {
+    width: auto;
+    height: 6em;
+    background-color: #ff5252;
+}
+
+nav menu {
+    width: auto;
+    height: 6em;
+    background-color: #ff5252;
+}
+
+nav menu ul {
+    width: 100%;
+    height: 5.8em;
+    background-color: #f7f1e3;
+    display: inline-flex;
+    justify-content: center;
+}
+
+nav menu ul li {
+    width: 100%;
+    min-width: 200px;
+    margin: 2px;
+    background-color: #ff5252;
+    text-align: center;
+}
+
+nav menu ul li a {
+    font-size: 1.8em;
+    line-height: 3em;
+    font-family: 'Trebuchet MS';
+}
+
+nav menu ul li:hover {
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration: 800ms;
+    opacity: 0.8;
+    transform: scale(1.02, 1.02);
+    border-bottom: 3px solid #000000;
+}
+
+/*********** NAV TOW ***********/
+
+nav#two {
+    width: 35%;
+    height: auto;
+    float: right;
+}
+
+nav#two menu ul {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 1em 2em;
+}
+
+nav#two menu ul li:hover {
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration: 800ms;
+    opacity: 0.8;
+    transform: scale(1.02, 1.02);
+    border-top: 3px solid #000000;
+    border-bottom: none;
+}
