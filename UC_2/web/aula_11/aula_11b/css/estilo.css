@@ -1,0 +1,23 @@
+table, th, td {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
+
+thead {    
+    background-color: #00b894;
+    font-size: 2em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #55efc4;
+}
+
+tbody tr:hover {
+    background-color: #d63031;
+}
