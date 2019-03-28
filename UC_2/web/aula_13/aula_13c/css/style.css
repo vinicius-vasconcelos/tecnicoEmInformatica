@@ -1,0 +1,118 @@
+/* -------------------------- All -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #000000;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(../image/prin.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;*/
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.movie, .movie video {
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header h1, article section h1 {
+    width: 15%;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 2em;
+    text-align: center;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+}
+
+/* -------------------------- Main -------------------------- */
+
+main, article {
+    width: 100%;
+    height: 100vh;
+}
+
+article section {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    margin: 2em auto 0em auto;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+}
+
+#img_0 {
+    background-image: url(../image/img0.jpg);
+}
+
+#img_1 {
+    background-image: url(../image/img1.jpg);
+}
+
+#img_2 {
+    background-image: url(../image/img2.jpg);
+}
+
+#img_3 {
+    background-image: url(../image/img3.jpg);
+}
+
+#img_4 {
+    background-image: url(../image/img4.jpg);
+}
+
+#img_5 {
+    background-image: url(../image/img5.jpg);
+}
+
+/* -------------------------- buttons:hover -------------------------- */
+h1:hover {
+    transition: all;
+    transition-delay: 200ms;
+    transition-duration: 990ms;
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+/* -------------------------- ScrollBar -------------------------- */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+	background-color: #343a40;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: #343a40;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #343a40;
+	border: 2px solid #555555;
+}
