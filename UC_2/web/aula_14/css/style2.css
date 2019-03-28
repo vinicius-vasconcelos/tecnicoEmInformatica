@@ -67,14 +67,13 @@ nav menu ul {
 }
 
 nav menu li {
-	width: 20%;
+	width: 15%;
 	height: auto;
-	margin: 2px 2px;
+	margin: 1em;
 	line-height: 3em;
 	background-color: rgba(0, 0, 0, 0.9);
 	border: 3px solid #20bf6b;
 	border-radius: 5px; 
-	
 }
 
 nav menu ul li a{
@@ -85,11 +84,17 @@ nav menu ul li a{
 	text-transform: uppercase;
 }
 
-nav menu ul li:hover{
+nav menu ul li:hover {
 	transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
-	transform: scale(0.95, 0.95);
+	transform: scale(1.1, 1.1);
+	background-color: #20bf6b;
+	border: 3px solid #000000;
+}
+
+nav menu ul li a:hover {
+	color: #000000;
 }
 
 /* ------------------------------- MAIN -------------------------------*/
@@ -183,13 +188,15 @@ main article#galeria section div {
 	width: 25%;
 	height: auto;
 	margin: 2em auto 0px auto;
+	border-radius: 50%;
 }
 
 main article#galeria section div img {
-	width: 400px;
-	height: 400px;
+	width: 500px;
+	height: 500px;
 	border: 3px solid #20bf6b;
 	filter: grayscale(100%);
+	border-radius: 50%;
 }
 
 main article#galeria section div img:hover {
@@ -198,6 +205,7 @@ main article#galeria section div img:hover {
 	transition-duration: 950ms;
 	transform: scale(1.05, 1.05);
 	filter: grayscale(0%);
+	cursor: pointer;
 }
 
 /* ------------------------------- FOOTER -------------------------------*/
@@ -212,10 +220,11 @@ footer p {
 	width: 100%;
 	margin: 1em auto 0em auto;
 	text-align: center;
+	color: #ffffff
 }
 
 footer p i {
-	margin: 1em 1em;
+	margin: 1em 1em 0.5em 1em;
 	text-align: center;
 	color: #20bf6b;
 	font-size: 2.5em;
@@ -226,7 +235,7 @@ footer p i:hover {
 	transition-delay: 200ms;
 	transition-duration: 950ms;
 	transform: scale(1.2, 1.2);
-	padding: 2px;
+	padding: 3px 6px;
 	border-radius: 5px; 
 	background-color: #20bf6b;
 	color: #000000;

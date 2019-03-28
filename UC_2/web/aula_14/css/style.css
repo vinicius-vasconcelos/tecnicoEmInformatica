@@ -70,14 +70,13 @@ nav menu ul {
 }
 
 nav menu li {
-	width: 20%;
+	width: 15%;
 	height: auto;
-	margin: 2px;
+	margin: 1em;
 	line-height: 3em;
 	background-color: rgba(0, 0, 0, 0.9);
 	border: 3px solid #20bf6b;
 	border-radius: 5px; 
-	
 }
 
 nav menu ul li a{
@@ -88,11 +87,17 @@ nav menu ul li a{
 	text-transform: uppercase;
 }
 
-nav menu ul li:hover{
+nav menu ul li:hover {
 	transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
-	transform: scale(0.95, 0.95);
+	transform: scale(1.1, 1.1);
+	background-color: #20bf6b;
+	border: 3px solid #000000;
+}
+
+nav menu ul li a:hover {
+	color: #000000;
 }
 
 /* ------------------------------- MAIN -------------------------------*/
@@ -100,16 +105,13 @@ main{
 	width: 100%;
 	height: auto;
 	min-height: 45em;
-	/*background-color:rgba(38, 222, 129,0.85);*/
 	background-color: #000000;
 }
 
 article#saude section{
 	width: 100%;
 	height: 100vh;
-	margin: 1em auto 0em auto;
-	border-top: 3px solid #20bf6b; 
-	border-bottom: 3px solid #20bf6b; 
+	margin: 1em auto 2em auto;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -139,7 +141,7 @@ article#saude section p{
 	margin: 0 auto; 
 	padding: 1em;
 	background-color: rgba(0, 0, 0, 0.5);
-	border: 3px solid #20bf6b;
+	border: 1px solid #20bf6b;
 	border-radius: 5px;
 	color: #ffffff;
 	position: relative;
@@ -186,8 +188,11 @@ article#saude section#quatro a:hover, article#saude section#cinco a:hover, artic
 	transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
-	transform: scale(0.95, 0.95);
-	cursor: pointer;
+	transform: scale(1.1, 1.1);
+	background-color: #20bf6b;
+	color: #000000;
+	border: 3px solid #000000;
+	cursor: pointer;	
 }
 
 /* ------------------------------- FOOTER -------------------------------*/
@@ -202,10 +207,11 @@ footer p {
 	width: 100%;
 	margin: 1em auto 0em auto;
 	text-align: center;
+	color: #ffffff
 }
 
 footer p i {
-	margin: 1em 1em;
+	margin: 1em 1em 0.5em 1em;
 	text-align: center;
 	color: #20bf6b;
 	font-size: 2.5em;
@@ -216,7 +222,7 @@ footer p i:hover {
 	transition-delay: 200ms;
 	transition-duration: 950ms;
 	transform: scale(1.2, 1.2);
-	padding: 2px;
+	padding: 3px 6px;
 	border-radius: 5px; 
 	background-color: #20bf6b;
 	color: #000000;
