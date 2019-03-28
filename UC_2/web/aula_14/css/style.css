@@ -42,39 +42,38 @@ header h1 {
 	border-radius: 5px; 
 	text-align: center;
 	font-weight: bold;
+	box-shadow: 1px 1px 6px 1px #000000;
 }
 
 nav{
-	width: 95%;
+	width: 100%;
 	height: auto;
-	background-color: #000000;
-	margin: 1px auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	z-index: 2;
 }
 
 nav menu {
-	width: 100%;
-	margin: 1em auto 0em auto;
+	width: 70%;
+	margin: 5px auto;
 	height: auto;
-	background-color: #000000;
-	position: sticky;
-	top: 0;
 }
 
 nav menu ul {
 	width: 100%;
-	margin: 2px auto;
+	margin: 5px auto;
 	height: auto;
 	display: inline-flex;
 	justify-content: center;
-	background-color: #000000;
 }
 
 nav menu li {
 	width: 15%;
 	height: auto;
-	margin: 1em;
-	line-height: 3em;
-	background-color: rgba(0, 0, 0, 0.9);
+	margin: 5px auto;
+	line-height: 2em;
 	border: 3px solid #20bf6b;
 	border-radius: 5px; 
 }
@@ -259,5 +258,3 @@ footer p i:hover {
 	background-color: #343a40;
 	border: 2px solid #555555;
 }
-
-/* -------------------------------------------------------------- FALE CONOSCO --------------------------------------------------------------*/
