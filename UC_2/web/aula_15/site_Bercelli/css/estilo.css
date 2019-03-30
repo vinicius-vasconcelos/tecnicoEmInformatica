@@ -1,3 +1,8 @@
+@font-face {
+    font-family: DOS;
+    src: url(../font/Perfect\ DOS\ VGA\ 437\ Win.ttf);
+}
+
 /* ----------------------------------------- ALL -----------------------------------------*/
 
 *{
@@ -9,7 +14,9 @@
 }
 
 body, html{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100%;
 }
 
 /* ----------------------------------------- ACESSIBILIDADE --------------------------------*/
@@ -17,30 +24,30 @@ body, html{
 #acessibilidade {
     width: 100%;
     height: 2em;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     position: fixed;
     text-align: center;
 }
 
 div#acessibilidade:hover {
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
 
 /* ----------------------------------------- HEADER ---------------------------------------*/
 header {
     width: 100%;
-    height: 15vh;
+    height: 100vh;
     background-color: rgba(244, 67, 54,1.0);
     padding: 3em 10em 10px 10em;
 }
 
 /*** logo ***/
 header section#logo{
-    width: 10%;
-    height: 5em;
+    width: 20%;
+    height: 50vh;
     float: left;
-    border: 5px solid #ffffff;
+    border: 2px solid #000000;
 }
 
 /*header section#logo img {
@@ -49,9 +56,23 @@ header section#logo{
 header section#logo img:hover {
 }*/
 
+/*** título ***/
+
+header section#titulo {
+    width: 100%;
+}
+
+header section#titulo h1 {
+    font-family: DOS;
+    font-size: 8em;
+    line-height: 3em;
+    color: #ffffff;
+    text-align: center;
+}
+
 /*** nav ***/
 nav{
-    width: 90%;
+    width: 80%;
     height: auto;
     float: left;
     text-align: center;
@@ -65,16 +86,18 @@ nav menu {
 }
 
 nav menu ul {
-	width: 90%;
+	width: 100%;
     height: auto;
 	display: inline-flex;
     justify-content: center;
 }
 
 nav menu li {
-    width: 90%;
+    width: 10%;
     height: auto;
     margin: 0px 10px 0px 10px;
+    font-family: DOS;
+    border-bottom: 3px solid #000000; 
 }
 
 nav menu ul li a{
@@ -82,7 +105,7 @@ nav menu ul li a{
 	display: block;
     text-align: center;
     font-size: 1.2em;
-    line-height: 2em;
+    line-height: 1.8em;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -94,7 +117,9 @@ nav menu ul li:hover {
     transform: scale(1.05, 1.05);
     border: 2px solid #ffffff;
     border-radius: 5px;
-    background-color: rgba(244, 67, 54, 0.5);
+    background-color: rgba(244, 67, 54, 1);
+    box-shadow: 1px 1px 5px 2px #000000;
+    font-weight: 900;
 }
 
 /* ----------------------------------------- MAIN -----------------------------------------*/
@@ -102,68 +127,184 @@ nav menu ul li:hover {
 main article {
     width: 100%;
     height: auto;
-    background-color: #ffffff;
 }
 
 main article section {
     width: 100%;
-    background-color: #ffffff;
-}
-
-main article section#slider {
-    width: 100%;
-    height: 40Vh;
-   
+    height: 100vh;
     margin: 0 auto;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
+/* ######## SLIDER ######## */
+/*main article section#slider {  
+}
 
+main article section#slider div {
+}
+
+main article section#slider div img {
+    width: 100%;
+    height: 30em;
+}
+.mySlides {display:none;}*/
+
+
+/*---------------------------------------DIVS DENTRO DE SECTIONS - MEUS CARDS --------------------------------------------*/
 main article section div {
-    width: 15%;
-    height: 20em;
-    margin: 1em;
-    display: inline-flex;
-    justify-content: center;
+    width: 20%;
+    height: 40em;
+    margin: 0 auto;
     background-color: rgba(251, 233, 231,1.0);
     border: 1px solid #000000;
-    box-shadow: 1px 2px 10px 3px #000000;
+    box-shadow: 0px 5px 10px 2px  #000000;
     border-radius: 5px;
 }
 
-main article section#maisConteudo {
+main article section.card div i {
     width: 100%;
-    height: 40vh;
+    line-height: 2em;
+    font-size: 8em;
     text-align: center;
-    background-color: rgba(255, 204, 188,1.0);
+    background-color: rgba(244, 67, 54, 1);
 }
 
-main article section#maisConteudo a{
-    width: 40%;
-    height: 3em;
-    line-height: 3em;
+main article section div h2 {
+    width: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    color: rgba(39, 190, 197, 1);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main article section div p {
+    width: 100%;
+    text-align: center;
+}
+
+main article section a{
+    width: 50%;
+    height: 4em;
+    line-height: 4em;
     z-index: 2;
     position: relative;
-    top: 18em;
+    top: 7em;
+    left: 6em;
     float: left;
     background-color: rgba(39, 190, 197, 1);
     border-radius: 5px;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
+    text-align: center;
 }
 
-main article section#maisConteudo a:hover {
+main article section a:hover {
     transition: all;
     transition-delay: 50ms;
     transition-duration: 950ms;
     transform: scale(1.2, 1.2);
 }
+/*---------------------------------------FIM DIVS DENTRO DE SECTIONS - MEUS CARDS --------------------------------------------*/
+
+
+/* ######## MAIS CONTEUDO ######## */
+main article section#maisConteudo {
+    background-color: rgba(255, 204, 188,1.0);
+}
+
+
+/* ######## BLOG ######## */
+main article section#blog {
+    background-image: url(../image/blog.jpg);
+}
+
+main article section#blog a {
+    top: 13em;
+}
+
+/* ######## PALESTRAS ######## */
+main article section#palestras {
+    background-color: rgba(255, 204, 188,1.0);
+}
+
+/* ######## APRENDA ######## */
+main article section#aprenda {
+    background-image: url(../image/aprenda2.jpg);
+}
+
+/* ######## LINKS ÚTEIS ######## */
+main article section#links {
+    justify-content: right;
+    text-align: right;
+    align-items: flex-start;
+    background-image: url(../image/links.png);
+}
+
+main article section#links div#tipoRight {
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(255, 204, 188,1.0);
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: 1px 1px 6px 1px #000000;
+    border-bottom: 1px solid #000000;
+}
+
+main article section#links div#tipoRight h2 {
+    line-height: 2em;
+    font-size: 2em;
+    color: #000000;
+}
+
+main article section#links div#tipoRight p {
+    width: 60%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+}
+
+main article section#links a{
+    width: 10%;
+    top: 2em;
+    left: 10em;
+}
+
+/* ######## SOBRE BERCELLI ######## */
+main article section#sobre {
+    background-color: rgba(255, 204, 188,1.0);
+}
+
+/* ######## GALERIA ######## */
+main article section#galeria {
+      
+}
+
+/* ######## CONTATO ######## */
+main article section#contato {
+      
+}
+
 
 /* ----------------------------------------- FOOTER -----------------------------------------*/
 footer {
     width: 100%;
-    height: 5vh;
+    height: 10em;
     background-color: rgba(244, 67, 54,1.0);
-    padding: 1em;
+    padding: 4em;
+    /*position: absolute;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+    z-index: -1;
+    border-top: 1px solid #000000;
+    box-shadow: 1px 1px 5px 2px #000000;*/
 }
 
 footer p {
@@ -171,17 +312,12 @@ footer p {
     height: auto;
     margin: 0 auto;
     text-align: center;
+    color: #ffffff;
 }
 
 footer p i {
-    font-size: 1.4em;
-    margin: 0px 2px;
-}
-
-footer p span {
-    text-transform: uppercase;
-    font-weight: 900;
-    margin: 0px 10px;
+    font-size: 3em;
+    margin: 0px 1em;
 }
 
 footer p i:hover {
@@ -194,18 +330,19 @@ footer p i:hover {
 
 /* -------------------------- ScrollBar -------------------------- */
 ::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 10px rgba(244, 67, 54,1.0);
-	background-color: #343a40;
+	box-shadow: inset 0 0 10px  #000000;
+	background-color: rgba(244, 67, 54, 0.01);
 }
 
 ::-webkit-scrollbar {
-	width: 8px;
-	background-color: #343a40;
+	width: 12px;
+	background-color: rgba(244, 67, 54, 1.0);
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #343a40;
-	border: 2px solid #555555;
+	background-color: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 30px;
 }
 
 /* -------------------------- SLIDER -------------------------- */
