@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bem Vindo</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bem Vindo</title>
 
-        <!--CSS-->
-        <link rel="stylesheet" href="css/estilo.css">
-        <!--FONT AWSOME-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
-            crossorigin="anonymous">
-    </head>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--FONT AWSOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <body>
-        <div id="acessibilidade">
-            BARRA DE ACESSIBILIDADE
-        </div>
-        <header>
-            <!--LOGO-->
-            <section id="logo">
-                <a href="index.html"><img src="image/logo.gif" alt=""></a>
+    
+</head>
+
+<body>
+    <div id="acessibilidade">
+        BARRA DE ACESSIBILIDADE
+    </div>
+    <header>
+        <!--LOGO-->
+        <section id="logo">
+            <!--a href="index.html"><img src="image/logo.gif" alt=""></a-->
+        </section>
+
+        <!--MENU-->
+        <nav>
+            <menu>
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="quemSou.html"> Bercelli </a></li>
+                    <li><a href="palestras.html"> Palestras </a></li>
+                    <li><a href="http://bercelli-eti.blogspot.com/"> Blog </a></li>
+                    <li><a href="linksUteis.html"> Links </a></li>
+                    <li><a href="desenvolvedor.html"> Aprenda </a></li>
+                    <li><a href="galeria.html"> Galeria </a></li>
+                    <li><a href="contato.html"> Contato </a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+
+
+    <main>
+        <article>
+            <section id="slider"> 
+                <div class="mySlides fade"><img src="image/noticias.jpg"></div>
+
+                <div class="mySlides fade"><img src="image/agenda.jpg"></div>
+
+                <div class="mySlides fade"><img src="image/mais.jpg"></div>
             </section>
 
-            <!--MENU-->
-            <nav>
-                <menu>
-                    <ul>
-                        <li><a href="index.html"> Home </a></li>
-                        <li><a href="quemSou.html"> Quem Sou ? </a></li>
-                        <li><a href="palestras.html"> Palestras </a></li>
-                        <li><a href="http://bercelli-eti.blogspot.com/"> Blog Pessoal </a></li>
-                        <li><a href="linksUteis.html"> Links Úteis </a></li>
-                        <li><a href="desenvolvedor.html"> Desenvolvedor </a></li>
-                        <li><a href="galeria.html"> Galeria </a></li>
-                        <li><a href="contato.html"> Fale Comigo </a></li>
-                    </ul>
-                </menu>
-            </nav>
-        </header>
+            <section id="maisConteudo">
+                <div id="novidades"><a href="">Novidades</a></div>
 
-        <main>
-            <article>
-                <section id="um">Informações/Slider</section>
-                
-                <section id="dois">
-                    <h2>Mais para você</h2>
-                    <div id="novidades"><h3>Novidades</h3></div>
-                    <div id="noticias"><h3>Notícias</h3></div>
-                    <div id="maisAcc"><h3>Mais Acessados</h3></div>
-                    <div id="agenda"><h3>Agenda</h3></div>
-                    <div id=""><h3>Mais Tópcos</h3></div>
-                </section>
 
-                <section id="tres">
-                    <h2>Sessão 3</h2>
-                    
-                </section>
+                <div id="noticias"><a href="">Notícias</a></div>
 
-                <section id="quatro">
-                    <h2>Sessão 4</h2>
-                    
-                </section>
 
-                <section id="cinco">
-                    <h2>Sessão N</h2>
-                    
-                </section>
-            </article>
-        </main>
+                <div id="maisAcc"><a href="">Mais Acessados</a></div>
 
-        <footer>
-            <p>
-                <span>Nos siga nas redes sociais </span>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-youtube"></i>
-            </p>
-        </footer>
-    </body>
+
+                <div id="agenda"><a href="">Agenda</a> </div>
+
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+            <span>Nos siga nas redes sociais </span>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-youtube"></i>
+        </p>
+    </footer>
+</body>
+
+<!--SLIDER SHOW-->
+<script src="js/slider.js"></script>
 
 </html>
