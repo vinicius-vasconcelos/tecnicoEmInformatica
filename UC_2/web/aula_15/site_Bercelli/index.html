@@ -12,8 +12,6 @@
     <!--FONT AWSOME-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
 </head>
 
 <body>
@@ -38,12 +36,12 @@
                 <ul>
                     <li><a href="index.html"> Home </a></li>
                     <li><a href="http://bercelli-eti.blogspot.com/"> Blog </a></li>
-                    <li><a href="palestras.html"> Palestras </a></li>
-                    <li><a href="desenvolvedor.html"> Aprenda </a></li>
-                    <li><a href="linksUteis.html"> Links </a></li>
-                    <li><a href="quemSou.html"> Bercelli </a></li>
-                    <li><a href="galeria.html"> Galeria </a></li>
-                    <li><a href="contato.html"> Contato </a></li>
+                    <li><a href="#palestras"> Palestras </a></li>
+                    <li><a href="#aprenda"> Aprenda </a></li>
+                    <li><a href="#links"> Links </a></li>
+                    <li><a href="#sobre"> Bercelli </a></li>
+                    <li><a href="#galeria"> Galeria </a></li>
+                    <li><a href="#contato"> Contato </a></li>
                 </ul>
             </menu>
         </nav>
@@ -53,15 +51,28 @@
         <article>
             <!--SLIDER-->
             <section id="slider">
-                <!--<div class="w3-content w3-section">
-                    <img class="mySlides" src="image/img1.png">
-                    <img class="mySlides" src="image/img4.png">
-                    <img class="mySlides" src="image/noticias.jpg">
-                </div>-->
+                    <ul class="slider">
+                        <li>
+                              <input type="radio" id="slide1" name="slide" checked>
+                              <label for="slide1"></label>
+                              <img src="./image/img1.png" />
+                        </li>
+                        <li>
+                              <input type="radio" id="slide2" name="slide">
+                              <label for="slide2"></label>
+                              <img src="./image/im3.png" />
+                        </li>
+                        <li>
+                              <input type="radio" id="slide3" name="slide">
+                              <label for="slide3"></label>
+                              <img src="./image/img4.png" />
+                        </li>
+                    </ul>
             </section>
 
             <!--MAIS PARA VOCÊ-->
             <section id="maisConteudo" class="card">
+                <h2 class="h2-section-title">Fique por Dentro !</h2>
                 <div>
                     <i class="fas fa-lightbulb"></i>
                     <h2>Novidades</h2>
@@ -125,22 +136,37 @@
 
             <!--BLOG-->
             <section id="blog" class="card">
+                <h2 class="h2-section-title"></h2>
                 <div>
                     <i class="fas fa-cubes"></i>
-                    <h2>Fique Por Dentro !</h2>
+                    <h2>Meu Blog !</h2>
                     <p>
                         Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin literature from 45 BC,
                         making it over 2000 years old.
                     </p>
-                    <a href="http://bercelli-eti.blogspot.com/">Leia mais</a>
+                    <a href="http://bercelli-eti.blogspot.com/">Acesse Agora !</a>
                 </div>
 
             </section>
 
             <!--PALESTRAS-->
             <section id="palestras">
-                palestras fixo
+                <div class="complemente-tri"></div>
+                <div class="triangle-topright">
+                        <h2>Confira Minhas Palestras _____</h2>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            It has roots in a piece of classical Latin literature from 45 BC,
+                            making it over 2000 years old. Richard McClintock, a Latin professor
+                            at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                            Latin words, consectetur, from a Lorem Ipsum passage, and going
+                            through the cites of the word in classical literature, discovered the
+                            undoubtable source.
+                        </p>
+                        <a href="">Veja Mais...</a>
+                    </div>
+                
             </section>
 
             <!--APRENDA-->
@@ -157,7 +183,7 @@
                         through the cites of the word in classical literature, discovered the
                         undoubtable source.
                     </p>
-                    <a href="">Leia Mais</a>
+                    <a href="">Leia Mais...</a>
                 </div>
 
                 <div>
@@ -172,7 +198,7 @@
                         through the cites of the word in classical literature, discovered the
                         undoubtable source.
                     </p>
-                    <a href="">Leia Mais</a>
+                    <a href="">Leia Mais...</a>
                 </div>
 
                 <div>
@@ -187,7 +213,7 @@
                         through the cites of the word in classical literature, discovered the
                         undoubtable source.
                     </p>
-                    <a href="">Leia Mais</a>
+                    <a href="">Leia Mais...</a>
                 </div>
 
                 <div>
@@ -202,15 +228,17 @@
                         through the cites of the word in classical literature, discovered the
                         undoubtable source.
                     </p>
-                    <a href="">Leia Mais</a>
+                    <a href="">Leia Mais...</a>
                 </div>
 
             </section>
 
             <!--LINKS ÚTEIS-->
             <section id="links">
-                <div id="tipoRight">
-                    <h2>Links Úteis</h2>
+
+                <div class="complemente-tri"></div>
+                <div class="triangle-topright">
+                    <h2>Links Úteis _____</h2>
                     <p>
                         Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin literature from 45 BC,
@@ -220,23 +248,66 @@
                         through the cites of the word in classical literature, discovered the
                         undoubtable source.
                     </p>
-                    <a href="">Leia Mais</a>
+                    <a href="">Veja Mais...</a>
                 </div>
             </section>
 
             <!--SOBRE BERCELLI-->
             <section id="sobre">
-                sobre fixo
+                <div class="complemente-tri"></div>
+                <h2 class="h2-section-title">Quem é o Bercelli ?</h2>
+                <div id="triangle-bottomright">
+                   <div id="minhaFoto"></div>
+                   <div id="minhaVida">
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            It has roots in a piece of classical Latin literature from 45 BC,
+                            making it over 2000 years old. Richard McClintock, a Latin professor
+                            at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                            Latin words, consectetur, from a Lorem Ipsum passage, and going
+                            through the cites of the word in classical literature, discovered the
+                            undoubtable source.
+
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            It has roots in a piece of classical Latin literature from 45 BC,
+                            making it over 2000 years old. Richard McClintock, a Latin professor
+                            at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                            Latin words, consectetur, from a Lorem Ipsum passage, and going
+                            through the cites of the word in classical literature, discovered the
+                            undoubtable source.
+                        </p>
+                   </div>
+                </div>
             </section>
 
             <!--GALERIA-->
             <section id="galeria">
-                galeria scroll
+                <h2 class="h2-section-title">Minha Galeria</h2>
+                <a href="">Veja minhas fotos ! <i class="fas fa-camera"></i></a>
             </section>
 
             <!--CONTATO-->
             <section id="contato">
-                contato fixo
+                <h2 class="h2-section-title">Fale Comigo !</h2>
+                <div id="formulario">
+                        <p>Entre em Contato</p>
+                        <hr>
+                    <form action="">
+                        <label for="nome">Nome:</label> <br>
+                        <input type="text" id="nome" name="nome"> <br>
+
+                        <label for="assunto">Assunto:</label> <br>
+                        <input type="text" id="assunto" name="assunto"> <br>
+                
+                        <label for="email">E-mail:</label> <br>
+                        <input type="email" id="email" name="email"> <br>
+                
+                        <label for="mensagem">Mensagem:</label> <br>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea><br>
+                
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </section>
         </article>
     </main>
