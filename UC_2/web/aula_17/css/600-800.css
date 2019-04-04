@@ -1,0 +1,50 @@
+@media screen and (min-width: 600px) and (max-width: 799px) {
+
+    /* ------------------------------------------ HEADER ------------------------------------------*/
+    /* --------------------------------------------------------------------------------------------*/
+    header{
+        background-color: coral;
+    }
+
+    /*** nav ***/
+    nav menu ul li{
+        min-width: 110px;
+    }
+    
+    nav menu ul li a {
+        font-size: 1.2em;
+        line-height: 2.8em;
+    }
+
+    /* ------------------------------------------ MAIN ------------------------------------------*/
+    /* --------------------------------------------------------------------------------------------*/
+    main article {
+        width: 100%;
+        min-height: 75vh;
+        background-color: #bdc3c7;
+        border-top: 1px solid #000000;
+        border-right: 1px solid #000000;
+        float: none;
+    }
+    
+    main aside {
+        width: 100%;
+        min-height: 75vh;
+        background-color: #95a5a6;
+        float: none;
+    }
+
+    main article section div {
+        width: 60%;
+        height: 20em;
+        margin-top: 5px;
+    }
+    
+    main article section div img {
+        width: 100%;
+        height: 20em;
+    }
+
+    /* ------------------------------------------ FOOTER ------------------------------------------*/
+    /* --------------------------------------------------------------------------------------------*/
+}
