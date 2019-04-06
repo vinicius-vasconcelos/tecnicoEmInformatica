@@ -8,20 +8,24 @@
     header section#logo{
         height: auto;
         min-height: 9vh;
+        display: none;
     }
 
     header section#titulo h1 {
-        font-size: 2.4em;
+        font-size: 4.4em;
         line-height: 1em;
     }
 
     /*** nav ***/
     nav#mobile {
-        border: 1px solid black;
-        display: inline;
+        position: absolute;
+        top:18%;
+        display: flex;
+        border: 1px solid white;
     }
 
     nav#mobile menu ul li {
+        border: 1px solid white;
         display: block;
     }
 

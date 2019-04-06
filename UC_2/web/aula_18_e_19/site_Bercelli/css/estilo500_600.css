@@ -1,26 +1,31 @@
-@media screen and (min-width: 600px) and (max-width: 699px) {
+@media screen and (min-width: 500px) and (max-width: 599px) {
     /* ----------------------------------------- HEADER ---------------------------------------*/
     /* --------------------------------------------------------------------------------------- */
     header {
-        background-color: darkorchid;
+        background-color: black;
     }
 
     header section#logo{
         height: auto;
-        min-height: 16vh;
+        min-height: 12vh;
+        border: 1px solid white;
+        display: none;
     }
 
     header section#titulo h1 {
-        font-size: 3.8em;
-        line-height: 1.5em;
+        font-size: 5.1em;
+        line-height: 1.25em;
     }
 
     /*** nav ***/
     nav#mobile {
-        border: 1px solid black;
-        display: inline;
+        position: absolute;
+        top:25%;
+        display: flex;
+        border: 1px solid white;
     }
     nav#mobile menu ul li {
+        border: 1px solid white;
         display: block;
     }
 

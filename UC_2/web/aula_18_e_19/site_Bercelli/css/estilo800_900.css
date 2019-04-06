@@ -1,32 +1,35 @@
-@media screen and (min-width: 900px) and (max-width: 999px) {
+@media screen and (min-width: 800px) and (max-width: 899px) {
     /* ----------------------------------------- HEADER ---------------------------------------*/
     /* --------------------------------------------------------------------------------------- */
     header {
-        background-color: chartreuse;
-    }
-
-    header section#titulo h1 {
-        font-size: 5.9em;
-        line-height: 2.25em;
+        background-color: darkblue;
     }
 
     header section#logo{
         height: auto;
-        min-height: 28vh;
+        min-height: 24vh;
+    }
+
+    header section#titulo h1 {
+        font-size: 7.2em;
+        line-height: 2em;
     }
 
     /*** nav ***/
     nav#mobile {
+        position: absolute;
+        top:40%;
+        display: flex;
+        border: 1px solid white;
+    }
+
+    nav#mobile menu ul li {
+        border: 1px solid white;
+        display: block;
+    }
+
+    nav#desk {
         display: none;
-    }
-
-    nav#desk menu li {
-        min-width: 91px; 
-    }
-
-    nav#desk menu ul li a{
-        font-size: 0.9em;
-        line-height: 1.35em;
     }
 
     /* ----------------------------------------- MAIN -----------------------------------------*/
