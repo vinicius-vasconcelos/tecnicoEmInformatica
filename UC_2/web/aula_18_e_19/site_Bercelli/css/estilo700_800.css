@@ -27,6 +27,7 @@
         width: 200px;
         border: 1px solid white;
         display: block;
+        padding: 10px;
     }
     
     nav#desk {
