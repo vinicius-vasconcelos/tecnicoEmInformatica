@@ -6,8 +6,9 @@
     }
 
     header section#logo{
-        height: auto;
-        min-height: 24vh;
+        /*height: auto;
+        min-height: 24vh;*/
+        display: none;
     }
 
     header section#titulo h1 {
@@ -15,6 +16,10 @@
     }
 
     /*** nav ***/
+    header div nav#mobile {
+        display: none;
+    }
+    
     nav#mobile {
         position: absolute;
         top:40%;
@@ -27,6 +32,21 @@
         border: 1px solid white;
         display: block;
         padding: 10px;
+    }
+
+    header div#container div#buttonMob {
+        width: 10%;
+        position: absolute;
+        top: 30%;
+        display: block;
+    }
+
+    header div#container div#buttonMob a#menuHamburguer {
+        border: 3px solid #000000;
+        border-radius: 5px; 
+        padding: 5px 8px;
+        color: #000000;
+        font-size: 1.5em;
     }
 
     nav#desk {

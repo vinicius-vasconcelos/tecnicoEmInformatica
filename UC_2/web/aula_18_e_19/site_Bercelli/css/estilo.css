@@ -83,12 +83,7 @@ nav#mobile {
     display: none;
 }
 
-header div a#menuHamburguer {
-    border: 3px solid #000000;
-    border-radius: 5px; 
-    padding: 10px 12px;
-    color: #000000;
-    font-size: 2em;
+header div#container div#buttonMob {
     display: none;
 }
 
