@@ -26,13 +26,12 @@
     }
 
     nav#desk menu li {
-        border: 1px solid #ffffff;
-        min-width: 146px;  /***/
+        min-width: 200px;
     }
 
     nav#desk menu ul li a{
-        font-size: 1.4em;
-        line-height: 1.65em;
+        font-size: 1.5em;
+        line-height: 1.8em;
     }
 
     /* ----------------------------------------- MAIN -----------------------------------------*/

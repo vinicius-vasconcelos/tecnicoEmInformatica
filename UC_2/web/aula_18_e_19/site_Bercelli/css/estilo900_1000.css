@@ -7,7 +7,6 @@
 
     header section#titulo h1 {
         font-size: 7.9em;
-        line-height: 2.25em;
     }
 
     header section#logo{
@@ -21,12 +20,12 @@
     }
 
     nav#desk menu li {
-        min-width: 91px; 
+        min-width: 160px;
     }
 
     nav#desk menu ul li a{
-        font-size: 1em;
-        line-height: 1.5em;
+        font-size: 1.5em;
+        line-height: 1.8em;
     }
 
     /* ----------------------------------------- MAIN -----------------------------------------*/

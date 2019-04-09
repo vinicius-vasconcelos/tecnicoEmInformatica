@@ -127,8 +127,8 @@ nav#desk menu ul {
 }
 
 nav#desk menu li {
-    width: 15%;
-    min-width: 140px;
+    width: 20%;
+    min-width: 220px;
     height: auto;
     margin: 0px 12px 0px 12px;
     font-family: DOS;

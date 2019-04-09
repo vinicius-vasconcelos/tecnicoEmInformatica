@@ -13,18 +13,18 @@
 
     header section#titulo h1 {
         font-size: 6.5em;
-        line-height: 1.75em;
     }
 
     /*** nav ***/
     nav#mobile {
         position: absolute;
-        top:35%;
+        top: 25%;
         display: flex;
         border: 1px solid white;
     }
 
     nav#mobile menu ul li {
+        width: 200px;
         border: 1px solid white;
         display: block;
     }
