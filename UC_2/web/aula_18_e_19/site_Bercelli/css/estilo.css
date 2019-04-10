@@ -1,9 +1,36 @@
+
+/* ------------------------------------------------------------ ## ALL ##  ------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+    pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, 
+    s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, 
+    ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, 
+    tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, 
+    header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+
+    margin: 0;	
+    padding: 0;	
+    border: 0;	
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, address, main {
+    display: block;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+    min-zoom: 0.5;
+    max-zoom: 4;
+    orientation: portrait;
+}
+
 @font-face {
     font-family: DOS;
     src: url(../font/Perfect\ DOS\ VGA\ 437\ Win.ttf);
 }
-
-/* ----------------------------------------- ALL -----------------------------------------*/
 
 *{
 	margin: 0px;
@@ -19,7 +46,8 @@ body, html{
     height: 100%;
 }
 
-/* ----------------------------------------- ACESSIBILIDADE --------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## ACESSIBILIDADE ## ------------------------------------------------------------*/
 
 #acessibilidade {
     width: 100%;
@@ -35,7 +63,8 @@ div#acessibilidade:hover {
     cursor: pointer;
 }
 
-/* ----------------------------------------- HEADER ---------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## HEADER ## ------------------------------------------------------------ */
 header {
     width: 100%;
     height: auto;
@@ -43,7 +72,9 @@ header {
     background-color: rgba(244, 67, 54,1.0);
     display: flex;
     justify-content: space-evenly;
-    text-align: center;    
+    text-align: center;
+    border-bottom: 10px solid #ffffff;
+
 }
 
 header div#container {
@@ -53,24 +84,24 @@ header div#container {
     padding-top: 10%; 
 }
 
-/*** logo *****/
-header section#logo{
-    width: 20%;
+/*************************************************************************** logo ***************************************************************************/
+header div#container section#logo{
+    width: 25%;
     min-width: 210px;
     height: auto;
-    min-height: 40vh;
+    min-height: 45vh;
     float: left;
     border: 2px solid #000000;
+    background-color: #000000;
 }
 
-/*** título ***/
-
-header section#titulo {
+/*************************************************************************** título ***************************************************************************/
+header div#container section#titulo {
     width: 100%;
     min-width: 240px;
 }
 
-header section#titulo h1 {
+header div#container section#titulo h1 {
     font-family: DOS;
     font-size: 10em;
     margin-top: 5px;
@@ -78,16 +109,45 @@ header section#titulo h1 {
     text-align: center;
 }
 
-/*** nav mobile ***/
-nav#mobile {
+/*************************************************************************** nav mobile(display:none) ****************************************************************************/
+header div#container nav#mobile {
     display: none;
 }
+
+header div#container nav#mobile menu ul li {
+    width: 300px;
+    border: 1px solid #ffffff;
+}
+
+header div#container nav#mobile menu ul li a {
+    display: block;
+    line-height: 2.5em;
+    color: #ffffff;
+}
+
+header div#container nav#mobile menu ul li a:hover {
+    transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(0.9, 0.9);
+    box-shadow: 1px 1px 5px 2px #000000;
+    font-weight: 900;
+}
+
 
 header div#container div#buttonMob {
     display: none;
 }
 
-header div a#menuHamburguer:hover {
+header div#container div#buttonMob a#menuHamburguer {
+    border: 3px solid #000000;
+    border-radius: 5px; 
+    padding: 5px 8px;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+header div#container div#buttonMob a#menuHamburguer:hover {
     transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
@@ -99,8 +159,8 @@ header div a#menuHamburguer:hover {
     font-weight: 900;
 }
 
-/*** nav desktop***/
-nav#desk {
+/*************************************************************************** nav desktop ***************************************************************************/
+header div#container nav#desk {
     width: 100%;
     height: auto;
     float: left;
@@ -108,31 +168,31 @@ nav#desk {
     margin-top: 1em;
 }
 
-nav#desk menu {
+header div#container nav#desk menu {
 	width: 100%;
 	margin: 0 auto;
     height: auto;
 }
 
-nav#desk menu ul {
+header div#container nav#desk menu ul {
 	width: 100%;
     height: auto;
 	display: inline-flex;
     justify-content: center;
 }
 
-nav#desk menu li {
+header div#container nav#desk menu li {
     width: 20%;
-    min-width: 220px;
     height: auto;
-    margin: 0px 12px 0px 12px;
+    margin: 0px 15px 0px 15px;
     font-family: DOS;
     border-bottom: 3px solid #000000; 
 }
 
-nav#desk menu ul li a{
+header div#container nav#desk menu ul li a{
 	color: #ffffff;
-	display: block;
+    display: block;
+    min-width: 200px;
     text-align: center;
     font-size: 1.5em;
     line-height: 1.8em;
@@ -140,14 +200,353 @@ nav#desk menu ul li a{
     font-weight: 900;
 }
 
-nav#desk menu ul li:hover {
+header div#container nav#desk menu ul li:hover {
 	transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
     border: 2px solid #ffffff;
     border-radius: 5px;
     background-color: rgba(244, 67, 54, 1);
     box-shadow: 1px 1px 5px 2px #000000;
     font-weight: 900;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## MAIN ## --------------------------------------------------------------- */
+
+
+main article {
+    width: 100%;
+    height: auto;
+}
+
+main article section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-bottom: 10px solid #000000; 
+}
+
+
+/*************************************************************************** divs cards(class desktop) ***************************************************************************/
+.card {
+    width: 20%;
+    min-width: 380px;
+    height: auto;
+    min-height: 40em;
+    margin: 10px auto;
+    background-color: rgba(251, 233, 231,1.0);;
+    box-shadow: 0px 5px 10px 2px  #000000;
+    border-radius: 5px;
+    border-top-left-radius: 30%;
+    text-align: center;
+}
+
+.card i {
+    width: 100%;
+    line-height: 2em;
+    font-size: 8em;
+    background-color: rgba(244, 67, 54, 1);
+    border-top-left-radius: 30%;
+    
+}
+
+.card h2 {
+    width: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    color: rgba(39, 190, 197, 1);
+    text-transform: uppercase;
+}
+
+.card p {
+    width: 100%;
+    padding: 1px;
+}
+
+.card hr {
+    margin: 1em 0;
+}
+
+.card a{
+    width: 50%;
+    line-height: 4em;
+    margin: 5.5em auto 0em auto;
+    background-color: rgba(39, 190, 197, 1);
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    display: block;
+}
+
+.card a:hover {
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+}
+
+
+/*************************************************************************** divs cards(class mobile) ***************************************************************************/
+div.cardMobile {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+
+div.cardMobile h2 {
+    line-height: 2em;
+    font-size: 2em;
+}
+
+div.cardMobile p {
+    text-align: justify;
+}
+
+div.cardMobile div {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px; 
+}
+
+div.cardMobile div a {
+    line-height: 4em;
+    margin: 0 auto;
+    background-color: rgba(39, 190, 197, 1);
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+div.cardMobile div a:hover {
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.1, 1.1);
+}
+
+/*************************************************************************** class dos triangulos ***************************************************************************/
+div.triangulo {
+    position: absolute;
+    height: auto;
+    right: 10.5em;
+    border-left: 100vh solid transparent;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+div.complemente-tri {
+    width: 10.5em;
+    right: 0;
+    background-color: rgba(1, 19, 29, 0.9);
+    border-left: none;
+}
+
+div.triangle-topright {
+    border-top: 100vh solid rgba(1, 19, 29, 0.9);
+}
+
+div.triangle-bottomright {
+    border-bottom: 100vh solid rgba(1, 19, 29, 0.9);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## SECTIONS ## --------------------------------------------------------------- */
+/*************************************************************************** Section BLOG ***************************************************************************/
+main article section#blog {
+    background-image: url(../image/blog.jpg);
+}
+
+/*************************************************************************** Section Palestras ***************************************************************************/
+main article section#palestras {
+    background-color: rgba(255, 204, 188,1.0);
+    background-image: url(../image/palestras.jpg);
+}
+/*************************************************************************** Section Sobre ***************************************************************************/
+main article section#sobre {
+    background-color: rgba(255, 255, 255,1.0);
+    background-image: url(../image/aprenda2.jpg);
+}
+
+div.intro-section {
+    width: 40em;
+    height: auto;
+    min-height: 20em;
+    position: absolute;
+    bottom: 30em;
+    right: -5em;
+    display: table;
+}
+
+.h2-align-right {
+    text-align: center;
+    margin: 15px;
+}
+
+.h2-align-right h2 {
+    font-size: 2em;  
+}
+
+
+div.intro-section p {
+    text-align: justify;
+}
+
+div.intro-section div.button {
+    width: 25%;
+    height: auto;
+    margin: 2em auto 0em auto;
+    text-align: center;
+}
+
+div.intro-section div.foto  {
+    margin-top: 3em;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+}
+
+div.intro-section div.foto img {
+    border-radius: 50%;
+}
+
+
+/*************************************************************************** Section Contato ***************************************************************************/
+main article section#contato {
+    background-color: rgba(255, 204, 188,1.0);
+    border-bottom: 1em solid #ffffff;
+}
+
+main article section#contato div#formulario {
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 2px  #000000;
+    text-align: center;
+    font-family: DOS;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(251, 233, 231,1.0);
+}
+
+hr {
+   margin: 5px auto;
+    width: 80%;
+}
+
+main article section#contato div#formulario p {
+    font-size: 2em;
+    line-height: 2em;
+}
+
+main article section#contato div#formulario label {
+    font-size: 1.8em;
+    margin: 10px auto;
+}
+
+main article section#contato div#formulario input {
+    width: 80%;
+    height: 2em;
+    border-radius: 10px; 
+    margin: 10px auto;
+    border: 2px solid #000000;
+}
+
+main article section#contato div#formulario textarea {
+    width: 80%;
+    height: 15em;
+    border-radius: 10px;
+    border: 2px solid #000000; 
+}
+
+main article section#contato div#formulario button {
+    width: 30%;
+    height: 3em;
+    margin: 1em auto 0px auto;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    
+    color: #000000;
+    background-color: rgba(39, 190, 197, 1);
+    border: 2px solid #000000;
+    font-weight: bold;
+    border-radius: 5px; 
+   
+}
+
+main article section#contato div#formulario button:hover {
+	transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px #000000;
+
+}
+
+
+/* ------------------------------------------------------------ ## FOOTER ##  ------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+    width: 100%;
+    height: 10em;
+    background-color: rgba(244, 67, 54,1.0);
+    padding: 4em;
+}
+
+footer p {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+footer p i {
+    font-size: 3em;
+    margin: 0 12px;
+}
+
+footer p i:hover {
+    transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------ ## Scroll ##  ------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px  #000000;
+	background-color: rgba(244, 67, 54, 0.01);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(244, 67, 54, 1.0);
+    border: 3px solid #000000;
+    border-radius: 30px;
 }
