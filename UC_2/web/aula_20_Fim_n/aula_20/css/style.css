@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+article, aside, details, figcaption, figure, legend, fieldset footer, header, hgroup, nav, section, address, main {
+	display: block;
+}
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+@viewport {
+	width: device-width;
+	zoom: 1;
+	min-zoom: 0.5;
+	max-zoom: 4;
+	orientation: portrait;
+}
+.peso {
+	clear: both;
+}
+body {
+	font-family: arial, verdana;
+	color: #B82E30;
+	background-image: url(../image/wallpapers/back.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+header {
+	width: 100%;
+	height: 6em;
+	background-color: #ffffff;
+	background-image: url("../image/logo.jpg");
+	background-attachment: scroll;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 1px 1px 4px 1px #000;
+	position: sticky;
+	top: 0;
+}
+#headerprint {
+	display: none;
+}
+main {
+	width: 100%;
+	padding: 30px 50px;
+}
+main article {
+	background-color: #FFF;
+	width: 80%;
+	margin: 0px auto;
+	padding: 30px 50px;
+}
+main article section {
+	min-height: 10em;
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+	border: 1px solid #ADADAD;
+	border-radius: 20px;
+	margin: 10px 0px;
+}
+main article section h1 {
+	width: 100%;
+	margin: 10px 0px;
+}
+.music {
+	width: 100%;
+	margin: 5px 0px;
+}
+.music audio {
+	width: 100%;
+}
+.movie {
+	width: 50%;
+}
+.movie video {
+	width: 100%;
+}
+#documents {
+	flex-direction: column;
+}
+#documents div a {
+	color: #000;
+	text-decoration: none;
+	margin-left: 30px;
+	font-weight: bold;
+}
+#documents div a:hover {
+	color: #B82E30;
+}
+#documents div {
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 5px 0px;
+}
+.doc {
+	background-image: url(../image/icones/word.png);
+}
+.xls {
+	background-image: url(../image/icones/excel.png);
+}
+.pdf {
+	background-image: url(../image/icones/pdf.png);
+}
+.wallpaper {
+	width: 23%;
+	height: 10em;
+	float: left;
+	margin: 2px;
+}
+.wallpaper a img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+.wallpaper a img:hover {
+	transform: scale(1.3, 1.3);
+	transition: 400ms;
+	opacity: 1;
+}
+footer {
+	/*line-height: 100vh;*/
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 2em;
+	background-color: #B82E30;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+footer a div {
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+footer a div img {
+	height: 100%;
+	margin-right: 5px;
+}
+form {
+	width: 98%;
+}
+fieldset {
+	display: block;
+	width: 100%;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-top: 0.35em;
+	padding-bottom: 0.625em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	border: 1px groove #000;
+}
+input, textarea {
+	display: block;
+	border: 1px solid #ccc;
+	height: 2em;
+	width: 80%;
+	margin: 2px;
+	padding: 2px;
+}
+textarea {
+	height: 12em;
+}
+input[type="submit"] {
+	background-color: #A0D539;
+}
+section#text {
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.texts {
+	width: 45%;
+	margin: 10px;
+	padding: 6px;
+	border: 1px solid #c1c5c9;
+	box-shadow: 1px 1px 4px 1px #ccc;
+}
+.texts h1.title {
+	width: 100%;
+	height: 2em;
+	padding: 20px 0px 0px 3em; 
+	background-image: url("../image/icones/seta-png-vermelha-.png");
+	background-attachment: scroll;
+	background-size: contain;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+@media print {
+	@page {
+		size: auto;
+		margin: 0;
+	}
+
+	* {
+		/*border: none!important*/
+		box-shadow: none !important;
+		background: transparent !important;
+		color: #000000 !important;
+		text-shadow: none !important;
+		filter: none !important;	
+	}
+
+	body {
+		word-break: break-all;
+		word-wrap: break-word;
+		width: 21cm;
+		height: 29cm;
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", 'Times New Roman', Times, serif;
+		font-size: 12px;
+		line-height: 1.4em;
+	}
+
+	a, a:hover {
+		text-decoration: none;
+	}
+
+	p {
+		widows: 3 !important;
+		orphans: 3 !important;
+	}
+
+	#headerprint {
+		display: block;
+		text-align: center;
+		width: auto;
+		height: 5em;
+		background-color: #ffffff;
+	}
+
+	section#text {
+		display: block;
+	}
+
+	.texts {
+		width: 100% !important;
+	}
+
+	article {
+		width: 100% !important;
+	}
+
+	footer {
+		display: none;
+	}
+}
+
+
+/*auto prefixed: https://autoprefixer.github.io/*/
