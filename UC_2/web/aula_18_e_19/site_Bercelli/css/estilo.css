@@ -340,31 +340,14 @@ div.cardMobile div a:hover {
 }
 
 /*************************************************************************** class dos triangulos ***************************************************************************/
-div.triangulo {
-    position: absolute;
+div.topright {
+    width: 40%;
     height: auto;
-    right: 10.5em;
-    border-left: 100vh solid transparent;
     min-height: 100vh;
+    float: right;
+    background-color: rgba(1, 19, 29, 0.9);
     color: #ffffff;
 }
-
-div.complemente-tri {
-    width: 10.5em;
-    right: 0;
-    background-color: rgba(1, 19, 29, 0.9);
-    border-left: none;
-}
-
-div.triangle-topright {
-    border-top: 100vh solid rgba(1, 19, 29, 0.9);
-}
-
-div.triangle-bottomright {
-    border-bottom: 100vh solid rgba(1, 19, 29, 0.9);
-}
-
-
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------ ## SECTIONS ## --------------------------------------------------------------- */
 /*************************************************************************** Section BLOG ***************************************************************************/
@@ -433,16 +416,13 @@ main article section#palestras div#expor {
 main article section#sobre {
     background-color: rgba(255, 255, 255,1.0);
     background-image: url(../image/aprenda2.jpg);
+    display: inherit;
 }
 
 div.intro-section {
-    width: 40em;
-    height: auto;
-    min-height: 20em;
-    position: absolute;
-    bottom: 30em;
-    right: -5em;
-    display: table;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1em;
 }
 
 .h2-align-right {
@@ -459,11 +439,8 @@ div.intro-section p {
     text-align: justify;
 }
 
-div.intro-section div.button {
-    width: 25%;
-    height: auto;
-    margin: 2em auto 0em auto;
-    text-align: center;
+div.intro-section ul {
+    padding: 10px;
 }
 
 div.intro-section div.foto  {

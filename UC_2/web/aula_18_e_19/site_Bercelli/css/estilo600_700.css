@@ -2,9 +2,9 @@
 
     /*-----------------------------------------------------------------------------------------------------------------------------------*/
     /* ------------------------------------------------------------ HEADER ------------------------------------------------------------ */
-    header {
+    /*header {
         background-color: darkorchid;
-    }
+    }*/
 
     /*************************************************************************** logo ***************************************************************************/
     header div#container section#logo{
@@ -50,36 +50,12 @@
     }
 
     /*************************************************************************** Section Sobre ***************************************************************************/
-    div.intro-section {
-        width: 25em;
-        bottom: 26em;
-        border: 1px solid #ffffff;
+    div.topright {
+        width: 100%;
     }
 
     /*************************************************************************** Section Contato ***************************************************************************/
     main article section#contato div#formulario {
         width: 80%;
     }
-    
-    /*
-    .input-format {
-        width: 80%;
-    }
-
-    main article section#contato div#formulario p {
-        font-size: 1.5em;
-        line-height: 2em;
-    }
-
-    main article section#contato div#formulario label {
-        font-size: 1em;
-    }
-
-    main article section#contato div#formulario button {
-        width: 50%;
-        height: 2em;
-        font-size: 12px;
-        text-align: center;
-        padding: 0px;
-    }*/
 }
