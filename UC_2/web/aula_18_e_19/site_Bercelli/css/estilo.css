@@ -243,14 +243,14 @@ main article section {
     height: auto;
     min-height: 40em;
     margin: 10px auto;
-    background-color: rgba(251, 233, 231,1.0);;
+    background-color: rgba(251, 233, 231,1.0);
     box-shadow: 0px 5px 10px 2px  #000000;
     border-radius: 5px;
     border-top-left-radius: 30%;
     text-align: center;
 }
 
-.card i {
+.card span {
     width: 100%;
     line-height: 2em;
     font-size: 8em;
@@ -273,6 +273,7 @@ main article section {
 }
 
 .card hr {
+    width: 100%;
     margin: 1em 0;
 }
 
@@ -376,6 +377,58 @@ main article section#palestras {
     background-color: rgba(255, 204, 188,1.0);
     background-image: url(../image/palestras.jpg);
 }
+
+main article section#palestras div#expor {
+    width: 95%;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.mini-card {
+    width: 15%;
+    min-width: 15em;
+    height: 12em;
+    background-color: rgba(251, 233, 231,1.0);
+    box-shadow: 0px 5px 10px 2px  #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mini-card:hover{
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.mini-card span {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 2em;
+    padding: 5px;
+    background-color: rgba(244, 67, 54, 1);
+    
+}
+
+.mini-card h2 {
+    width: 100%;
+    line-height: 2em;
+    font-size: 1.5em;
+    color: rgba(39, 190, 197, 1);
+    text-transform: uppercase;
+}
+
+.mini-card p {
+    width: 100%;
+    font-size: 12px;
+}
+
+
 /*************************************************************************** Section Sobre ***************************************************************************/
 main article section#sobre {
     background-color: rgba(255, 255, 255,1.0);
@@ -450,6 +503,15 @@ hr {
     width: 80%;
 }
 
+.input-format {
+    width: 80%;
+    height: 2em;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: 2px solid #000000;
+    padding-left: 10px;
+}
+
 main article section#contato div#formulario p {
     font-size: 2em;
     line-height: 2em;
@@ -460,23 +522,12 @@ main article section#contato div#formulario label {
     margin: 10px auto;
 }
 
-main article section#contato div#formulario input {
-    width: 80%;
-    height: 2em;
-    border-radius: 10px; 
-    margin: 10px auto;
-    border: 2px solid #000000;
-}
-
 main article section#contato div#formulario textarea {
-    width: 80%;
-    height: 15em;
-    border-radius: 10px;
-    border: 2px solid #000000; 
+    height: 10em;
 }
 
 main article section#contato div#formulario button {
-    width: 30%;
+    width: 25%;
     height: 3em;
     margin: 1em auto 0px auto;
     font-size: 1.2em;
@@ -486,7 +537,6 @@ main article section#contato div#formulario button {
     background-color: rgba(39, 190, 197, 1);
     border: 2px solid #000000;
     font-weight: bold;
-    border-radius: 5px; 
    
 }
 
@@ -497,9 +547,7 @@ main article section#contato div#formulario button:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
     box-shadow: 1px 1px 2px 1px #000000;
-
 }
-
 
 /* ------------------------------------------------------------ ## FOOTER ##  ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------------------------------*/
@@ -520,12 +568,12 @@ footer p {
     justify-content: center;
 }
 
-footer p i {
+footer p span {
     font-size: 3em;
     margin: 0 12px;
 }
 
-footer p i:hover {
+footer p span:hover {
     transition: all;
 	transition-delay: 100ms;
 	transition-duration: 950ms;
