@@ -92,7 +92,7 @@ header div#container section#logo{
     min-height: 45vh;
     float: left;
     border: 2px solid #000000;
-    background-color: #000000;
+    /*background-color: #000000;*/
 }
 
 /*************************************************************************** título ***************************************************************************/
