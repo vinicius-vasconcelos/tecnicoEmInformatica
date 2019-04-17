@@ -1,0 +1,17 @@
+div {
+    width: 60%;
+    height: 10em;
+    margin: 0 auto;
+    border: 1px dotted #000000;
+    padding: 1em;
+    font-size: 2em;
+    border-radius: 5px; 
+}
+
+p{
+    color: red;
+}
+
+b{
+    text-transform: uppercase;
+}
