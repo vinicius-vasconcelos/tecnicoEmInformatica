@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3</title>
+
+    <script>
+        let l1 = 1;
+        let l2 = 1;
+        let l3 = 3;
+    </script>
+</head>
+<body>
+    <script>
+        if(l1 == l2 && l2 == l3)//equilátero
+            alert(` L1 = ${l1} \n L2 = ${l2} \n L3 = ${l3}\n  = equilátero`);
+        
+        else if(l1 == l2 || l2 == l3 || l1 == l3 )//isoceles
+            alert(`L1 = ${l1}\n L2 = ${l2} \n L3 = ${l3}\n  = isoceles`);
+        
+        else if(l1 != l2 && l2 != l3)//Escaleno
+            alert(`L1 = ${l1} \n L2 = ${l2} \n L3 = ${l3}\n  = Escaleno`);
+    </script>
+</body>
+</html>

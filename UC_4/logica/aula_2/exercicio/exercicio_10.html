@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 10</title>
+
+    <link rel="stylesheet" href="css/css.css">
+
+    <script>
+        let produto = 'cerveja';
+        let valor = 1.50;
+        let quantidade = 2;
+        let desconto = 10;
+        let avista = false;
+        let totalCompra = (valor * quantidade);
+        let totalComDesconto =  totalCompra - (totalCompra * 0.1);
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <script>
+
+            if(!avista)
+                document.write(`<b>Produto:</b> ${produto} <br>
+                                <b>Valor unitário:</b> R$${valor} <br>
+                                <b>Quantidade:</b> ${quantidade} <br>
+                                
+                                <b>Total da compra =</b> R$${totalCompra} <br>`);
+                else
+                    document.write(`<b>Produto:</b> ${produto} <br>
+                                <b>Valor unitário:</b> R$${valor} <br>
+                                <b>Quantidade:</b> ${quantidade} <br>
+                                <b>Total com desconto =</b> R$${totalComDesconto} <br>`);
+        </script>
+    </div>
+</body>
+</html>
