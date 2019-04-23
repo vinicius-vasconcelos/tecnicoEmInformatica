@@ -1,0 +1,37 @@
+URL
+
+origem:
+
+abeviatura: URL é a abreviatura de Uniform Resource Locator, ou Localizador Padrão de Recursos
+
+Definição: O Uniform Resource Locator (URL), é um termo técnico (e anglicismo de tecnologia da informação) que foi traduzido para a língua portuguesa como "localizador uniforme de recursos". Um URL se refere ao endereço de rede no qual se encontra algum recurso informático, como por exemplo um arquivo de computador ou um dispositivo periférico (impressora, equipamento multifuncional, unidade de rede etc.). Essa rede pode ser a Internet, uma rede corporativa (como uma intranet) 
+
+exemplo de url completo: esquema ou protocolo://domínio:porta/caminho/recurso?query_string#fragmento
+
+-O esquema é o protocolo. Poderá ser HTTP, HTTPS, FTP etc.
+-O domínio é o endereço da máquina: designa o servidor que disponibiliza o documento ou recurso solicitado.
+-O caminho especifica o local (geralmente num sistema de arquivos) onde se encontra o recurso, dentro do servidor.
+-A query string[nota 1] é um conjunto de um ou mais pares "pergunta-resposta" ou "parâmetro-argumento" (como por exemplo nome=fulano, em que nome pode ser, por exemplo, uma variável, e fulano é o valor (argumento) atribuído a nome).[1] É uma string enviada ao servidor para que seja possível filtrar ou mesmo criar o recurso. (opcional)
+
+Exemplo: http://www.w3.org/Addressing/URL/uri-spec.html
+
+No exemplo acima, o protocolo é o HTTP, o servidor é designado por www.w3.org e o recurso (neste caso, o arquivo uri-spec.html) encontra-se em Addressing/URL/. A porta, omitida, recai sobre o padrão do protocolo (no caso, a porta 80) e não há query string ou identificador de fragmento.
+
+composição: É composto de um link, por um protocolo HTTP(protocolo de comunicação na internet) ou por um FTP(protocolo de tranferencia), tudo isso trabalhando no protocolo HTML(conjutnto de tags que estrutura o documento dando semantica a ele)
+
+
+
+
+
+
+
+
+
+
+
+
+https://gizmodo.uol.com.br/urls-e-caracteres-estranhos/
+https://tableless.com.br/o-grande-desencontro-http-com-o-html/
+https://pt.wikipedia.org/wiki/URL#cite_note-1
+https://br.ccm.net/contents/288-o-que-e-um-url
+https://www.ibm.com/support/knowledgecenter/pt-br/SSPREK_9.0.5/com.ibm.isam.doc/wrp_config/concept/con_dyn_url_compo.html
