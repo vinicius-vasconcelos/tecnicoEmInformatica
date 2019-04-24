@@ -1,0 +1,47 @@
+			   Briefing
+--------------------------------------------------------------------------------------------
+*Ja tem logotipo ?
+	se sim, deseja manter ?
+	se nao, tem alguma ideia em mente ou referencia algo do tipo ?
+---------------------------------------------------------------------------------------------
+*Tem conhecimento de dominio e hospedagem?
+	se sim, ja tem dominio e hospedagem?
+		se sim, deseja manter ou migra ou trocar dominio?
+		se nao, deseja criar? Tem algo em mente, alguma preferencia?
+	se nao, **nos explicaremos**.
+--------------------------------------------------------------------------------------------
+*tem alguma ideia de como ira querer o site?(design, cores, fontes etc)
+	se sim, quais? Tem alguma ideia de referencia, alguma objeção?( nao colocar X coisas,
+nao colocar cores X etc)
+	se nao, podemos criar alguns layouts de exemplo e apresentarmos para voce?
+---------------------------------------------------------------------------------------------
+*o que ira conter no site?(caso nao tenha uma noção do que ira quere no site)
+	-Home;(se sim, tem ideia do que ira conter nela ?)
+	-Contato(colocar atalhos para redes socias ou algo do tipo);
+	-Area de pesquisa dentro do site(barra de busca);
+	-Sobre(ja tem textos sobre a empresa, informações uteis para os clientes etc?);
+	-Categorias(de serviço ou o que queira inserir no site);
+	-FAQ;(perguntas mais frequentes, podendo explicar algumas coisa do site ou serviço);
+	-Area para expor seu trabalho (comentarios ou algum metodo
+de avaliação dos clientes etc. se sim, ja tem ideia de como ira ser essa area?);
+	-Alguma midia como fotos(galeria ou algo do tipo); audios; videos etc;(ja as midias
+nescessarias?)
+	-Cadastramento de clientes e/ou funcionarios;(se sim, quais?algum dado especifico?)
+	-Agenda(ja é confirmado);
+	-Localização do estabelecimento;
+--------------------------------------------------------------------------------------------
+*quem ira gerenciar o site?( nao sei se é muito importante essa);
+--------------------------------------------------------------------------------------------
+*qual sera a frequencia de atualização do site?( tambem nao sei se é muito importante)
+--------------------------------------------------------------------------------------------
+*qual diferencial dos serviços prestados?
+--------------------------------------------------------------------------------------------
+*quais as regras de negocio?
+--------------------------------------------------------------------------------------------
+			Parte da agenda
+--------------------------------------------------------------------------------------------
+*tem alguma ideia de como quer a area para agenda?
+	se sim, conte nos, tem algo de referencia? alguma objeção ou restrição de algo?
+	se nao, podemos dar sugestões?
+--------------------------------------------------------------------------------------------
+
