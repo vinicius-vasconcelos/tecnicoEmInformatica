@@ -10,16 +10,16 @@
 
     <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; text-align: center;">
         <script>
-            let nome = prompt('Qual seu nome:');
-            let idade = prompt('Qual sua idade:');
-            let ano = new Date().getFullYear() - parseInt(idade);
+            let pessoas = prompt('Quantidade de pessoas:');
+            pessoas = parseInt(pessoas);
 
-            if(ano < 2000)
-                for(let i = 0; i < 20; i++)
-                    document.write(`${nome}<br>`);
-            else
-                for(let i = 0; i < 15; i++)
-                    document.write(`${new Date()}<br>`); 
+            let carne = pessoas * 300;
+            let brejas = (pessoas * 12) / 12;
+    
+
+            document.write(`<h1>PARA SEU CHURRAS FICAR TOP, TU VAI PRECISAR DE:</h1>
+                            ${brejas} caixas de brejas <br>
+                            ${carne}Kg de PICANHA !`);
         </script>
     </div>
 
