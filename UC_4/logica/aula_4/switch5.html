@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+
+    <script>
+
+        let op = prompt('Digite 1 para verdade ou qualquer coisa para falso');
+        let variavel;
+
+        switch(parseInt(op)) {
+            case 0:
+                variavel = false;
+            break;
+
+            case 1:
+                variavel = true;
+            break;
+
+            default:
+                variavel = false;
+        }
+
+
+        if(variavel)
+            document.write('Você escolheu "verdadeiro"');
+        else
+            document.write('Você escolheu "falso"')
+    </script>
+</head>
+<body>
+</body>
+</html>

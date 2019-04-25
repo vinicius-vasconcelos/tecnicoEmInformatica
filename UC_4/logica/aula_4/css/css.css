@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+div#preto {
+    width: 33%;
+    height: 100vh;
+    background-color: black;
+    float: left;
+}
+
+div#branco{
+    width: 33%;
+    height: 100vh;
+    margin: 0 auto;
+    /*border: 1px solid #000000;
+    border-radius: 3px;*/
+    text-align: center;
+    font-size: 3em;
+    color: red;
+    text-transform: uppercase;
+    float: left;
+}
+
+div#vermelho {
+    width: 33%;
+    height: 100vh;
+    background-color: red;
+    float: right;
+}
