@@ -1,0 +1,24 @@
+O protocolo HTTP/HTTPS fica em qual camada do Modelo TCP/IP?
+	aplicação(correta)
+	sessão
+	transporte
+	rede
+
+Quais qual certifica é configurado no protocolo HTTPS ?
+	OSI/TCP
+	LSS/SLT
+	SSL/TLS(correta)
+	HTTP/HTTPS
+
+HTTPS é a sigla para?
+	HyperText Transfer Protocol Security
+	HyperText Transfer Protocol Secure (correta)
+	HyperTexto Transfer Protocol Secure
+	HyperText Transfer Protocolo Secure
+
+Wireshark é uma ferramenta de?
+	Análise de tráfego de rede (correta)
+	Hackiar as senhas das pessoas
+	Invadir a NASA
+	Roubar a senha da garota que você gosta
+	

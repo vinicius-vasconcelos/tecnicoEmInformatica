@@ -1,0 +1,21 @@
+O que significa HTTP?
+
+a- Hyper Texto de Transferência de midia 
+b- Hyper Texto Transfer Protocolo
+c- Hyper Text Transfer Protocol
+d- Hyper Text Transfer Portugol
+
+Quais outros protocololos são necessários para se formar uma conexão HTTP?
+
+a- Apenas TCP
+b- TCP/IP
+c- TCPP/IP
+d- Apenas IP
+
+Como funciona o sistema de requisição?
+
+a- Usuário-> browser-> servidor-> página da web 
+b- Browser-> usuário-> servidor-> página de web 
+c- Usuário-> browser-> servidor-> página da web 
+d- Servidor-> usuário-> browser-> página da web 
+
