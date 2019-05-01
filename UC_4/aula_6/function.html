@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+
+    <script>
+        function pulaLinha() {
+            document.write('<br><br>');
+        }
+
+        function tracaLinha() {
+            document.write('<hr>');
+        }
+
+        function calcValor(a, b, op) {
+            switch(op) {
+                case 1:
+                    return `${a} + ${b} = ${a + b}` ;
+                break;
+
+                case 2:
+                    return `${a} - ${b} = ${a - b}` ;
+                break;
+
+                case 3:
+                    return `${a} / ${b} = ${a / b}` ;
+                break;
+
+                case 4:
+                    return `${a} * ${b} = ${a * b}` ;
+                break;
+
+                default:
+                    return 'operação inválida';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <script>
+        let num = []
+
+        for (let i = 0; i < 2; i++) {
+            num[i] = prompt('Número: ');
+
+            document.write(`${num[i]}`);
+            pulaLinha();
+            tracaLinha();
+        }
+        let op = prompt('Operação: \n 1 - soma \n 2- subtração \n 3 - divisão \n 4 - multiplicação');
+
+        document.write(`${calcValor(parseInt(num[0]), parseInt(num[1]), parseInt(op))}`);
+    </script>
+    
+</body>
+</html>
