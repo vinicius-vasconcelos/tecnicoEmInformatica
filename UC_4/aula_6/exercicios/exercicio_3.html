@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <script>
+        //3 - Crie um vetor que Guarde numeros apenas se forem impares, mostre-os.
+        let num = [];
+        let valor = 0;
+
+        for (let i = 0; i < 5;){
+            valor = prompt(`Digite o ${i+1}º número: `);
+            if(parseInt(valor)%2) 
+                num[i++] = valor;
+        }
+            
+
+        for (let i = 0; i < num.length; i++)
+            document.write(`O ${i+1}º número digitado foi = ${num[i]}<hr>`);
+      
+    </script>
+</body>
+</html>

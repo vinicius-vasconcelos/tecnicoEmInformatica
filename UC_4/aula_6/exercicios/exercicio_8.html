@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 8</title>
+
+    <script>
+        function dandoDesconto(valorUni, desconto) {
+            return parseFloat(valorUni - (valorUni * (desconto / 100)));
+        }
+    </script>
+</head>
+<body>
+    <script>
+        //8 - Crie uma função que calcule a porcentagem de um desconto;
+        let coisa = prompt('Coisa: ');
+        let valorUni = parseFloat(prompt('valor unitário: '));
+        let desconto = parseInt(prompt('Desconto[de 0 a 100]:'));
+
+        document.write(`${coisa} custa R$${valorUni} com desconto de ${desconto}% custará R$${dandoDesconto(valorUni, desconto)}`);
+        
+    </script>
+</body>
+</html>

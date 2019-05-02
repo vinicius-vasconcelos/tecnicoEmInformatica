@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <script>
+        //2 - Crie um vetor que guarde 10 nomes e imprima os 5 últimos.
+        let num = [];
+        for (let i = 0; i < 10; i++) 
+            num[i] = prompt(`Digite o ${i+1}º número: `);
+
+        for (let i = num.length-1; i > (num.length / 2) -1; i--)
+            document.write(`O ${i+1}º número digitado foi = ${num[i]}<hr>`);
+      
+    </script>
+</body>
+</html>

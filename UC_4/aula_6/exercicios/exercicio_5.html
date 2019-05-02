@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <script>
+        //5 - Crie três vetores armzene numeros em dois, e o terceiro guarda a 6 - soma de cada indice dos dois primeiros.
+        let vet1 = [];
+        let vet2 = [];
+        let vet3 = [];
+
+        for (let i = 0; i < 5; i++) {
+           vet2[i] = vet1[i] = parseInt(prompt(`Digite o ${i+1}º número: `));
+           vet3[i] = 6 - (vet1[i] + vet2[i]);
+        }
+
+        for (let i = 0; i < vet1.length; i++)
+            document.write(`vet1[${i}] =  ${vet1[i]}; vet2[${i}] =  ${vet2[i]}; 6 - (${vet1[i]} + ${vet2[i]}) = ${vet3[i]} <hr>`);
+      
+    </script>
+</body>
+</html>

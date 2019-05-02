@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <script>
+        //4 - Crie dois vetores, um que guarda nome e outro guarda a idade;
+        let nome = [];
+        let idade = [];
+        for (let i = 0; i < 3; i++) {
+            nome[i] = prompt(`Nome:`);
+            idade[i] = prompt(`Idade do ${nome[i]}`);
+        } 
+
+        for (let i = 0; i < nome.length; i++)
+            document.write(`${nome[i]} tem ${idade[i]} anos<hr>`);
+            
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 9</title>
+
+    <script>
+        function dandoJuros(valor, valorJu) {
+            return parseFloat((valorJu - valor) / 100);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        //9 - Crie uma função que calcule a porcentagem de um juros;
+        let coisa = prompt('Coisa: ');
+        let valor = parseFloat(prompt('valor: '));
+        let valorJu = parseFloat(prompt('Valor com juros: '));
+
+        document.write(`${coisa} custa R$${valor} valor com juros  R$${valorJu} produto com ${dandoJuros(valor, valorJu)} % de juros`);
+    </script>
+</body>
+</html>
