@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.caixa-foto {
+    width: 400px;
+    height: 400px;
+    background-color: #cccccc;
+    border: 3px solid #000000;
+    box-shadow: 1px 1px 6px 2px #000000;
+    border-radius: 50%;
+    margin: 10px;
+    float: left;
+}
+
+.caixa-foto:hover {
+    transition: all;
+    transition-delay: 250ms;
+    transition-duration: 950ms;
+    transform: scale(0.9, 0.9);
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.div-estilo {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #cccccc;
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

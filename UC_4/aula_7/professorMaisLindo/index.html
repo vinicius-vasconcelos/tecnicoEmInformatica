@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Professor Mais Lindo</title>
+
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function criarImagens() {
+            let fotos = ["./fotos/Adolfo.jpg", "./fotos/Anderson.jpg", "./fotos/Danilo.jpg", "./fotos/Fabricio.jpg", "./fotos/Thiago.jpg", "./fotos/Hermilo.jpg","./fotos/Sergio.jpg"];
+            let nomes = ["Adolfo", "Anderson", "Danilo", "Fabricio", "Thiago", "Hermilo", "Sergio"];
+
+            //exibe os códigos na tela
+            let i = 0;
+            let str = '<div class="div-estilo">';
+            while(i < fotos.length) {
+                str += `<div class="caixa-foto">
+                            <img class="foto" src="${fotos[i]}" alt="${nomes[i]}" title="${nomes[i]}">
+                        </div>`
+                i++;
+            }
+            str += '</div>';
+            document.write(str);
+        }
+
+        function embaralharImagens() {
+            let a = 10;
+            let b = 20;
+
+            document.write(`<h2> A = ${a}; B = ${b}</h2>`);
+        }
+
+       
+    </script>
+</head>
+<body>
+    <script>
+        criarImagens();
+        embaralharImagens();
+    </script>
+
+    <!--div class="caixa-foto">
+        <img class="foto" src="./fotos/Adolfo.jpg" alt="Adolfo">
+    </div-->
+</body>
+</html>
