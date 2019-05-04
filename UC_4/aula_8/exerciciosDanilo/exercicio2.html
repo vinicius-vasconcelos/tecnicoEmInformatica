@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 50%; 
+            height: auto; 
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #000000; 
+            border-radius: 5px;
+            box-shadow: 1px 1px 6px 2px #000000;
+            text-align: center;
+            background-color: #cccccc;
+            font-size: 2em;
+            
+        }
+
+        hr {
+            color: #000000;
+            background-color: #000000;
+            height: 3px;
+        }
+    </style>
+
+    <script>
+        function calculaIMC(p, a) {
+            return parseFloat(p / (a * a)).toFixed(2);
+        }
+
+        function verificaGrau(data) {
+
+            if(data <= 18.5)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Abaixo do peso</h2>
+                    <p>`
+            else if(data > 18.5 && data <= 24.9)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Peso normal</h2>
+                    <p>`
+            else if(data > 25 && data <= 29.9)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Sobrepeso</h2>
+                    <p>`
+            else if(data > 30 && data <= 34.9)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Obesidade grau 1</h2>
+                    <p>`
+            else if(data > 35 && data <= 39.9)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Obesidade grau 2</h2>
+                    <p>`
+            else if(data > 40)
+                return `<p>
+                        <b>Peso</b> = ${peso};<br> 
+                        <b>Altura</b> = ${altura};<br> 
+                        <b>IMC</b> = ${data};
+                        <h2>Obesidade grau 3</h2>
+                    <p>`
+        }
+    </script>
+</body>
+
+    <div>
+        <h1>Exercício do IMC</h1>
+        <hr>
+        <script>
+            let peso = parseFloat(prompt('Digite seu peso: '));
+            let altura = parseFloat(prompt('Digite sua altura: '));
+
+            document.write(verificaGrau(calculaIMC(peso, altura)))
+        </script>
+    </div>
+
+    
+</html>

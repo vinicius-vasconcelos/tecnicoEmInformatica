@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+
+        div {
+            width: 50%; 
+            height: auto; 
+            margin: 5em auto;
+            padding: 1em;
+            border: 1px solid #000000; 
+            border-radius: 5px;
+            box-shadow: 1px 1px 6px 2px #000000;
+            text-align: center;
+            background-color: #cccccc;
+            font-size: 2em;
+            
+        }
+
+        hr {
+            color: #000000;
+            background-color: #000000;
+            height: 3px;
+        }
+    </style>
+
+    <script>
+        function calculaAreaTriangulo(b, a) {
+            return (b * a) / 2;
+        }
+    </script>
+</body>
+
+    <div>
+        <h1>Exercício do Triângulo</h1>
+        <hr>
+        <script>
+            let base = parseInt(prompt('Digite a base do triângulo: '));
+            let altura = parseInt(prompt('Digite a altura do triângulo: '));
+
+            document.write(`<p><b>Base</b> = ${base};<br> <b>Altura</b> = ${altura};<br> <b>Área</b> = ${calculaAreaTriangulo(base, altura)}<p>`)
+        </script>
+    </div>
+
+    
+</html>
