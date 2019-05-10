@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Professor mais lindo</title>
+<link rel="stylesheet" href="estilo.css" type="text/css">
+</head>
+
+<body>
+	
+	<h1>Professor mais lindo do mundo !</h1>
+	<script>
+
+		function exibir(valor) {
+			if(valor == true)
+				alert('Acerto, mizeravi !');
+			else
+			alert('Tente novamente !');
+		}
+
+		function EmbaralhaImagens(qtde){
+			let j;
+			let aux, aux2;
+			let pos;
+
+			for (let i = 0; i < qtde; i++) {
+				j = 0;
+				while(j < fotos.length) {
+					aux =  fotos[j];
+					aux2 = nomes[j];
+					pos = Math.floor(Math.random() * fotos.length);
+					fotos[j] = fotos[pos];
+					nomes[j] = nomes[pos];
+					fotos[pos] = aux;
+					nomes[pos] = aux2;
+			
+					j++;
+				}
+			}
+		}
+		function CriaImagens(){
+			//exibe as fotos na tela
+			var i = 0;
+			var texto = "";
+			while(i<nomes.length){
+				
+				if(nomes[i] == 'Danilo') {
+					texto = '<div class="caixafoto">';
+					texto = texto + '<img src="';
+					texto = texto + fotos[i];
+					texto = texto + '" alt="'+nomes[i]+'" class="foto" title="'+nomes[i]+'" onclick ="exibir(true)">';
+					texto = texto + '</div>';
+					document.write(texto);
+				} else {
+					texto = '<div class="caixafoto">';
+					texto = texto + '<img src="';
+					texto = texto + fotos[i];
+					texto = texto + '" alt="'+nomes[i]+'" class="foto" title="'+nomes[i]+'" onclick ="exibir(false)">';
+					texto = texto + '</div>';
+					document.write(texto);
+				}
+				i = i + 1;
+			}
+		}
+		
+		//fotos[0] = "fotos/Adolfo.jpg";
+		var fotos = [
+			"fotos/Adolfo.jpg",
+			"fotos/Anderson.jpg",
+			"fotos/Danilo.jpg",
+			"fotos/Fabricio.jpg",
+			"fotos/Thiago.jpg",
+			"fotos/Hermilo.jpg",
+			"fotos/Sergio.jpg"
+		];
+		var nomes = [
+			"Adolfo","Anderson","Danilo","Fabricio",
+			"Thiago","Hermilo","Sergio"		
+		];
+		
+		EmbaralhaImagens(10);
+		CriaImagens();
+	</script>
+</body>
+</html>
