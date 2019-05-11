@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício</title>
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1>Média</h1>
+        <hr>
+
+        <form id="form1" action="#">
+            Valor 1: <br>
+            <input type="number" id="v1"> <br>
+
+            Valor 2: <br>
+            <input type="number" id="v2"> <br>
+
+            Valor 3: <br>
+            <input type="number" id="v3"> <br>
+
+            Valor 4: <br>
+            <input type="number" id="v4"> <br>
+
+            Total: <br>
+            <input type="number" id="total" readonly > <br><br>
+
+            <input type="button" onclick="calcular()" value="Calcular">
+        </form>
+
+    </body>
+
+    <script>
+        function calcular() {
+            document.forms['form1'].total.value = 
+                (parseInt(document.forms['form1'].v1.value) +
+                parseInt(document.forms['form1'].v2.value) +
+                parseInt(document.forms['form1'].v3.value) +
+                parseInt(document.forms['form1'].v4.value)) / 4;
+        }
+    </script>
+</html>
