@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Média</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <style>
+
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            form {
+                width: 50%;
+                margin: 0 auto;
+                padding: 10px;
+                border: 1px solid #cccccc;
+                text-align: center;
+                box-shadow: 1px 1px 12px 1px #000000;
+            }
+
+            input {
+                width: 30%;
+                height: 2em;
+                margin: 10px;
+                border: 1px solid #cccccc;
+                border-radius: 3px; 
+            }
+
+            input[type='button'] {
+                width: 80%;
+                height: 2.5;
+                background-color: transparent;
+                border: 3px solid #92ec8f;
+            }
+
+            input[type='button']:hover {
+                transition: all;
+                transition-delay: 100ms;
+                transition-duration: 500ms;
+                transform: scale(1.1, 1.1);
+                border: 1px solid #ffffff;
+                background-color: #92ec8f;
+                color: #ffffff;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <form id="form1" action="">
+            <h1>Calcula média</h1>
+
+            <input id="nome" type="text" placeholder="Entre com seu nome..."> <br>
+            <input id="nota_1" type="text" placeholder="Entre com a nota 1..."> <br>
+            <input id="nota_2" type="text" placeholder="Entre com a nota 2..."> <br>
+            <input id="nota_3" type="text" placeholder="Entre com a nota 3..."> <br>
+            <input id="nota_4" type="text" placeholder="Entre com a nota 4..."> <br>
+
+            <input id="media" type="text" placeholder="Sua média é..." readonly> <br><br>
+
+            <input type="button" value="Calcular" onclick="calcular()">
+        </form>
+    </body>
+
+    <script>
+        function exibeView(res) {
+            console.log(res);
+            document.forms['form1'].media.value = res.media;
+        }
+
+        function calcular() {
+
+            let aluno = {
+                nome: document.forms['form1'].nome.value,
+                not1: parseFloat(document.forms['form1'].nota_1.value),
+                not2: parseFloat(document.forms['form1'].nota_2.value),
+                not3: parseFloat(document.forms['form1'].nota_3.value),
+                not4: parseFloat(document.forms['form1'].nota_4.value),
+                media: '',
+            }
+
+            let result = media(aluno);
+            exibeView(result);
+        }
+
+        function media(alu) {
+            alu.media = ((alu.not1 + alu.not2 + alu.not3 + alu.not4) / 4);
+            return alu;
+        }
+
+    </script>
+
+</html>

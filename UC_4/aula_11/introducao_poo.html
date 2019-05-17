@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>POO</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <body>
+        <script>
+
+
+            let vet = [
+                {
+                    pergunta: 'Quem é a pessoa mais inteligente da noite ?',
+                    resposta: 'viniGOD'
+                },
+                {
+                    pergunta: 'Quem é a pessoa mais bonita da noite ?',
+                    resposta: 'viniGOD'
+                },
+                {
+                    pergunta: 'Quem é a pessoa mais bonita e inteligente da noite ?',
+                    resposta: 'viniGOD'
+                }
+            ]
+
+            document.write(`
+                <h1> Peguntas e Respostas</h1>
+                <hr>
+                <p><b>${vet[0].pergunta}</b><p>
+                <p>${vet[0].resposta}<p>
+
+                <p><b>${vet[1].pergunta}</b><p>
+                <p>${vet[1].resposta}<p>
+
+                <p><b>${vet[2].pergunta}</b><p>
+                <p>${vet[2].resposta}<p>
+            `);
+        </script>
+    </body>
+</html>
