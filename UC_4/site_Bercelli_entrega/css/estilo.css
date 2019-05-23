@@ -1,0 +1,577 @@
+
+/* ------------------------------------------------------------ ## ALL ##  ------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+    pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, 
+    s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, 
+    ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, 
+    tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, 
+    header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+
+    margin: 0;	
+    padding: 0;	
+    border: 0;	
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, address, main {
+    display: block;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+    min-zoom: 0.5;
+    max-zoom: 4;
+    orientation: portrait;
+}
+
+@font-face {
+    font-family: DOS;
+    src: url(../font/Perfect\ DOS\ VGA\ 437\ Win.ttf);
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body, html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## ACESSIBILIDADE ## ------------------------------------------------------------*/
+
+#acessibilidade {
+    width: 100%;
+    height: 2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    text-align: center;
+    z-index: 100;
+}
+
+div#acessibilidade:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## HEADER ## ------------------------------------------------------------ */
+header {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgba(244, 67, 54,1.0);
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    border-bottom: 10px solid #ffffff;
+
+}
+
+header div#container {
+    width: 90%;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 10%; 
+}
+
+/*************************************************************************** logo ***************************************************************************/
+header div#container section#logo{
+    width: 25%;
+    min-width: 210px;
+    height: auto;
+    min-height: 45vh;
+    float: left;
+    border: 2px solid #000000;
+    /*background-color: #000000;*/
+}
+
+/*************************************************************************** título ***************************************************************************/
+header div#container section#titulo {
+    width: 100%;
+    min-width: 240px;
+}
+
+header div#container section#titulo h1 {
+    font-family: DOS;
+    font-size: 10em;
+    margin-top: 5px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*************************************************************************** nav mobile(display:none) ****************************************************************************/
+header div#container nav#mobile {
+    display: none;
+}
+
+header div#container nav#mobile menu ul li {
+    width: 300px;
+    border: 1px solid #ffffff;
+}
+
+header div#container nav#mobile menu ul li a {
+    display: block;
+    line-height: 2.5em;
+    color: #ffffff;
+}
+
+header div#container nav#mobile menu ul li a:hover {
+    transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(0.9, 0.9);
+    box-shadow: 1px 1px 5px 2px #000000;
+    font-weight: 900;
+}
+
+
+header div#container div#buttonMob {
+    display: none;
+}
+
+header div#container div#buttonMob a#menuHamburguer {
+    border: 3px solid #000000;
+    border-radius: 5px; 
+    padding: 5px 8px;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+header div#container div#buttonMob a#menuHamburguer:hover {
+    transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(244, 67, 54, 1);
+    box-shadow: 1px 1px 5px 2px #000000;
+    font-weight: 900;
+}
+
+/*************************************************************************** nav desktop ***************************************************************************/
+header div#container nav#desk {
+    width: 100%;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin-top: 1em;
+}
+
+header div#container nav#desk menu {
+	width: 100%;
+	margin: 0 auto;
+    height: auto;
+}
+
+header div#container nav#desk menu ul {
+	width: 100%;
+    height: auto;
+	display: inline-flex;
+    justify-content: center;
+}
+
+header div#container nav#desk menu li {
+    width: 20%;
+    height: auto;
+    margin: 0px 15px 0px 15px;
+    font-family: DOS;
+    border-bottom: 3px solid #000000; 
+}
+
+header div#container nav#desk menu ul li a{
+	color: #ffffff;
+    display: block;
+    min-width: 200px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+header div#container nav#desk menu ul li:hover {
+	transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.1, 1.1);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(244, 67, 54, 1);
+    box-shadow: 1px 1px 5px 2px #000000;
+    font-weight: 900;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## MAIN ## --------------------------------------------------------------- */
+
+
+main article {
+    width: 100%;
+    height: auto;
+}
+
+main article section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-bottom: 10px solid #000000; 
+}
+
+
+/*************************************************************************** divs cards(class desktop) ***************************************************************************/
+.card {
+    width: 20%;
+    min-width: 380px;
+    height: auto;
+    min-height: 40em;
+    margin: 10px auto;
+    background-color: rgba(251, 233, 231,1.0);
+    box-shadow: 0px 5px 10px 2px  #000000;
+    border-radius: 5px;
+    border-top-left-radius: 30%;
+    text-align: center;
+}
+
+.card span {
+    width: 100%;
+    line-height: 2em;
+    font-size: 8em;
+    background-color: rgba(244, 67, 54, 1);
+    border-top-left-radius: 30%;
+    
+}
+
+.card h2 {
+    width: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    color: rgba(39, 190, 197, 1);
+    text-transform: uppercase;
+}
+
+.card p {
+    width: 100%;
+    padding: 1px;
+}
+
+.card hr {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.card a{
+    width: 50%;
+    line-height: 4em;
+    margin: 5.5em auto 0em auto;
+    background-color: rgba(39, 190, 197, 1);
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    display: block;
+}
+
+.card a:hover {
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+}
+
+
+/*************************************************************************** divs cards(class mobile) ***************************************************************************/
+div.cardMobile {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+
+div.cardMobile h2 {
+    line-height: 2em;
+    font-size: 2em;
+}
+
+div.cardMobile p {
+    text-align: justify;
+}
+
+div.cardMobile div {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px; 
+}
+
+div.cardMobile div a {
+    line-height: 4em;
+    margin: 0 auto;
+    background-color: rgba(39, 190, 197, 1);
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+div.cardMobile div a:hover {
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.1, 1.1);
+}
+
+/*************************************************************************** class dos triangulos ***************************************************************************/
+div.topright {
+    width: 40%;
+    height: auto;
+    min-height: 100vh;
+    float: right;
+    background-color: rgba(1, 19, 29, 0.9);
+    color: #ffffff;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------ ## SECTIONS ## --------------------------------------------------------------- */
+/*************************************************************************** Section BLOG ***************************************************************************/
+main article section#blog {
+    background-image: url(../image/blog.jpg);
+}
+
+/*************************************************************************** Section Palestras ***************************************************************************/
+main article section#palestras {
+    background-color: rgba(255, 204, 188,1.0);
+    background-image: url(../image/palestras.jpg);
+}
+
+main article section#palestras div#expor {
+    width: 95%;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.mini-card {
+    width: 15%;
+    min-width: 15em;
+    height: 9em;
+    background-color: rgba(251, 233, 231,1.0);
+    box-shadow: 0px 5px 10px 2px  #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mini-card:hover{
+    transition: all;
+    transition-delay: 50ms;
+    transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.mini-card span {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 2em;
+    padding: 5px;
+    background-color: rgba(244, 67, 54, 1);
+    
+}
+
+.mini-card h2 {
+    width: 100%;
+    line-height: 2em;
+    font-size: 1.5em;
+    color: rgba(39, 190, 197, 1);
+    text-transform: uppercase;
+}
+
+.mini-card p {
+    width: 100%;
+    font-size: 12px;
+}
+
+
+/*************************************************************************** Section Sobre ***************************************************************************/
+main article section#sobre {
+    background-color: rgba(255, 255, 255,1.0);
+    background-image: url(../image/aprenda2.jpg);
+    display: inherit;
+}
+
+div.intro-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+.h2-align-right {
+    text-align: center;
+    margin: 15px;
+}
+
+.h2-align-right h2 {
+    font-size: 2em;  
+}
+
+
+div.intro-section p {
+    text-align: justify;
+}
+
+div.intro-section ul {
+    padding: 10px;
+}
+
+div.intro-section div.foto  {
+    margin-top: 3em;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+}
+
+div.intro-section div.foto img {
+    border-radius: 50%;
+}
+
+
+/*************************************************************************** Section Contato ***************************************************************************/
+main article section#contato {
+    background-color: rgba(255, 204, 188,1.0);
+    border-bottom: 1em solid #ffffff;
+}
+
+main article section#contato div#formulario {
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 2px  #000000;
+    text-align: center;
+    font-family: DOS;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(251, 233, 231,1.0);
+}
+
+hr {
+   margin: 5px auto;
+    width: 80%;
+}
+
+.input-format {
+    width: 80%;
+    height: 2em;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: 2px solid #000000;
+    padding-left: 10px;
+}
+
+main article section#contato div#formulario p {
+    font-size: 2em;
+    line-height: 2em;
+}
+
+main article section#contato div#formulario label {
+    font-size: 1.8em;
+    margin: 10px auto;
+}
+
+main article section#contato div#formulario textarea {
+    height: 10em;
+}
+
+main article section#contato div#formulario button {
+    width: 25%;
+    height: 3em;
+    margin: 1em auto 0px auto;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    
+    color: #000000;
+    background-color: rgba(39, 190, 197, 1);
+    border: 2px solid #000000;
+    font-weight: bold;
+   
+}
+
+main article section#contato div#formulario button:hover {
+	transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px #000000;
+}
+
+/* ------------------------------------------------------------ ## FOOTER ##  ------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+    width: 100%;
+    height: 10em;
+    background-color: rgba(244, 67, 54,1.0);
+    padding: 4em;
+}
+
+footer p {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+footer p span {
+    font-size: 3em;
+    margin: 0 12px;
+}
+
+footer p span:hover {
+    transition: all;
+	transition-delay: 100ms;
+	transition-duration: 950ms;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------ ## Scroll ##  ------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px  #000000;
+	background-color: rgba(244, 67, 54, 0.01);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(244, 67, 54, 1.0);
+    border: 3px solid #000000;
+    border-radius: 30px;
+}
