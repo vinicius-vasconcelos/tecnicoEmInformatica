@@ -371,9 +371,9 @@ main article section#palestras div#expor {
 }
 
 .mini-card {
-    width: 15%;
-    min-width: 15em;
-    height: 9em;
+    width: 12%;
+    min-width: 10em;
+    height: 8em;
     background-color: rgba(251, 233, 231,1.0);
     box-shadow: 0px 5px 10px 2px  #000000;
     border-radius: 5px;
@@ -392,7 +392,7 @@ main article section#palestras div#expor {
     width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 5px;
     background-color: rgba(244, 67, 54, 1);
     
@@ -400,15 +400,14 @@ main article section#palestras div#expor {
 
 .mini-card h2 {
     width: 100%;
-    line-height: 2em;
-    font-size: 1.5em;
+    font-size: 1em;
     color: rgba(39, 190, 197, 1);
     text-transform: uppercase;
 }
 
 .mini-card p {
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 
@@ -431,11 +430,12 @@ div.intro-section {
 }
 
 .h2-align-right h2 {
-    font-size: 2em;  
+    font-size: 1.5em;  
 }
 
 
 div.intro-section p {
+    font-size: 14px;
     text-align: justify;
 }
 
@@ -444,13 +444,17 @@ div.intro-section ul {
 }
 
 div.intro-section div.foto  {
-    margin-top: 3em;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
     border-radius: 50%;
     text-align: center;
     display: block;
 }
 
 div.intro-section div.foto img {
+    width: 100%;
     border-radius: 50%;
 }
 

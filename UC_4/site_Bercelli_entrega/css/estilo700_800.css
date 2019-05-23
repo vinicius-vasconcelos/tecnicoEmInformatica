@@ -29,35 +29,47 @@
     }
 
     /*************************************************************************** Section Palestras ***************************************************************************/
-    /*.mini-card {
-        width: 12%;
-        min-width: 10em;
-        height: 10em;
+    .mini-card {
+        min-width: 8em;
+        height: 5em;
     }
-
+    
     .mini-card span {
         font-size: 1em;
         padding: 2px;
     }
     
     .mini-card h2 {
-        line-height: 1.5em;
-        font-size: 1em;
+        font-size: 12px;
     }
-
+    
     .mini-card p {
         font-size: 10px;
-    }*/
-
-    .mini-card {
-        min-width: 10em;
-        height: 20em;
-        font-size: 8px;
     }
 
     /*************************************************************************** Section Sobre ***************************************************************************/
     div.topright {
         width: 50%;
+    }
+
+    div.intro-section {
+        width: 95%;
+        padding-top: 12px;
+    }
+
+    .h2-align-right h2 {
+        font-size: 1.5em;  
+    }
+    
+    
+    div.intro-section p {
+        font-size: 14px;
+    }
+    
+    
+    div.intro-section div.foto  {
+        width: 140px;
+        height: 140px;
     }
 
     /*************************************************************************** Section Contato ***************************************************************************/

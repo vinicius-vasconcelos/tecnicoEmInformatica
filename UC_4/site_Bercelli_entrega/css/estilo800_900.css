@@ -35,8 +35,41 @@
 
     .mini-card {
         min-width: 8em;
-        height: 18em;
-        font-size: 8px;
+        height: 6em;
+    }
+    
+    .mini-card span {
+        font-size: 1.2em;
+        /*padding: 5px;*/
+    }
+    
+    .mini-card h2 {
+        font-size: 12px;
+    }
+    
+    .mini-card p {
+        font-size: 10px;
     }
 
+    /*************************************************************************** Section Sobre ***************************************************************************/
+    
+    div.intro-section {
+        width: 95%;
+        padding-top: 14px;
+    }
+
+    .h2-align-right h2 {
+        font-size: 1.5em;  
+    }
+    
+    
+    div.intro-section p {
+        font-size: 14px;
+    }
+    
+    
+    div.intro-section div.foto  {
+        width: 140px;
+        height: 140px;
+    }
 }
