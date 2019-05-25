@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Qual é o número</title>
+<link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+
+<body>
+	<header>
+		<h1>Qual é o número entre 1 e 10 estou pensando?</h1>
+	</header>
+	<main>
+		<div class="divconteudo"> 
+			<img id="animacao1" src="imagens/parado.jpeg" height="200" width="200">
+
+			<video id="animacao2" width="200" height="200" controls autoplay loop>
+  				<source src="imagens/danca.mp4" type="video/mp4">
+  				<source src="imagens/rindo.mp4" type="video/ogg">
+			</video>
+
+			<video id="animacao3" width="200" height="200" controls autoplay loop>
+  				<source src="imagens/rindo.mp4" type="video/ogg">
+			</video>
+		</div>
+		<div class="divconteudo">
+			<div id="menu-principal">
+				<a href="#" onclick="iniciarJogo()" id="btn-jogar">Jogar</a>
+			</div>
+
+			<div id="principal">
+				<h2 id="h2tentativas"></h2>
+				<form name="form1">
+					<label for="valor">Que número eu pensei?</label><br>
+					<input type="text" name="valor" id="valor">
+					<input type="button" name="tentar" value="Chutar número" onClick="ChutarNumero()">
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<h3 id="mensagem">Tente adivinhar se puder.....</h3>
+	</footer>
+	<script>
+		var tentativas;
+		var gameover;
+		var numeropc;
+		var numerouser;
+
+		resetarJogo();
+
+		function iniciarJogo() {
+			document.getElementById('principal').style.display = 'block';
+			document.getElementById('menu-principal').style.display = 'none';
+		}
+
+		function resetarJogo() {
+			tentativas = 0;
+			gameover = false;
+			numeropc = 0;
+			numerouser = 0;
+
+			document.getElementById('animacao1').style.display = 'block';
+			document.getElementById('animacao2').style.display = 'none';
+			document.getElementById('animacao3').style.display = 'none';
+			document.getElementById('h2tentativas').innerHTML = `Número de tentativas: ${tentativas}`;
+			document.getElementById('principal').style.display = 'none';
+
+			//determinar o número do pc
+			numeropc = Math.floor((Math.random() * 10) + 1);
+		}
+
+		function acertou() {
+			document.getElementById('animacao1').style.display = 'none';
+			document.getElementById('animacao2').style.display = 'block';
+			document.getElementById('animacao3').style.display = 'none';
+			document.getElementById('h2tentativas').innerHTML = `Número de tentativas: ${tentativas}`;
+		}
+
+		function errou() {
+			document.getElementById('animacao1').style.display = 'none';
+			document.getElementById('animacao2').style.display = 'none';
+			document.getElementById('animacao3').style.display = 'block';
+			document.getElementById('h2tentativas').innerHTML = `Número de tentativas: ${tentativas}`;
+		}
+		
+
+		function ChutarNumero() {
+			if(gameover == false) {
+
+				numerouser = parseInt(document.forms['form1'].valor.value);
+				var texto = "";	
+				tentativas++;
+				document.getElementById('h2tentativas').innerHTML = `Número de tentativas: ${tentativas}`;
+
+				if(numeropc == numerouser) {
+					gameover = true;
+					texto = `Parabens!!!!! Você acertou com apenas ${tentativas} tentativas`;
+
+					acertou();
+
+				} else {
+					document.forms['form1'].valor.value = '';
+
+					if(numeropc > numerouser) {
+						texto = 'Chute um número maior';
+					} else {				
+						texto = 'Chute um número menor';	
+					}
+
+					errou();
+				}
+
+				//exibe a resposta no cabeçalho h3
+				document.getElementById("mensagem").innerHTML = texto;
+			} else {
+				document.getElementById("mensagem").innerHTML = 'O jogo já acabou!!!!! Aperte F5 para reiniciar o jogo.';
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Qual é o número</title>
+
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <header>
+            <h1>Adivinhe Se Puder !!!</h1>
+        </header>
+        <main>
+            <form action="#" id="form1">
+                <label for="valor">Que número eu pensei ?</label> <br><br>
+                <input type="text" id="valor" name="valor"> <br><br><br>
+
+                <input type="button" id="tentar" name="tentar" value="Chute" onmouseover="limpaP()" onclick="chutarNumero()"> <br><br>
+            </form>
+
+            <p id="mensagem"></p>
+            <div id="errou" class="img">
+                <img src="./erou.jpg" alt="">
+            </div>
+
+            <div id="acertou" class="img">
+                    <img src="./acertou.jpg" alt="">
+            </div>
+        </main>
+    </body>
+
+    <script>
+        let tentativas = 0;
+        let gameOver = false;
+        let numeroOpc = 0;
+        let numeroUser = 0;
+
+        //determinar o número do pc
+        numeroOpc = Math.floor((Math.random() * 10) + 1);
+        document.getElementById('acertou').style.display = 'none';
+        document.getElementById('errou').style.display = 'none';
+
+        
+        function chutarNumero() {
+            numeroUser = parseInt(document.forms['form1'].valor.value);
+            document.forms['form1'].valor.value = '';
+
+           
+            if(numeroOpc == numeroUser) {
+                gameOver = true;
+                document.getElementById('mensagem').innerHTML = `Parabéns vc é top !!! Foram ${tentativas} tentativas.`;
+                
+                document.getElementById('errou').style.display = 'none';
+                document.getElementById('acertou').style.display = 'block';
+
+                document.forms['form1'].valor.style.display = 'none';
+                document.forms['form1'].tentar.style.display = 'none';
+
+            } else {
+                tentativas++;
+                if(numeroOpc > numeroUser)
+                    document.getElementById('mensagem').innerHTML = `Chute um número MAIOR !!!`;
+                else
+                    document.getElementById('mensagem').innerHTML = `Chute um número MENOR !!!`;
+
+                document.getElementById('acertou').style.display = 'none';
+                document.getElementById('errou').style.display = 'block';
+            }
+        }
+
+
+        function limpaP() {
+            document.getElementById('mensagem').innerHTML = ``;
+            document.getElementById('acertou').style.display = 'none';
+        document.getElementById('errou').style.display = 'none';
+        }
+
+    </script>
+</html>

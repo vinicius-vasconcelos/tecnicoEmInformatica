@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+header{
+	width: 80%;
+	margin: 0 auto;	
+	text-align: center;
+}
+
+header h1 {
+	background-color: #AB6F0C;
+	color: #F9F3F3;
+	border-radius: 10px;
+	padding: 20px;
+}
+main{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #EC9A12;
+	border-radius: 10px;
+}
+
+footer{
+	height: 100px;
+	width: 80%;
+	margin: 0 auto;
+	background-color: #AB6F0C;
+	border-radius: 10px;
+	clear: both;
+}
+
+.divconteudo{
+	float: left;
+}
+
+div#menu-principal a {
+	font-size: 2em;
+	background-color: #AB6F0C;
+	border-radius: 5px;
+	text-decoration: none;
+}
