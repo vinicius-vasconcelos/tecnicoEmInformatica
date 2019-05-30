@@ -33,7 +33,10 @@ CREATE TABLE IF NOT EXISTS materias (
 
 INSERT INTO alunos VALUES (null, 'João', '1998-05-23', '18997601111', '123456'),
 						  (null, 'Maria', '2019-05-22', '18997602222', '654321'),
-                          (null, 'viniGOD', '1996-01-13', '18997601158', '101426');
+                          (null, 'viniGOD', '1996-01-13', '18997601158', '101426'),
+                          (null, 'JoãoGOD', '1998-05-23', '18997603333', '101430'),
+						  (null, 'MariaGOD', '2019-05-22', '18997604444', '101431'),
+                          (null, 'vini', '1996-01-13', '18997605555', '101433');
                           
 INSERT INTO professores VALUES (null, 'Nilo', '1998-05-23', '18997601111', '123456'),
 							   (null, 'Danilo', '2019-05-22', '18997602222', '654321'),
@@ -84,7 +87,15 @@ SELECT * FROM materias RIGHT JOIN alunos
 /*desabilitando todas as chaves estrangeiras para dar o truncate*/
 SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE alunos;
+TRUNCATE TABLE professores;
+TRUNCATE TABLE materias;
 SET FOREIGN_KEY_CHECKS = 1;
+
+SELECT COUNT(*) as qtde FROM alunos;
+SELECT COUNT(*) as qtde FROM materias;
+SELECT COUNT(*) as qtde FROM professores;
+
+SELECT COUNT(DISTINCT(alunos.alu_nome)) as qtde FROM alunos;
 
 
 
