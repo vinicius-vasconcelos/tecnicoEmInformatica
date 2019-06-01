@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impares</title>
+
+    <script>
+        function gerar() {
+            let ini = parseInt(document.forms['form1'].valor1.value);
+            let fim = parseInt(document.forms['form1'].valor2.value);
+            let str = '';
+
+            if(!(ini % 2))
+                ini++;
+
+            while (ini < fim) {
+                if(ini % 2)
+                    str += `${ini}, `;
+                ini += 2 ;
+            }
+
+            document.getElementById('resp').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+
+    <!--Algoritmo para exibir na tela todos os números impares entre um intervalo-->
+
+    <form name="form1" action="">
+        <label for="valor1">Valor inicial: </label>
+        <input type="number" name="valor1" id="valor1"> <br><br>
+        
+        <label for="valor2">Valor final: </label>
+        <input type="number" name="valor2" id="valor2"> <br><br>
+
+        <input type="button" value="Gerar" onclick="gerar()">
+    </form>
+
+    <h1 id="resp"></h1>
+    
+</body>
+</html>

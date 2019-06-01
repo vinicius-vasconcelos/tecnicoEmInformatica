@@ -7,45 +7,47 @@
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="../public/css/css.css">
+
+    <script src="../public/js/calc.js"></script>
 </head>
 <body>
 
     <main>
         <section id="visor">
-
+            <input type="text" id="inp-texto" name="inp-texto">
         </section>
-
+        
         <section id="teclado">
             <!--Linha 1-->
             <div class="linha">
-                <button type="button" id="" name="" value="" class="numeros">7</button>
-                <button type="button" id="" name="" value="" class="numeros">8</button>
-                <button type="button" id="" name="" value="" class="numeros">9</button>
-                <button type="button" id="" name="" value="" >Limpar</button>
+                <button type="button" id="" name="" value="7" class="numeros" onclick="exibir(this.value)">7</button>
+                <button type="button" id="" name="" value="8" class="numeros" onclick="exibir(this.value)">8</button>
+                <button type="button" id="" name="" value="9" class="numeros" onclick="exibir(this.value)">9</button>
+                <button type="button" id="" name="" value=""  onclick="limpar()">C</button>
             </div>
 
             <!--Linha 2-->
             <div class="linha">
-                <button type="button" id="" name="" value="" class="numeros">6</button>
-                <button type="button" id="" name="" value="" class="numeros">5</button>
-                <button type="button" id="" name="" value="" class="numeros">4</button>
-                <button type="button" id="" name="" value="" >/</button>
+                <button type="button" id="" name="" value="6" class="numeros" onclick="exibir(this.value)">6</button>
+                <button type="button" id="" name="" value="5" class="numeros" onclick="exibir(this.value)">5</button>
+                <button type="button" id="" name="" value="4" class="numeros" onclick="exibir(this.value)">4</button>
+                <button type="button" id="" name="" value="/" onclick="exibir(this.value)">/</button>
             </div>
 
             <!--Linha 3-->
             <div class="linha">
-                <button type="button" id="" name="" value="" class="numeros">3</button>
-                <button type="button" id="" name="" value="" class="numeros">2</button>
-                <button type="button" id="" name="" value="" class="numeros">1</button>
-                <button type="button" id="" name="" value="" >*</button>
+                <button type="button" id="" name="" value="3" class="numeros" onclick="exibir(this.value)">3</button>
+                <button type="button" id="" name="" value="2" class="numeros" onclick="exibir(this.value)">2</button>
+                <button type="button" id="" name="" value="1" class="numeros" onclick="exibir(this.value)">1</button>
+                <button type="button" id="" name="" value="*"  onclick="exibir(this.value)">*</button>
             </div>
 
             <!--Linha 4-->
             <div class="linha">
-                <button type="button" id="" name="" value="" >+</button>
-                <button type="button" id="" name="" value="" >-</button>
-                <button type="button" id="" name="" value="" class="numeros">0</button>
-                <button type="button" id="" name="" value="" >=</button>
+                <button type="button" id="" name="" value="+"  onclick="exibir(this.value)">+</button>
+                <button type="button" id="" name="" value="-"  onclick="exibir(this.value)">-</button>
+                <button type="button" id="" name="" value="0" class="numeros" onclick="exibir(this.value)">0</button>
+                <button type="button" id="" name="" value=""  onclick="result()">=</button>
             </div>
             
         </section>

@@ -16,6 +16,7 @@ main {
     height: 60vh;
     margin: 15vh auto 0 auto;
     background-color: #808e9b;
+    border: 1px solid #ffffff;
     background-image: linear-gradient(to bottom, #1e272e, #d2dae2);
 }
 
@@ -24,6 +25,14 @@ main section#visor {
     height: 5em;
     margin: 4px auto;
     background-color: #d2dae2;
+}
+
+main section#visor input {
+    width: 100%;
+    height:auto;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4em;
 }
 
 main section#teclado {
@@ -41,15 +50,23 @@ main section#teclado div.linha {
 
 button {
     width: 24%;
-    min-height: 6em;
-    max-height: 6em;
+    height: auto;
     border: none;
     border-radius: 3px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1em;
+    font-size: 3em;
+    line-height: 2em;
     font-weight: bold;
+    outline: none;
 }
 
 button.numeros {
     background-image: linear-gradient(to bottom right, #274046, #E6DADA);
+}
+
+button:hover {
+    background-image: none;
+    background-color: #808e9b;
+    cursor: pointer;
+    outline: none;
 }
