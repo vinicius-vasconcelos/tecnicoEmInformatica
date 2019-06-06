@@ -48,15 +48,17 @@ INSERT INTO vendas VALUES (null, 1, 1),
                           (null, 3, 2),
                           (null, 4, 1);
 
+/*SELECT @@event_scheduler;*/
+use atacadao;
 
-    create view nilo as
-   
-    
-    SELECT * FROM produtos inner JOIN vendas inner JOIN compradores
-		ON produtos.produto_pro_codigo = vendas.pro_codigo AND compradores.compra_com_codigo = vendas.com_codigo;
-        
 
-        
+create view rel as
+    SELECT pro_descricao, pro_valor,  pro_quantidade, com_nome, com_telefone
+		FROM vendas Inner JOIN produtos Inner JOIN compradores
+			ON vendas.pro_codigo = produtos.pro_codigo and vendas.com_codigo = compradores.com_codigo;
+
+	
+
 SELECT * FROM rel;
     
     

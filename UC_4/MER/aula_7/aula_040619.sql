@@ -34,7 +34,7 @@ select * from mysql;
 select @@event_scheduler;
 set global event_scheduler = ON;
 set @@GLOBAL.event_scheduler = ON;
-set global event_scheduler = 1;
+set global event_scheduler = 0;
 set @@GLOBAL.event_scheduler = 1;
 
 select * from alunos;
