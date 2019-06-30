@@ -1,3 +1,3 @@
-#Técnico em Informática para Internet no Senac de Presidente Prudente
+#tecnicoInformaticaSenac
 Conteúdos do curso de técnico em informática
 <small><p><em>Conteúdos do curso (Apenas de armazenamento, sem descrições ou separação)</em></p></small>
