@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	list-style: none;
+	text-decoration: none;
+	border:0px;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	background-color:#f1f5f9;
+	font-family:Tahoma;
+	font-size: 16px;
+	background-image: url("../image/backgroundOne.jpg");
+	background-attachment: fixed;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+header{
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 3px;
+	display: inline-flex;
+	justify-content:space-between;
+	
+}
+nav{
+	width: 80%;
+	margin: 0 auto 10px auto;
+	padding: 10px;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav a + a {
+	margin-left: 15px 
+}
+main{
+	width: auto;
+	margin-bottom: 10px;
+	padding: 3px;
+	border-bottom: 1px solid #999999;
+}
+footer{
+	width: auto;
+	margin-bottom: 10px;
+	padding: 3px;
+	border-bottom: 1px solid #999999;
+}
+#alfabeto{
+	background-color: #B3C6C2;
+}
+#alfabeto ul{
+	padding: 5px;
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#alfabeto ul li {
+	margin: 2px;
+	padding: 2px;
+	width: 5%;
+	border: 1px solid #888888;
+	border-radius: 5px; 
+}
+
+#alfabeto ul li a {
+	display: block;
+	text-align: center;
+}
+
+#alfabeto ul li a:hover {
+	transition: all .1s ease;
+	opacity: 0.5;
+}
+
+.dados-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	flex-wrap: wrap;
+}
+
+.list-item {
+	border: 1px solid #888888;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 5px;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .2);
+	background-color: #fff; 
+	flex: 0 1 250px;
+	text-align: center;
+	font-style: italic;
+}
+
+.list-item .listNome {
+	font-weight: bold;
+}
+
+.list-item .del {
+	width: 100%;
+}
+
+.list-item .del button {
+	width: 50%;
+	margin: 20px auto 0 auto;
+	font-size: 16px;
+	line-height: 2em;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .1);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.list-item .del button:hover {
+	transition: all 1s ease;
+	opacity: 0.5;
+}
