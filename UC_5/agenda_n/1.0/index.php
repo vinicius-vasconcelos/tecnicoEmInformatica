@@ -99,7 +99,12 @@
 								<div class="listNome"><?= $row['nome']?></div>
 								<div class="listTel"><?= $row['tel']?></div>
 								<div class="listEmail"><?= $row['email']?></div>
-								<div class="del"><button onclick="excluir('<?= $row['idcontatos']?>')">Excluir</button></div>
+								<div class="del">
+									<button 
+										onclick="excluir('<?= $row['idcontatos']?>', '<?= $row['nome']?>')">
+											Excluir
+									</button>
+								</div>
 							</div>
 						<?php }?>
 					</div>
