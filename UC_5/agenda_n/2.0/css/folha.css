@@ -66,6 +66,93 @@ footer{
 	text-align: center;
 	margin: 2px;
 	padding: 2px;
-	width: 6%;
+	width: 5%;
 	border: 1px solid #888888;
+	border-radius: 5px;
+	
+}
+#alfabeto ul li a{
+	color: #000;
+	display: block;
+}
+
+#alfabeto ul li a:hover {
+	transition: all .1s ease;
+	opacity: .5;
+}
+
+.list {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+
+.list-item {
+	flex: 0 1 300px;
+	border: 1px solid #888888;
+	background-color: #fff;
+	margin: 15px;
+	padding: 5px;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .2)
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	
+}
+
+.buttons div {
+	width: 30%;
+	margin: 2px;
+
+}
+
+.buttons div a {
+	display: block;
+	border: 1px solid #888888;
+	padding: 5px;
+	color: #000;
+	border-radius: 5px;
+}
+
+.buttons div a:hover {
+	transition: all .1s ease;
+	opacity: .5;
+}
+
+#newCad {
+	width: 50%;
+	border: 1px solid #888888;
+	background-color: rgba(0, 0, 0, .2);
+	padding: 5px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 15px auto;
+}
+
+#newCad form input, select {
+	width: 30%;
+	height: 2em;
+	display: block;
+	margin:5px auto;
+	border: 1px solid #888888;
+	padding: 5px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+input #btCad {
+	width: 80%;
+	height: 3em;
 }
