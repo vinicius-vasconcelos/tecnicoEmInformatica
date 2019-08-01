@@ -17,6 +17,13 @@
 			$flag = mysqli_num_rows($result);
 		}
 	}
+
+
+	if(isset($_GET['letter'])) {
+		$sql = "SELECT * FROM contatos WHERE nome LIKE '" . $_GET['letter'] . "%' OR nome LIKE upper('" . $_GET['letter'] . "%')";
+		$result = $banco->query($sql);
+		$flag = mysqli_num_rows($result);
+	}
 ?>
 
 <!doctype html>
@@ -59,32 +66,32 @@
 				<section id="menuAlfabeto">
 					<div id="alfabeto">
 						<ul>
-							<li><a href="#">A</a></li>
-							<li><a href="#">B</a></li>
-							<li><a href="#">C</a></li>
-							<li><a href="#">D</a></li>
-							<li><a href="#">E</a></li>
-							<li><a href="#">F</a></li>
-							<li><a href="#">G</a></li>
-							<li><a href="#">H</a></li>
-							<li><a href="#">I</a></li>
-							<li><a href="#">J</a></li>
-							<li><a href="#">K</a></li>
-							<li><a href="#">L</a></li>
-							<li><a href="#">M</a></li>
-							<li><a href="#">N</a></li>
-							<li><a href="#">O</a></li>
-							<li><a href="#">P</a></li>
-							<li><a href="#">Q</a></li>
-							<li><a href="#">R</a></li>
-							<li><a href="#">S</a></li>
-							<li><a href="#">T</a></li>
-							<li><a href="#">U</a></li>
-							<li><a href="#">V</a></li>
-							<li><a href="#">W</a></li>
-							<li><a href="#">X</a></li>
-							<li><a href="#">Y</a></li>
-							<li><a href="#">Z</a></li>
+							<li><a href="index.php?letter=a">A</a></li>
+							<li><a href="index.php?letter=b">B</a></li>
+							<li><a href="index.php?letter=c">C</a></li>
+							<li><a href="index.php?letter=d">D</a></li>
+							<li><a href="index.php?letter=e">E</a></li>
+							<li><a href="index.php?letter=f">F</a></li>
+							<li><a href="index.php?letter=g">G</a></li>
+							<li><a href="index.php?letter=h">H</a></li>
+							<li><a href="index.php?letter=i">I</a></li>
+							<li><a href="index.php?letter=j">J</a></li>
+							<li><a href="index.php?letter=k">K</a></li>
+							<li><a href="index.php?letter=l">L</a></li>
+							<li><a href="index.php?letter=m">M</a></li>
+							<li><a href="index.php?letter=n">N</a></li>
+							<li><a href="index.php?letter=o">O</a></li>
+							<li><a href="index.php?letter=p">P</a></li>
+							<li><a href="index.php?letter=q">Q</a></li>
+							<li><a href="index.php?letter=r">R</a></li>
+							<li><a href="index.php?letter=s">S</a></li>
+							<li><a href="index.php?letter=t">T</a></li>
+							<li><a href="index.php?letter=u">U</a></li>
+							<li><a href="index.php?letter=v">V</a></li>
+							<li><a href="index.php?letter=w">W</a></li>
+							<li><a href="index.php?letter=x">X</a></li>
+							<li><a href="index.php?letter=y">Y</a></li>
+							<li><a href="index.php?letter=z">Z</a></li>
 						
 						</ul>
 					</div>
