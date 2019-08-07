@@ -156,3 +156,17 @@ input #btCad {
 	width: 80%;
 	height: 3em;
 }
+
+div.error {
+	width: 100%;
+	padding: 15px;
+	background-color: #dc3545;
+	color: #fff;
+}
+
+div.sucesso {
+	width: 100%;
+	padding: 15px;
+	background-color: #28a745;
+	color: #fff;
+}

@@ -1,7 +1,20 @@
 <?php
 	require_once('include/connectaBD.php');
 
-	$result = $banco->query("SELECT * FROM contatos");
+	$result = $banco->query("SELECT * FROM contatos ORDER BY nome ");
+
+	if(isset($_GET['btLetra'])) 
+		$result = $banco->query("SELECT * FROM contatos WHERE nome LIKE '" . $_GET['btLetra'] . "%' OR nome LIKE upper('" . $_GET['btLetra'] . "%') order by idcontatos desc");
+
+	
+	if(isset($_GET['btSearch'])) 
+		if($_GET['txtBusca'] == '') 
+			$result = $banco->query("SELECT * FROM contatos ORDER BY nome");
+		else 
+			$result = $banco->query("SELECT * FROM contatos WHERE nome LIKE '%" . $_GET['txtBusca'] . "%' OR nome LIKE upper('%" . $_GET['txtBusca'] . "%')");
+
+	//if(isset($_GET['star']))
+		//fazer o star
 ?>
 
 <!doctype html>
@@ -25,33 +38,33 @@
 				<section id="menuAlfabeto">
 					<div id="alfabeto">
 						<ul>
-							<li><a href="#">A</a></li>
-							<li><a href="#">B</a></li>
-							<li><a href="#">C</a></li>
-							<li><a href="#">D</a></li>
-							<li><a href="#">E</a></li>
-							<li><a href="#">F</a></li>
-							<li><a href="#">G</a></li>
-							<li><a href="#">H</a></li>
-							<li><a href="#">I</a></li>
-							<li><a href="#">J</a></li>
-							<li><a href="#">K</a></li>
-							<li><a href="#">L</a></li>
-							<li><a href="#">M</a></li>
-							<li><a href="#">N</a></li>
-							<li><a href="#">O</a></li>
-							<li><a href="#">P</a></li>
-							<li><a href="#">Q</a></li>
-							<li><a href="#">R</a></li>
-							<li><a href="#">S</a></li>
-							<li><a href="#">T</a></li>
-							<li><a href="#">U</a></li>
-							<li><a href="#">V</a></li>
-							<li><a href="#">W</a></li>
-							<li><a href="#">X</a></li>
-							<li><a href="#">Y</a></li>
-							<li><a href="#">Z</a></li>
-							<li><a href="#">Favoritos</a></li>
+							<li><a href="index.php?btLetra=a">A</a></li>
+							<li><a href="index.php?btLetra=b">B</a></li>
+							<li><a href="index.php?btLetra=c">C</a></li>
+							<li><a href="index.php?btLetra=d">D</a></li>
+							<li><a href="index.php?btLetra=e">E</a></li>
+							<li><a href="index.php?btLetra=f">F</a></li>
+							<li><a href="index.php?btLetra=g">G</a></li>
+							<li><a href="index.php?btLetra=h">H</a></li>
+							<li><a href="index.php?btLetra=i">I</a></li>
+							<li><a href="index.php?btLetra=j">J</a></li>
+							<li><a href="index.php?btLetra=k">K</a></li>
+							<li><a href="index.php?btLetra=l">L</a></li>
+							<li><a href="index.php?btLetra=m">M</a></li>
+							<li><a href="index.php?btLetra=n">N</a></li>
+							<li><a href="index.php?btLetra=o">O</a></li>
+							<li><a href="index.php?btLetra=p">P</a></li>
+							<li><a href="index.php?btLetra=q">Q</a></li>
+							<li><a href="index.php?btLetra=r">R</a></li>
+							<li><a href="index.php?btLetra=s">S</a></li>
+							<li><a href="index.php?btLetra=t">T</a></li>
+							<li><a href="index.php?btLetra=u">U</a></li>
+							<li><a href="index.php?btLetra=v">V</a></li>
+							<li><a href="index.php?btLetra=w">W</a></li>
+							<li><a href="index.php?btLetra=x">X</a></li>
+							<li><a href="index.php?btLetra=y">Y</a></li>
+							<li><a href="index.php?btLetra=z">Z</a></li>
+							<li><a href="">Favoritos</a></li>
 						</ul>
 					</div>
 				</section>
@@ -68,11 +81,14 @@
 								<div class="listEmail"><?= $row['email']?></div>
 								
 								<div class="buttons">
-									<div class="star"><a href="favoritar.php">Favoritar</a></div>
-									<div class="up"><a href="contatoUp.php">Editar</a></div>
+									<div class="star"><a href="favoritar.php?star<?= $row['idcontatos']?>">Favoritar</a></div>
+									<div class="up"><a href="contatoUp.php?nome=<?= $row['nome']?>&tel=<?= $row['tel']?>&email=<?= $row['email']?>">Editar</a></div>
 									<div class="del"><a href="contatoDel.php?id=<?= $row['idcontatos']?>">Excluir</a></div>
 								</div>
 							</div>
+						<?php }?>
+						<?php if(isset($_GET['btLetra']) && mysqli_num_rows($result) == 0) {?>
+							<h2>Não há pessoas que iniciam com a letra '<?= $_GET['btLetra']?>'</h2>
 						<?php }?>
 					</div>
 
