@@ -4,7 +4,7 @@
 	$result = $banco->query("SELECT * FROM contatos ORDER BY nome ");
 
 	if(isset($_GET['btLetra'])) 
-		$result = $banco->query("SELECT * FROM contatos WHERE nome LIKE '" . $_GET['btLetra'] . "%' OR nome LIKE upper('" . $_GET['btLetra'] . "%') order by idcontatos desc");
+		$result = $banco->query("SELECT * FROM contatos WHERE nome LIKE '" . $_GET['btLetra'] . "%' OR nome LIKE upper('" . $_GET['btLetra'] . "%')");
 
 	
 	if(isset($_GET['btSearch'])) 
@@ -13,20 +13,29 @@
 		else 
 			$result = $banco->query("SELECT * FROM contatos WHERE nome LIKE '%" . $_GET['txtBusca'] . "%' OR nome LIKE upper('%" . $_GET['txtBusca'] . "%')");
 
-	//if(isset($_GET['star']))
-		//fazer o star
+	if(isset($_GET['btFavoritos']))
+		$result = $banco->query("SELECT * FROM contatos WHERE favoritos = '1'");
+
+
+	if(isset($_GET['sucesso']) || isset($_GET['error']))
+		header("refresh:2; index.php");
 ?>
 
 <!doctype html>
 <html lang="pt-br">
 	<head>
-	<meta charset="utf-8">
-	<title>PokeAgenda2.0 - AnDaNilo</title>
-	<link rel="stylesheet" href="css/folha.css" type="text/css">
-	<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
-	<meta name="keywords" content="PokeAgenda">
-	<meta name="autor" content="seu nome aqui">
-	<meta name="description" content="Agenda de contatos e possíveis clientes">
+		<meta charset="utf-8">
+		<title>PokeAgenda2.0 - AnDaNilo</title>
+		<link rel="stylesheet" href="css/folha.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+		<meta name="keywords" content="PokeAgenda">
+		<meta name="autor" content="seu nome aqui">
+		<meta name="description" content="Agenda de contatos e possíveis clientes">
+
+		<link 
+			rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+			crossorigin="anonymous">
 	</head>
 	<body>
 		<?php include('include/inc_topo.php');?>
@@ -34,7 +43,6 @@
 
 		<main>
 			<article>
-				<h1>Agenda de clientes/contato</h1>
 				<section id="menuAlfabeto">
 					<div id="alfabeto">
 						<ul>
@@ -64,14 +72,26 @@
 							<li><a href="index.php?btLetra=x">X</a></li>
 							<li><a href="index.php?btLetra=y">Y</a></li>
 							<li><a href="index.php?btLetra=z">Z</a></li>
-							<li><a href="">Favoritos</a></li>
+							<li><a href="index.php?btFavoritos=true"><i class="far fa-star"></i></a></li>
 						</ul>
 					</div>
 				</section>
 				
+				<h3><a href="contatoAdd.php">Cadastrar Contato</a></h3>
 				<section id="listar">
 					<h2>Listando todos os Contatos</h2>
-					<h3><a href="contatoAdd.php">Cadastrar Contato</a></h3>
+
+					<?php if(isset($_GET['error'])) {?>
+						<div class="error">
+							<p><?= $_GET['error']?></p>
+						</div>
+					<?php }?>
+
+					<?php if(isset($_GET['sucesso'])) {?>
+						<div class="sucesso">
+							<p><?= $_GET['sucesso']?></p>
+						</div>
+					<?php }?>
 
 					<div class="list">
 						<?php while($row = mysqli_fetch_array($result)) {?>
@@ -81,9 +101,23 @@
 								<div class="listEmail"><?= $row['email']?></div>
 								
 								<div class="buttons">
-									<div class="star"><a href="favoritar.php?star<?= $row['idcontatos']?>">Favoritar</a></div>
-									<div class="up"><a href="contatoUp.php?nome=<?= $row['nome']?>&tel=<?= $row['tel']?>&email=<?= $row['email']?>">Editar</a></div>
-									<div class="del"><a href="contatoDel.php?id=<?= $row['idcontatos']?>">Excluir</a></div>
+
+									<?php if((int)$row['favoritos']) {?>
+										<div class="star"><a href="favoritar.php?star=<?= $row['idcontatos']?>&op=0"><i class="far fa-thumbs-up"></i></a></div>
+									<?php } else { ?>
+										<div class="no-star"><a href="favoritar.php?star=<?= $row['idcontatos']?>&op=1"><i class="far fa-thumbs-down"></i></a></div>
+									<?php }?>
+
+									<div class="up">
+										<a href="contatoUp.php?id=<?= $row['idcontatos']?>&nome=<?= $row['nome']?>&tel=<?= $row['tel']?>&email=<?= $row['email']?>&user=<?= $row['users_idusers']?>">
+										<i class="fas fa-user-edit"></i>
+									</a>
+									</div>
+									<div class="del">
+										<a href="contatoDel.php?id=<?= $row['idcontatos']?>">
+										<i class="fas fa-user-times"></i>
+										</a>
+									</div>
 								</div>
 							</div>
 						<?php }?>

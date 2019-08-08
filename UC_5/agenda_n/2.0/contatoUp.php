@@ -1,6 +1,26 @@
 <?php
 	require_once('include/connectaBD.php');
 	$result = $banco->query("SELECT * FROM users");
+	$userSel = $_GET['user'];
+
+	if(isset($_POST['btCad'])) {
+		$id = $_POST['codigo'];
+		$nome = $_POST['txtNome'];
+		$telefone = $_POST['txtTelefone'];
+		$email = $_POST['txtEmail'];
+		$idUser = $_POST['selUser'];
+
+		$execute = "UPDATE contatos SET nome = '$nome', tel = '$telefone', email = '$email', favoritos = '0', users_idusers = $idUser WHERE idcontatos = $id";
+
+		if(mysqli_query($banco, $execute)) {
+			$msg = "Contato alterado com sucesso !!!";
+			header("location: index.php?sucesso=" . $msg);
+		}
+		else {
+			$msg = "Problemas ao alterar funcinário, tente mais tarde !";
+			header("location: index.php?error=" . $msg);
+		}
+	}
 ?>
 
 <!doctype html>
@@ -40,12 +60,17 @@
 					<h2>Alterando cadastro</h2>
 					<div id="newCad">
 						<form action="#" method="post" name="formCad" id="formCad">
+							<input type="hidden" name="codigo" id="codigo" value="<?= $_GET['id']?>" readonly>
 							<input type="text" name="txtNome" id="txtNome" placeholder="Nome" value="<?= $_GET['nome']?>">
 							<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone" value="<?= $_GET['tel']?>">
-							<input type="text" name="txtEmail" id="txtEMail" placeholder="E-Mail" value="<?= $_GET['email']?>">
+							<input type="text" name="txtEmail" id="txtEmail" placeholder="E-Mail" value="<?= $_GET['email']?>">
 							<select name="selUser" id="selUser">
 								<?php while($row = mysqli_fetch_array($result)) {?>
-									<option value="<?= $row['idusers']?>"><?= $row['nome']?></option>
+									<?php if($userSel == $row['idusers']) {?>
+										<option selected value="<?= $row['idusers']?>"><?= $row['nome']?></option>
+									<?php } else {?>
+										<option value="<?= $row['idusers']?>"><?= $row['nome']?></option>
+									<?php }?>
 								<?php }?>
 							</select>
 							<input type="hidden" name="keyContato" id="keyContato">
