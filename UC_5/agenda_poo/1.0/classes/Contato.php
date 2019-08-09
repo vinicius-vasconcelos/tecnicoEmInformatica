@@ -1,18 +1,28 @@
 <?php
-    require_once("ClasseBase.php");
-
-    class Contato extends ClasseBase {
+    class Contato  {
+        private $id;
+        private $nome;
         private $telefone;
         private $email;
 
-        function __construct($id = 0, $nome = "", $telefone = "", $email = "") {
-            parent::__construct($id, $nome);
-            $this->setNome($telefone);
+        function __construct($nome, $telefone, $email, $id = 0) {
+
+            $this->setNome($nome);
+            $this->setTelefone($telefone);
             $this->setEmail($email);
+            $this->setId($id);
+        }
+
+        public function getId() {
+            return $this->id;
+        }
+
+        public function setId($id) {
+            $this->id = $id;
         }
 
         public function getNome() {
-            return $this->$nome;
+            return $this->nome;
         }
 
         public function setNome($nome) {
@@ -24,7 +34,7 @@
         }
 
         public function setTelefone($telefone) {
-            $this->telefone;
+            $this->telefone = $telefone;
         }
 
         public function getEmail() {
@@ -32,7 +42,7 @@
         }
 
         public function setEmail($email) {
-            $this->email;
+            $this->email = $email;
         }
     }
 ?>

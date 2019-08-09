@@ -28,11 +28,11 @@
 				<h2>Novo cadastro</h2>
 				
 				<div id="newCad">
-				<form action="#" method="post" name="formCad" id="formCad">
-					<input type="text" name="txtNome" id="txtNome" placeholder="Nome">
-					<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone">
-					<input type="text" name="txtEmail" id="txtEMail" placeholder="E-Mail">
-					<input type="submit" name="btCad" id="btCad" value="Cadastrar">
+					<form action="classes/ctrContato.php" method="post" name="formCad" id="formCad">
+						<input type="text" name="txtNome" id="txtNome" placeholder="Nome">
+						<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone">
+						<input type="text" name="txtEmail" id="txtEmail" placeholder="E-Mail">
+						<input type="submit" name="btCad" id="btCad" value="Cadastrar">
 					</form>
 				</div>
 				

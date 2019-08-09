@@ -8,6 +8,11 @@
 	<meta name="keywords" content="PokeAgenda">
 	<meta name="autor" content="seu nome aqui">
 	<meta name="description" content="Agenda de contatos e possíveis clientes">
+	<link 
+		rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+		crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -60,11 +65,12 @@
 				<h2>Listando todos os Contatos</h2>
 				
 				<div class="list">
-					<div class="listNome">Nome:</div>
-					<div class="listTel">Telefone:</div>
-					<div class="listEmail">Email:</div>
-					
-        <div class="del"><a href="contatoDel.php">Excluir</a></div>
+					<div class="list-item">
+						<div class="listNome">Nome:</div>
+						<div class="listTel">Telefone:</div>
+						<div class="listEmail">Email:</div>
+						<div class="del"><a href="contatoDel.php">Excluir</a></div>
+					</div>
 				</div>
 				
 			</section>
