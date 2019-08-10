@@ -13,23 +13,51 @@
             $telefone = $contato->getTelefone();
             $email = $contato->getEmail();
 
-            $this->conexao->getBanco()->query("INSERT INTO contatos VALUES(null, '$nome', '$telefone', '$email')");
+            $this
+                ->conexao
+                ->getBanco()
+                ->query("INSERT INTO contatos VALUES(null, '$nome', '$telefone', '$email')");
         }
 
         public function update($contato) {
-            $sql = "";
+            $id = $contato->getId();
+            $nome = $contato->getNome();
+            $telefone = $contato->getTelefone();
+            $email = $contato->getEmail();
+
+            $this
+                ->conexao
+                ->getBanco()
+                ->query("UPDATE contatos set nome = '$nome', tel = '$telefone', email = '$email' WHERE idcontatos = $id");
         }
 
-        public function delete($contato) {
-            $sql = "";
+        public function delete($id) {
+            $this
+            ->conexao
+            ->getBanco()
+            ->query("DELETE FROM contatos WHERE idcontatos = $id");
         }
 
         public function getContatos() {
-            $sql = "";
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM contatos");
         }
 
         public function getContato($id) {
-            $sql = "";
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM contatos WHERE idcontatos = $id");
         }
+
+        public function buscarNome($str) {
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM contatos WHERE nome LIKE '%$str%'");
+        }
+        
     }
 ?>

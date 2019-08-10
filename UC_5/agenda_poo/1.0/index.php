@@ -1,3 +1,9 @@
+<?php
+	if(isset($_GET['error']) || isset($_GET['sucesso'])) {
+		header("refresh:2;url=index.php");
+	}
+?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -18,7 +24,9 @@
 	<header>
 		<div id="logo"><img src="image/logoTwo.png" alt="Logo PokeAgenda"></div>
 		<div id="search">
-			<form action="#" method="get" name="formBusca" id="formBusca"><input type="text" name="txtBusca" id="txtBusca" placeholder="Digite parte de um nome"><input type="submit" name="btSerach" id="btSearch" value="Buscar">
+			<form action="#" method="get" name="formBusca" id="formBusca">
+				<input type="text" name="txtBusca" id="txtBusca" placeholder="Digite parte de um nome">
+				<input type="button" name="btSearch" id="btSearch" value="Buscar">
 			</form>
 		</div>
 	</header>
@@ -63,19 +71,55 @@
 			</section>
 			<section id="listar">
 				<h2>Listando todos os Contatos</h2>
+
+				<?php if(isset($_GET['error'])) {?>
+					<div class="error">
+						<p><?= $_GET['error']?></p>
+					</div>
+				<?php }?>
+
+				<?php if(isset($_GET['sucesso'])) {?>
+					<div class="sucesso">
+						<p><?= $_GET['sucesso']?></p>
+					</div>
+				<?php }?>
 				
 				<div class="list">
-					<div class="list-item">
-						<div class="listNome">Nome:</div>
-						<div class="listTel">Telefone:</div>
-						<div class="listEmail">Email:</div>
-						<div class="del"><a href="contatoDel.php">Excluir</a></div>
-					</div>
 				</div>
 				
 			</section>
 		</article>
 	</main>
 	<footer>Desenvolvido por seres supremos &reg; &copy;</footer>
+
+	<script
+  		src="https://code.jquery.com/jquery-3.4.1.min.js"
+  		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+	<script>
+		$(document).ready(() => {
+			$.ajax({
+				type: "GET",
+				url: "classes/ctrContato.php?op=gets",
+				success: respText => {
+					$('div.list').html('');
+					$('div.list').append(respText);
+				} 
+			});
+
+			$('#btSearch').click((e) => { 
+				e.preventDefault();
+				$.ajax({
+					type: "GET",
+					url: `classes/ctrContato.php?op=buscarNome&str=${$('#txtBusca').val()}`,
+					success: respText => {
+						$('div.list').html('');
+						$('div.list').append(respText);
+					} 
+				});
+			});
+		});
+	</script>
 </body>
 </html>

@@ -217,8 +217,16 @@ div.sucesso p {
 	background-color: #007bff;
 }
 
-.del a {
+div.del a i {
+	margin: 15px;
+	padding: 15px !important;
 	background-color: #dc3545;
+	color: #fff;
+}
+
+div.del a:hover {
+	transition: all 1s ease;
+	opacity: .5;
 }
 
 .no-star a {

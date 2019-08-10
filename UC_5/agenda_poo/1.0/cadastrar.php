@@ -28,7 +28,7 @@
 				<h2>Novo cadastro</h2>
 				
 				<div id="newCad">
-					<form action="classes/ctrContato.php" method="post" name="formCad" id="formCad">
+					<form action="classes/ctrContato.php?op=insert" method="post" name="formCad" id="formCad">
 						<input type="text" name="txtNome" id="txtNome" placeholder="Nome">
 						<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone">
 						<input type="text" name="txtEmail" id="txtEmail" placeholder="E-Mail">
