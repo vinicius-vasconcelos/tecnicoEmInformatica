@@ -80,3 +80,29 @@ input{
 	display: block;
 	margin: 2px;
 }
+
+div.error {
+	width: 100%;
+	margin-top: 30px; 
+	padding: 15px;
+	background-color: #dc3545;
+	color: #fff;
+	text-align: center;
+}
+
+div.error p {
+	font-size: 18px;
+}
+
+div.sucesso {
+	width: 100%;
+	margin-top: 30px; 
+	padding: 15px;
+	background-color: #28a745;
+	color: #fff;
+	text-align: center;
+}
+
+div.sucesso p {
+	font-size: 18px;
+}
