@@ -42,6 +42,8 @@
   			crossorigin="anonymous">
 		</script>
 
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,700&display=swap" rel="stylesheet">
+
 		<script src="./js/indexAjax.js"></script>
 	</head>
 	<body>

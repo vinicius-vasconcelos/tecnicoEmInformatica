@@ -36,6 +36,7 @@
 			rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 			crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<?php include('include/inc_topo.php');?>
@@ -109,7 +110,7 @@
 									<?php }?>
 
 									<div class="up">
-										<a href="contatoUp.php?id=<?= $row['idcontatos']?>&nome=<?= $row['nome']?>&tel=<?= $row['tel']?>&email=<?= $row['email']?>&user=<?= $row['users_idusers']?>">
+										<a href="contatoUp.php?id=<?= $row['idcontatos']?>&nome=<?= $row['nome']?>&tel=<?= $row['tel']?>&email=<?= $row['email']?>&user=<?= $row['users_idusers']?>&star=<?= $row['favoritos']?>">
 										<i class="fas fa-user-edit"></i>
 									</a>
 									</div>

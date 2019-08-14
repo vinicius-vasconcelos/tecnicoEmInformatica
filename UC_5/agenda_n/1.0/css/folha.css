@@ -8,15 +8,20 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+a {
+	color: #FFF;
+	font-weight: bold;
+}
 body{
 	background-color:#f1f5f9;
-	font-family:Tahoma;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 16px;
-	background-image: url("../image/backgroundOne.jpg");
+	background-color: #ee5253;
+	/*background-image: url("../image/backgroundOne.jpg");
 	background-attachment: fixed;
 	background-position: bottom right;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
 }
 header{
 	width: 100%;
@@ -24,7 +29,6 @@ header{
 	padding: 3px;
 	display: inline-flex;
 	justify-content:space-between;
-	
 }
 nav{
 	width: 80%;
@@ -43,16 +47,17 @@ main{
 	width: auto;
 	margin-bottom: 10px;
 	padding: 3px;
-	border-bottom: 1px solid #999999;
 }
 footer{
+	position: fixed;
+	bottom: 0;
 	width: auto;
 	margin-bottom: 10px;
 	padding: 3px;
 	border-bottom: 1px solid #999999;
 }
 #alfabeto{
-	background-color: #B3C6C2;
+	background-color: rgba(255, 107, 107, .5);
 }
 #alfabeto ul{
 	padding: 5px;
@@ -96,6 +101,7 @@ footer{
 	flex: 0 1 250px;
 	text-align: center;
 	font-style: italic;
+	background-color: rgba(255, 107, 107, .5);
 }
 
 .list-item .listNome {
@@ -114,9 +120,20 @@ footer{
 	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .1);
 	font-weight: bold;
 	cursor: pointer;
+	background-color: #dc3545;
 }
 
 .list-item .del button:hover {
 	transition: all 1s ease;
 	opacity: 0.5;
+}
+
+#search input {
+	padding: 5px;
+	height: 2em;
+	background-color: rgba(255, 107, 107, .5);
+}
+
+#search input::placeholder {
+	color: #FFF;
 }

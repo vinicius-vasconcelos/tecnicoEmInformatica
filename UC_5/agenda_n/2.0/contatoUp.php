@@ -9,8 +9,9 @@
 		$telefone = $_POST['txtTelefone'];
 		$email = $_POST['txtEmail'];
 		$idUser = $_POST['selUser'];
+		$star = $_GET['star'];
 
-		$execute = "UPDATE contatos SET nome = '$nome', tel = '$telefone', email = '$email', favoritos = '0', users_idusers = $idUser WHERE idcontatos = $id";
+		$execute = "UPDATE contatos SET nome = '$nome', tel = '$telefone', email = '$email', favoritos = '$star', users_idusers = $idUser WHERE idcontatos = $id";
 
 		if(mysqli_query($banco, $execute)) {
 			$msg = "Contato alterado com sucesso !!!";
