@@ -6,17 +6,18 @@
 	border:0px;
 	margin: 0px;
 	padding: 0px;
+	box-sizing: border-box;
 }
 img {max-width: 100%;}
 body{
-	background-color:#f1f5f9;
-	font-family:Tahoma;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 16px;
-	background-image: url("../image/backgroundOne.jpg");
+	/*background-image: url("../image/backgroundOne.jpg");
 	background-attachment: fixed;
 	background-position: bottom right;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
+	background-color: #dff9fb;
 }
 header{
 	width: 100%;
@@ -70,6 +71,59 @@ footer{
 	width: 6%;
 	border: 1px solid #888888;
 }
+
+/*----------------------------------------me----------------------------------------------------------*/
+#acesso {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#acesso form {
+	width: 20%;
+	height: 35vh;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: #130f40;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .9);
+}
+#acesso form h1 {
+	color: #aaa;
+	margin-bottom: 30px; 
+	text-transform: capitalize; 
+	font-size: 2em}
+#acesso form input {
+	width: 75%;
+	height: 2em;
+	background-color: rgba(149, 175, 192, .2);
+	padding: 5px;
+	margin: 5px;
+}
+
+#acesso form input[type="submit"] {
+	width: 50%;
+	height: 3em;
+	margin-top:30px; 
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	letter-spacing: .1em;
+	color: #aaa;
+	transition: all .5s ease-in-out;
+}
+
+#acesso form input[type="submit"]:hover{
+	background-color: #AAA;
+	color: #000;
+}
+
+#acesso form input::placeholder {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #aaa;
+}
+
 .listAll{
 	width: 45%;
 	float: left;
@@ -118,28 +172,36 @@ div.sucesso p {
 }
 
 .list-item {
-	flex: 0 1 200px;
+	flex: 0 1 275px;
 	background-color: #28a745;
 	margin: 5px;
 	padding: 20px;
 	border-radius: 5px;
+	transition: all .5s ease-in-out;
 }
 
 .listFt {
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	margin: 5px auto;
 	border-radius: 5px;
+	padding: 5px;
+	transition: all .5s ease-in-out;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .listFt img {
-	width: 100px;
-	height: 100px;
+	display: block;
+	width: 125px;
+	height: 125px;
 	border-radius: 5px;
 }
 
-.listNome{font-weight: bold;}
-.listEmail{font-style: italic}
+.listNome{font-weight: bold; margin-top: 20px;}
+.listEmail{font-style: italic; margin-bottom: 20px;}
 
 .btn {
 	display: block;
@@ -149,9 +211,97 @@ div.sucesso p {
 	font-weight: bold;
 	letter-spacing: .1em;
 	padding: 10px;
+	transition: all .5s ease-in-out;
+	border-radius: 5px;
 }
 
 .btn a {color: #fff; display: block;}
 
-.up {background-color: #007bff}
-.del {background-color: #dc3545;}
+.up {border: 3px solid #007bff}
+.del {border: 3px solid #dc3545;}
+
+.up:hover {background-color: #007bff;}
+.del:hover {background-color: #dc3545;}
+
+div.listFt button[type="button"] {
+	cursor: pointer;
+	color: #000;
+	padding: 10px; 
+	position: absolute;
+	border-radius: 5px;
+	z-index: 2;
+	transition: all .5s ease-in-out;
+}
+
+.fundo-preto {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.poupup {
+	background-color: #dff9fb;
+	padding: 20px;
+}
+
+.poupup form {
+	display: flex;
+	flex-direction: column;
+}
+
+.poupup form .nova-foto {
+	width: 300px;
+	height: 300px;
+	border: 3px dotted #AAA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+.poupup form .nova-foto input[type="file"] {color: transparent; width: 15%;}
+.poupup form .nova-foto input[type="file"]::-webkit-file-upload-button{visibility: hidden;}
+.poupup form .nova-foto input[type="file"]::before {
+content: '+';
+color: #000;
+background: -webkit-linear-gradient(top, #f5f6fa, #dcdde1);
+border: none;
+padding: 5px;
+border-radius: 50%;
+outline: none;
+white-space: nowrap;
+-webkit-user-select: none;
+cursor: pointer;
+text-shadow: 1px 1px #fff;
+font-weight: bold;
+font-size: 2rem;
+}
+.poupup form .nova-foto input[type="file"]:hover::before {border-color: #000;}
+.poupup form .nova-foto input[type="file"]:active {outline: 0;}
+.poupup form .nova-foto input[type="file"]:active::before {background: -webkit-linear-gradient(top, #f5f6fa, #dcdde1);}
+
+.poupup form .div-btn-foto {width: 100%; margin: 10px auto}
+.poupup form .div-btn-foto button {
+	width: 49%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+	padding: 10px;
+	transition: all .5s ease-in-out;
+	border-radius: 5px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.poupup form .div-btn-foto button.up:hover {background-color: #007bff; color: #fff;}
+.poupup form .div-btn-foto button.del:hover {background-color: #dc3545; color: #fff;}

@@ -14,6 +14,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PokeAgenda3.0 - AnDaNilo - Controle</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400i,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 		<link rel="stylesheet" href="../css/folha.css" type="text/css">
 		<link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
 	</head>

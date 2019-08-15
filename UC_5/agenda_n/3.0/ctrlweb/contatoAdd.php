@@ -22,6 +22,7 @@
 
 			$targetFile = str_replace('//', '/', $targetPath).$nome_final;
 			$temporario = $_FILES['upFt']['tmp_name'];
+			echo $temporario;
 			$diretorio = "../image/" . $targetFile;
 			
 			move_uploaded_file($temporario, $diretorio);
@@ -42,9 +43,7 @@
 		if(mysqli_query($banco, $sql))
 			header("location: contatos.php?sucesso=Contato cadastrado com sucesso !!!");
 		else
-		header("location: contatos.php?error=Contato cadastrado com sucesso !!!");
-
-
+		header("location: contatos.php?error=Erro ao cadastrar contato");
 	}
 ?>
 

@@ -10,6 +10,39 @@
 
 	$sql = "SELECT * FROM contatos";
 	$result = mysqli_query($banco, $sql);
+
+
+	if(isset($_GET['contatoId'])) {
+		$data = date('d-m-YH:i:s');
+		$auxVet = explode(".", $_GET['updateFoto']);
+		
+
+		$nomeFoto = $_GET['path'];
+		$completo = $nomeFoto . "_" . $data;
+		$path_parts = pathinfo($nomeFoto);
+		$targetPath = 0;
+		$nome_foto_md5 = md5($completo);
+		$nome_final = $nome_foto_md5 . "." . $path_parts['extension'];
+
+		$targetFile = str_replace('//', '/', $targetPath).$nome_final;
+		$temporario = $_GET['path'];
+		echo $temporario;
+		$diretorio = "../image/" . $targetFile;
+		
+		move_uploaded_file($temporario, $diretorio);
+		$foto = $targetFile;
+
+		
+
+		$sql = "UPDATE contatos SET  foto = '$foto' WHERE idcontatos = " . $_GET['contatoId'];
+
+		if(mysqli_query($banco, $sql))
+			header("location: contatos.php?sucesso=Contato alterado com sucesso !!!");
+		else
+			header("location: contatos.php?error=Erro ao alterar contato");
+
+
+	}
 ?>
 
 <!doctype html>
@@ -17,6 +50,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PokeAgenda3.0 - AnDaNilo - Controle</title>
+
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400i,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 		<link rel="stylesheet" href="../css/folha.css" type="text/css">
 		<link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
 	</head>
@@ -59,7 +96,7 @@
 				<section id="listar">
 					<?php while($row = mysqli_fetch_array($result)) {?>
 						<div class="list-item">
-							<div class="listFt"><img src="../image/<?= $row['foto']?>" alt="Foto contato"></div>
+							<div id="<?= $row['idcontatos']?>" class="listFt"><img src="../image/<?= $row['foto']?>" alt="Foto contato"></div>
 							<div class="listNome"><?= $row['nome']?></div>
 							<div class="listTel"><?= $row['tel']?></div>
 							<div class="listEmail"><?= $row['email']?></div>
@@ -71,5 +108,13 @@
 			</article>
 		</main>
 		<footer>Desenvolvido por seres supremos &reg; &copy;</footer>
+
+		<script
+  			src="https://code.jquery.com/jquery-3.4.1.min.js"
+  			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  			crossorigin="anonymous">
+		</script>
+
+		<script src="../js/efeitos.js"></script>
 	</body>
 </html>
