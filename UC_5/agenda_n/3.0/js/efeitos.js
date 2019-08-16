@@ -15,7 +15,7 @@ $('div.listFt').mouseenter(function () {
     } );
 
     $(this).prepend(`
-        <button type="button" onclick="updateFoto()">Nova Foto</button>
+        <button type="button" onclick="updateFoto('${idContato[0].id}')">Nova Foto</button>
     `);
 });
 
@@ -29,13 +29,13 @@ $('div.listFt').mouseleave(function () {
     $(this).find(':first-child').remove();
 });
 
-function updateFoto() {
+function updateFoto(idContato) {
     $('body').append(`
         <div class="fundo-preto">
            <div class="poupup">
-                <form action="#" method="post" name="formCad" enctype="multipart/form-data">
+                <form action="contatos.php?contatoId=${idContato}" method="post" name="formCad" enctype="multipart/form-data">
                     <div class="nova-foto">
-                        <input type="file" name="upFt">
+                        <input type="file" name="upFt" onchange="readURL(this)">
                     </div>
 
                     <div class="div-btn-foto">
@@ -48,9 +48,12 @@ function updateFoto() {
     `);
 }
 
-$('div.fundo-preto div.poupup form .nova-foto input[type="file"]').change(function (e) { 
-    console.log('here');
-        
-    //window.location.href=`contatos.php?updateFoto=${this.files[0].name}%path=${this.value}&contatoId=${idContato[0].id}`;
-        
-});
+function readURL(url) {
+    let fReader = new FileReader();
+
+    fReader.readAsDataURL(url.files[0]);
+    fReader.onloadend = function(event) {
+        $('form .nova-foto').append(`<img id="novaImg">`);
+        $('#novaImg').attr('src', event.target.result);
+    }
+};

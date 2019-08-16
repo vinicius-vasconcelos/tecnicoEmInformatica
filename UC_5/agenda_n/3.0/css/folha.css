@@ -266,8 +266,9 @@ div.listFt button[type="button"] {
 	align-items: center;
 	text-align: center;
 	border-radius: 5px;
-	
 }
+
+.poupup form .nova-foto img {border-radius: 5px;}
 
 .poupup form .nova-foto input[type="file"] {color: transparent; width: 15%;}
 .poupup form .nova-foto input[type="file"]::-webkit-file-upload-button{visibility: hidden;}

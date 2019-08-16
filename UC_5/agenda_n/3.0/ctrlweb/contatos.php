@@ -14,32 +14,35 @@
 
 	if(isset($_GET['contatoId'])) {
 		$data = date('d-m-YH:i:s');
-		$auxVet = explode(".", $_GET['updateFoto']);
+		$sup = $_FILES['upFt']['size'];
 		
+		if($sup != 0) {
+			$nomeFoto = $_FILES['upFt']['name'];
+			$completo = $nomeFoto . "_" . $data;
+			$path_parts = pathinfo($nomeFoto);
+			$targetPath = 0;
+			$nome_foto_md5 = md5($completo);
+			$nome_final = $nome_foto_md5 . "." . $path_parts['extension'];
 
-		$nomeFoto = $_GET['path'];
-		$completo = $nomeFoto . "_" . $data;
-		$path_parts = pathinfo($nomeFoto);
-		$targetPath = 0;
-		$nome_foto_md5 = md5($completo);
-		$nome_final = $nome_foto_md5 . "." . $path_parts['extension'];
-
-		$targetFile = str_replace('//', '/', $targetPath).$nome_final;
-		$temporario = $_GET['path'];
-		echo $temporario;
-		$diretorio = "../image/" . $targetFile;
+			$targetFile = str_replace('//', '/', $targetPath).$nome_final;
+			$temporario = $_FILES['upFt']['tmp_name'];
+			echo $temporario;
+			$diretorio = "../image/" . $targetFile;
+			
+			move_uploaded_file($temporario, $diretorio);
+			$foto = $targetFile;
 		
-		move_uploaded_file($temporario, $diretorio);
-		$foto = $targetFile;
-
-		
+		} 
+		else {
+			$foto = "ftDefault.png";
+		}
 
 		$sql = "UPDATE contatos SET  foto = '$foto' WHERE idcontatos = " . $_GET['contatoId'];
 
 		if(mysqli_query($banco, $sql))
-			header("location: contatos.php?sucesso=Contato alterado com sucesso !!!");
+			header("location: contatos.php?sucesso=Foto alterado com sucesso !!!");
 		else
-			header("location: contatos.php?error=Erro ao alterar contato");
+			header("location: contatos.php?error=Erro ao alterar foto");
 
 
 	}
