@@ -1,7 +1,7 @@
 <!--Inicio Menu -->
 <nav class="sidebar">
     <ul class="list-unstyled">
-        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="painel.php"><i class="fas fa-home"></i> Home</a></li>
 
         <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
 
@@ -12,6 +12,16 @@
             <ul class="list-unstyled collapse" id="subUsuario">
                 <li><a href="#"><i class="fas fa-list-ol"></i> Listar Usuários</a></li>
                 <li><a href="./controllers/ctrUsuario.php"><i class="far fa-plus-square"></i> Novo Usuário</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#subAdm" data-toggle="collapse">
+                <i class="fas fa-users-cog"></i> Administradores
+            </a>
+            <ul class="list-unstyled collapse" id="subAdm">
+                <li><a href="listAdministradores.php"><i class="fas fa-list-ol"></i> Listar Administradores</a></li>
+                <li><a href="cadAdmistrador.php"><i class="far fa-plus-square"></i> Novo Administrador</a></li>
             </ul>
         </li>
 

@@ -1,7 +1,7 @@
 <?php
     require_once("../config/Conexao.php");
-    require_once("../models/Administrador.php");
-    require_once("../DAL/AdministradorDAL.php");
+    require_once("../models/Usuario.php");
+    require_once("../DAL/UsuarioDAL.php");
 
     $conexao = new Conexao("localhost", "root", "", "gameControllerDB");
     $operacao = new UsuarioDAL($conexao);

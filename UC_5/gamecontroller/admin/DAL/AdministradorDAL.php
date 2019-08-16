@@ -10,32 +10,32 @@
 
         public function insert($adm) {
             $nome = $adm->getNome();
-            $telefone = $adm->getTelefone();
             $email = $adm->getEmail();
+            $senha = $adm->getSenha();
 
-            $this
-                ->conexao
-                ->getBanco()
-                ->query("INSERT INTO administradores VALUES(null, '$nome', '$telefone', '$email')");
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("INSERT INTO administradores VALUES(null, '$nome', '$email', '$senha')");
         }
 
         public function update($adm) {
             $id = $adm->getId();
             $nome = $adm->getNome();
-            $telefone = $adm->getTelefone();
             $email = $adm->getEmail();
+            $senha = $adm->getSenha();
 
-            $this
-                ->conexao
-                ->getBanco()
-                ->query("UPDATE administradores set nome = '$nome', tel = '$telefone', email = '$email' WHERE id = $id");
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("UPDATE administradores set nome = '$nome',email = '$email', senha = '$senha' WHERE id = $id");
         }
 
         public function delete($id) {
-            $this
-            ->conexao
-            ->getBanco()
-            ->query("DELETE FROM administradores WHERE id = $id");
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("DELETE FROM administradores WHERE id = $id");
         }
 
         public function getLogar($login, $senha) {
@@ -43,6 +43,13 @@
                     ->conexao
                     ->getBanco()
                     ->query("SELECT * FROM administradores WHERE email = '$login' AND senha = '$senha'");
+        }
+
+        public function getAdministradores() {
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM administradores");
         }
     }
 ?>

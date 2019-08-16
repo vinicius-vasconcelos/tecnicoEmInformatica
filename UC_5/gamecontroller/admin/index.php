@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <form method="POST" class="form-signin" action="./controllers/ctrLogin.php?op=logar">
+    <form method="POST" class="form-signin" action="./controllers/ctrAdministrador.php?op=logar">
         <div class="text-center mb-4">
             <img class="mb-4" src="imagens/sistema/geral/login.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Área Restrita</h1>

@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION)) {
+        session_start();
+        if($_SESSION['liberado'] == false)
+		    header("location: index.php?erro=Você não está autorizado, logue-se !!!");
+    }
+?>
 <nav class="navbar navbar-expand navbar-dark bg-secondary">
     <a class="sidebar-toggle text-ligth mr-3">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +32,7 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuUsuario" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="imagens/sistema/geral/no-avatar.png" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline ml-2"><?= $_GET['nomeLogado'] ?></span>
+                    <img src="imagens/sistema/geral/no-avatar.png" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline ml-2"><?= $_SESSION['nome'] ?></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuUsuario">
                     <a class="dropdown-item" href="#"><i class="far fa-user-circle"></i> Perfil</a>
