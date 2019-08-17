@@ -11,7 +11,7 @@
         public function insert($adm) {
             $nome = $adm->getNome();
             $email = $adm->getEmail();
-            $senha = $adm->getSenha();
+            $senha = md5($adm->getSenha());
 
             return $this
                     ->conexao
@@ -23,7 +23,7 @@
             $id = $adm->getId();
             $nome = $adm->getNome();
             $email = $adm->getEmail();
-            $senha = $adm->getSenha();
+            $senha = md5($adm->getSenha());
 
             return $this
                     ->conexao
@@ -39,6 +39,7 @@
         }
 
         public function getLogar($login, $senha) {
+            $senha = md5($senha);
             return $this
                     ->conexao
                     ->getBanco()
@@ -50,6 +51,13 @@
                     ->conexao
                     ->getBanco()
                     ->query("SELECT * FROM administradores");
+        }
+
+        public function getAdministrador($id) {
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM administradores WHERE id = " . $id);
         }
     }
 ?>

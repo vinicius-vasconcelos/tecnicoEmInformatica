@@ -21,7 +21,7 @@
             </a>
             <ul class="list-unstyled collapse" id="subAdm">
                 <li><a href="listAdministradores.php"><i class="fas fa-list-ol"></i> Listar Administradores</a></li>
-                <li><a href="cadAdmistrador.php"><i class="far fa-plus-square"></i> Novo Administrador</a></li>
+                <li><a href="cadAdministrador.php"><i class="far fa-plus-square"></i> Novo Administrador</a></li>
             </ul>
         </li>
 

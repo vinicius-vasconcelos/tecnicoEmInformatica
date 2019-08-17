@@ -30,12 +30,12 @@
 
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Usuários</h2>
+                        <h2 class="display-4 titulo-pagina">Administradores</h2>
                     </div>
-                    <a href="cadastrar.html">
+                    <a href="cadAdministrador.php">
                         <div class="p-1">
                             <button class="btn btn-outline-primary">
-                                    <i class="far fa-plus-square"></i> Novo Usuário
+                                    <i class="far fa-plus-square"></i> Novo Administrador
                             </button>
                         </div>
                     </a>
@@ -83,6 +83,27 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-undo-alt"></i>
                         CANCELAR</button>
                     <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> EXCLUIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalView" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title text-white" id="exampleModalCenterTitle">Dados do Administrador</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fas fa-check"></i> Ok</button>
                 </div>
             </div>
         </div>

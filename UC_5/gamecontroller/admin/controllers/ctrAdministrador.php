@@ -14,14 +14,18 @@
                 $adm = new Administrador($_POST['nome'], $_POST['email'], $_POST['senha']);
                 
                 if($operacao->insert($adm))
-                    header("location: ../cadAdmistrador.php?sucesso=Cadastrado com sucesso !!!");
+                    header("location: ../cadAdministrador.php?sucesso=Cadastrado com sucesso !!!");
                 else
-                    header("location: ../cadAdmistrador.php?erro=Erro ao cadastrar !!!");
+                    header("location: ../cadAdministrador.php?erro=Erro ao cadastrar !!!");
             break;
  
             case 'update':
                 $adm = new Administrador($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['id']);
-                $operacao->update($adm);
+                
+                if($operacao->update($adm))
+                    header("location: ../cadAdministrador.php?sucesso=Alterado com sucesso !!!");
+                else
+                    header("location: ../cadAdministrador.php?erro=Erro ao alterar !!!");
             break;
  
             case 'delete':
@@ -40,7 +44,7 @@
                         $_SESSION['nome'] = $row['nome'];
                     }
             
-                    header("location: ../painel.php?nomeLogado=" . $row['nome']);
+                    header("location: ../painel.php");
                 }
                 else {
                     if(isset($_SESSION))
@@ -55,18 +59,32 @@
                 $str = "";
             
                 while($row = mysqli_fetch_array($arrAdms)) {
+                    $arguments = "'".$row["id"]."', '".$row["nome"]."','".$row["email"]."'";
+                    $urlView = "'"."cadAdministrador.php"."'";
+                    $urlCtr = "'"."ctrAdministrador.php"."'";
+
                     $str .= '<tr>';
                         $str .= '<th class="d-none d-md-table-cell">'. $row["id"] .'</th>';
                         $str .= '<td>'. $row["nome"] .'</td>';
                         $str .= '<td class="d-none d-md-table-cell">'. $row["email"] .'</td>';
                         $str .= '<td class="text-center">';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-info"><i class="fas fa-eye"></i></button>';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-warning"><i class="far fa-edit"></i></button>';
+                            $str .= '<button type="button" class="btn btn-sm btn-outline-info" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
+                            $str .= '<button type="button" class="btn btn-sm btn-outline-warning" onclick="updateForm('.$row["id"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
                             $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalConfirmaExcluir"><i class="far fa-trash-alt"></i></a>';
                         $str .= '</td>';
 
                     $str .= '</tr>';
                 }
+                
+                echo $str;
+            break;
+
+            case 'get':
+                $adm = $operacao->getAdministrador($_GET['id']);
+                $str = "";
+            
+                if($row = mysqli_fetch_array($adm))
+                    $str .= 'id='.$row["id"].'&nome='.$row["nome"].'&email='.$row["email"];
                 
                 echo $str;
             break;
