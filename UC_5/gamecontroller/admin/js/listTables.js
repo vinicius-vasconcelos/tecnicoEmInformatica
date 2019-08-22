@@ -21,10 +21,30 @@ function showPreview(...args) {
     $('#modalView div.modal-body').append(str);
 }
 
+function showDelete(idDelete) {
+    $('td.text-center a.btn-outline-danger').attr({
+        'data-toggle':'modal',
+        'data-target': '#modalConfirmaExcluir'
+    });
+
+    $('#modalConfirmaExcluir div.modal-body').html('');
+    $('#modalConfirmaExcluir div.modal-body').html(` Deseja realmente excluir o registro <strong>ID = ${idDelete}</strong> ?`);
+}
+
 function updateForm(id, urlView, urlCtr) {
     $.ajax({
         type: 'GET',
         url: `./controllers/${urlCtr}?op=get&id=${id}`,
+        success: responseText => window.location.href= `${urlView}?${responseText}`
+    });
+}
+
+
+function deleteForm(id, urlView, urlCtr) {
+    showDelete(id);
+    $.ajax({
+        type: 'GET',
+        url: `./controllers/${urlCtr}?op=delete&id=${id}`,
         success: responseText => window.location.href= `${urlView}?${responseText}`
     });
 }

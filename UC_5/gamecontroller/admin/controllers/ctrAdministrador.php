@@ -29,8 +29,10 @@
             break;
  
             case 'delete':
-                $operacao->delete($_GET['id']);
-                header("location: ../index.php?sucesso=Deletado com sucesso !!!");
+                if($operacao->delete($_GET['id']))
+                    header("location: ../listAdministradores.php?sucesso=Deletado com sucesso !!!");
+                else
+                    header("location: ../listAdministradores.php?erro=Falha ao deletar !!!");
             break;
 
             case 'logar':
@@ -61,6 +63,7 @@
                 while($row = mysqli_fetch_array($arrAdms)) {
                     $arguments = "'".$row["id"]."', '".$row["nome"]."','".$row["email"]."'";
                     $urlView = "'"."cadAdministrador.php"."'";
+                    $urlDelete = "'"."listAdministradores.php"."'";
                     $urlCtr = "'"."ctrAdministrador.php"."'";
 
                     $str .= '<tr>';
@@ -68,9 +71,9 @@
                         $str .= '<td>'. $row["nome"] .'</td>';
                         $str .= '<td class="d-none d-md-table-cell">'. $row["email"] .'</td>';
                         $str .= '<td class="text-center">';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-info" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-warning" onclick="updateForm('.$row["id"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
-                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalConfirmaExcluir"><i class="far fa-trash-alt"></i></a>';
+                            $str .= '<button type="button" class="btn btn-sm btn-outline-info mx-1" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
+                            $str .= '<button type="button" class="btn btn-sm btn-outline-warning mx-1" onclick="updateForm('.$row["id"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
+                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="deleteForm('.$row["id"].', '.$urlDelete.', '. $urlCtr.')"><i class="far fa-trash-alt"></i></a>';
                         $str .= '</td>';
 
                     $str .= '</tr>';

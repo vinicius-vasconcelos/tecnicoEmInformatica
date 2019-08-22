@@ -41,6 +41,21 @@
                     </a>
                 </div>
 
+                <?php if(isset($_GET['sucesso'])) {?>
+                    <div class="card border-success mb-3">
+                        <div class="card-body text-success">
+                            <p class="card-text text-center"><i class="fas fa-thumbs-up"></i> <?= $_GET['sucesso']?></p>
+                        </div>
+                    </div>
+                <?php }?>
+
+                <?php if(isset($_GET['erro'])) {?>
+                    <div class="card border-danger mb-3">
+                        <div class="card-body text-danger">
+                            <p class="card-text text-center"><i class="fas fa-thumbs-down"></i> <?= $_GET['erro']?></p>
+                        </div>
+                    </div>
+                <?php }?>
                 
                 <div class="table-responsive">
                     <table class="table table-hover table-striped table-bordered">
@@ -77,7 +92,7 @@
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    Deseja realmente excluir o registro selecionado ?
+                   
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-undo-alt"></i>
