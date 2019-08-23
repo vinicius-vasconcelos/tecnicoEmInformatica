@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<body onload="getForList('ctrAdministrador.php')">
+<body onload="getForList('ctrCategoria.php')">
     <?php include_once("./header.php") ?>
 
     <div class="d-flex">
@@ -30,12 +30,12 @@
 
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Administradores</h2>
+                        <h2 class="display-4 titulo-pagina">Categorias</h2>
                     </div>
-                    <a href="cadAdministrador.php">
+                    <a href="cadCategoria.php">
                         <div class="p-1">
                             <button class="btn btn-outline-primary">
-                                    <i class="far fa-plus-square"></i> Novo Administrador
+                                    <i class="far fa-plus-square"></i> Nova Categoria
                             </button>
                         </div>
                     </a>
@@ -63,7 +63,6 @@
                             <tr>
                                 <th class="d-none d-md-table-cell">ID</th>
                                 <th>Nome Completo</th>
-                                <th class="d-none d-md-table-cell">E-mail</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -97,7 +96,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-undo-alt"></i>
                         CANCELAR</button>
-                    <button type="button" class="btn btn-danger" onclick="deleteForm(this, 'listAdministradores', 'ctrAdministrador')">
+                    <button type="button" class="btn btn-danger" onclick="deleteForm(this, 'listCategorias', 'ctrCategoria')">
                         <i class="far fa-trash-alt"></i> 
                         EXCLUIR
                     </button>

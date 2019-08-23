@@ -27,6 +27,7 @@ function showDelete(idDelete) {
         'data-target': '#modalConfirmaExcluir'
     });
 
+    $('#modalConfirmaExcluir div.modal-footer button.btn-danger').attr({'id': `${idDelete}`});
     $('#modalConfirmaExcluir div.modal-body').html('');
     $('#modalConfirmaExcluir div.modal-body').html(` Deseja realmente excluir o registro <strong>ID = ${idDelete}</strong> ?`);
 }
@@ -40,11 +41,15 @@ function updateForm(id, urlView, urlCtr) {
 }
 
 
-function deleteForm(id, urlView, urlCtr) {
+function showPreviewDelete(id) {
     showDelete(id);
+}
+
+function deleteForm(idDelete, urlDelete, urlCtr) {
     $.ajax({
         type: 'GET',
-        url: `./controllers/${urlCtr}?op=delete&id=${id}`,
-        success: responseText => window.location.href= `${urlView}?${responseText}`
+        url: `./controllers/${urlCtr}.php?op=delete&id=${idDelete.id}`,
+        success: responseText => window.location.href= `${urlDelete}.php?${responseText}`,
+        error:  errText => window.location.href= `${urlDelete}.php?${errText}`
     });
 }

@@ -3,9 +3,9 @@
         private $id;
         private $nome;
 
-        function __construct($id = 0, $nome = "") {
-            $this->setId($id);
+        function __construct($nome = "", $id = 0) {
             $this->setNome($nome);
+            $this->setId($id);
         }
 
         public function getId() {

@@ -20,19 +20,20 @@
             break;
  
             case 'update':
-                $adm = new Administrador($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['id']);
+                $adm = new Administrador($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['codigo']);
+                $strError = 'id='.$adm->getId().'&nome='.$adm->getNome().'&email='.$adm->getEmail();
                 
                 if($operacao->update($adm))
-                    header("location: ../cadAdministrador.php?sucesso=Alterado com sucesso !!!");
+                    header("location: ../listAdministradores.php?sucesso=Alterado com sucesso !!!");
                 else
-                    header("location: ../cadAdministrador.php?erro=Erro ao alterar !!!");
+                    header("location: ../listAdministradores.php?erro=Erro ao alterar !!!&".$strError);
             break;
  
             case 'delete':
                 if($operacao->delete($_GET['id']))
-                    header("location: ../listAdministradores.php?sucesso=Deletado com sucesso !!!");
+                    echo "sucesso=Deletado com sucesso !!!";
                 else
-                    header("location: ../listAdministradores.php?erro=Falha ao deletar !!!");
+                    echo "erro=Falha ao deletar !!!";
             break;
 
             case 'logar':
@@ -52,7 +53,7 @@
                     if(isset($_SESSION))
                         $_SESSION['liberado'] = false;
             
-                     header("location: ../index.php?erro=Falha de autenticação");
+                    header("location: ../index.php?erro=Falha de autenticação");
                 }
             break;
  
@@ -63,7 +64,6 @@
                 while($row = mysqli_fetch_array($arrAdms)) {
                     $arguments = "'".$row["id"]."', '".$row["nome"]."','".$row["email"]."'";
                     $urlView = "'"."cadAdministrador.php"."'";
-                    $urlDelete = "'"."listAdministradores.php"."'";
                     $urlCtr = "'"."ctrAdministrador.php"."'";
 
                     $str .= '<tr>';
@@ -73,7 +73,7 @@
                         $str .= '<td class="text-center">';
                             $str .= '<button type="button" class="btn btn-sm btn-outline-info mx-1" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
                             $str .= '<button type="button" class="btn btn-sm btn-outline-warning mx-1" onclick="updateForm('.$row["id"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
-                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="deleteForm('.$row["id"].', '.$urlDelete.', '. $urlCtr.')"><i class="far fa-trash-alt"></i></a>';
+                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="showPreviewDelete('.$row["id"].')"><i class="far fa-trash-alt"></i></a>';
                         $str .= '</td>';
 
                     $str .= '</tr>';
@@ -86,7 +86,7 @@
                 $adm = $operacao->getAdministrador($_GET['id']);
                 $str = "";
             
-                if($row = mysqli_fetch_array($adm))
+                if($row = mysqli_fetch_assoc($adm))
                     $str .= 'id='.$row["id"].'&nome='.$row["nome"].'&email='.$row["email"];
                 
                 echo $str;

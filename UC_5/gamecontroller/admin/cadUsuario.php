@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Cadastro de Administradores</title>
+    <title>Cadastro de Usuários</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/floating-labels/">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -29,9 +29,9 @@
             <div class="list-group-item">
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Cadastrar Admistrador</h2>
+                        <h2 class="display-4 titulo-pagina">Cadastrar Usuário</h2>
                     </div>
-                    <a href="listAdministradores.php">
+                    <a href="listUsuarios.php">
                         <div class="p-1">
                             <button class="btn btn-sm btn-outline-secondary">
                                     <i class="fas fa-undo-alt"></i> Listar todos
@@ -59,9 +59,9 @@
                 
             
                 <?php if(isset($_GET['id'])) {?>
-                    <form method="POST" action="./controllers/ctrAdministrador.php?op=update">
+                    <form method="POST" action="./controllers/ctrUsuario.php?op=update">
                 <?php } else { ?>
-                    <form method="POST" action="./controllers/ctrAdministrador.php?op=insert">
+                    <form method="POST" action="./controllers/ctrUsuario.php?op=insert">
                 <?php } ?>   
                     
                     <?php if(isset($_GET['id'])) { ?>
@@ -90,24 +90,51 @@
                         </div>
                     <?php } ?>
 
+                    <?php if(isset($_GET['email'])) { ?>
+                        <div class="form-group">
+                            <label for="email">E-mail(*):</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="fulaninho@hotmail.com" 
+                                value="<?= $_GET['email']?>" required autofocus>
+                        </div>
+                    <?php } else { ?>
+                        <div class="form-group">
+                            <label for="email">E-mail(*):</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="fulaninho@hotmail.com" 
+                                    required autofocus>
+                        </div>
+                    <?php } ?>
+
                     <div class="form-row">
-                        <?php if(isset($_GET['email'])) { ?>
+                        <?php if(isset($_GET['bio'])) { ?>
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">E-mail(*):</label>
-                                <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="E-mail" 
-                                    value="<?= $_GET['email']?>" required>
+                                <label for="bio">Bio:</label>
+                                <textarea class="form-control" id="bio" name="bio" placeholder="Escreva algo..." 
+                                    value="<?= $_GET['bio']?>" rows="8"></textarea>
                             </div>
                         <?php } else { ?>
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">E-mail(*):</label>
-                                <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="E-mail" 
-                                    required>
+                            <div class="form-group col-md-10">
+                                <label for="bio">Bio:</label>
+                                <textarea class="form-control" id="bio" name="bio" placeholder="Escreva algo..." rows="8"></textarea>
                             </div>
                         <?php } ?>
 
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Senha(*):</label>
-                            <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Senha" required>
+                        <div class="form-group col-md-2 d-flex flex-column">
+                            <label for="foto">Foto:</label>
+                            <div id="div-foto" class="border">
+                                <input type="file" id="foto" name="foto" onchange="readURL(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 d-flex flex-column">
+                            <label for="senha">Senha(*):</label>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+                        </div>
+
+                        <div class="form-group col-md-6 d-flex flex-column">
+                            <label for="confSenha">Confirmar Senha(*):</label>
+                            <input type="password" class="form-control" id="confSenha" name="confSenha" placeholder="Reescreva a senha" required>
                         </div>
                     </div>
                     
@@ -122,6 +149,7 @@
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/showHidePopUp.js"></script>
+    <script src="js/photoPreview.js"></script>
 </body>
 
 </html>

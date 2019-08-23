@@ -10,8 +10,8 @@
                 <i class="fas fa-users"></i> Usuários
             </a>
             <ul class="list-unstyled collapse" id="subUsuario">
-                <li><a href="#"><i class="fas fa-list-ol"></i> Listar Usuários</a></li>
-                <li><a href="./controllers/ctrUsuario.php"><i class="far fa-plus-square"></i> Novo Usuário</a></li>
+                <li><a href="listUsuarios"><i class="fas fa-list-ol"></i> Listar Usuários</a></li>
+                <li><a href="cadUsuario.php"><i class="far fa-plus-square"></i> Novo Usuário</a></li>
             </ul>
         </li>
 
@@ -40,8 +40,8 @@
                 <i class="fas fa-layer-group"></i> Categorias
             </a>
             <ul class="list-unstyled collapse" id="subCategoria">
-                <li><a href="#"><i class="fas fa-list-ol"></i> Listar Categorias</a></li>
-                <li><a href="#"><i class="far fa-plus-square"></i> Nova Categoria</a></li>
+                <li><a href="listCategorias.php"><i class="fas fa-list-ol"></i> Listar Categorias</a></li>
+                <li><a href="cadCategoria.php"><i class="far fa-plus-square"></i> Nova Categoria</a></li>
             </ul>
         </li>
 

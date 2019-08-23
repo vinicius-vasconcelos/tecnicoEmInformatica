@@ -3,9 +3,10 @@
 
     class Usuario extends Administrador {
         private $foto;
+        private $bio;
         private $jogos;
 
-        function __construct($nome = "", $email = "", $senha = "", $foto = "", $id = 0) {
+        function __construct($nome = "", $email = "", $senha = "", $foto = "", $bio = "", $id = 0) {
             parent::__construct($nome, $email, $senha, $id);
             $this->setFoto($foto);
             $this->jogos = [];

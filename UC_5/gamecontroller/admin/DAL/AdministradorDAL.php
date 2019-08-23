@@ -28,7 +28,7 @@
             return $this
                     ->conexao
                     ->getBanco()
-                    ->query("UPDATE administradores set nome = '$nome',email = '$email', senha = '$senha' WHERE id = $id");
+                    ->query("UPDATE administradores SET nome = '$nome', email = '$email', senha = '$senha' WHERE id = " . $id);
         }
 
         public function delete($id) {
