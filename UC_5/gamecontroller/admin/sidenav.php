@@ -30,8 +30,8 @@
                 <i class="fas fa-gamepad"></i> Jogos
             </a>
             <ul class="list-unstyled collapse" id="subJogos">
-                <li><a href="#"><i class="fas fa-list-ol"></i> Listar Jogos</a></li>
-                <li><a href="#"><i class="far fa-plus-square"></i> Novo Jogo</a></li>
+                <li><a href="listJogos.php"><i class="fas fa-list-ol"></i> Listar Jogos</a></li>
+                <li><a href="cadJogo.php"><i class="far fa-plus-square"></i> Novo Jogo</a></li>
             </ul>
         </li>
 

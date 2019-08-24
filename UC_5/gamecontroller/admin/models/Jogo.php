@@ -4,10 +4,10 @@
         private $nome;
         private $categoria;
 
-        function __construct($id = 0, $nome = "", $categoria = null) {
-            $this->setId($id);
+        function __construct($nome = "", $categoria = 0, $id = 0) {
             $this->setNome($nome);
             $this->setCategoria($categoria);
+            $this->setId($id);
         }
 
         public function getId() {

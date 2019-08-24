@@ -26,7 +26,7 @@
                 if($operacao->update($cat))
                     header("location: ../listCategorias.php?sucesso=Alterado com sucesso !!!");
                 else
-                    header("location: ../listCategorias.php?erro=Erro ao alterar !!!&".$strError);
+                    header("location: ../cadCategoria.php?erro=Erro ao alterar !!!&".$strError);
             break;
  
             case 'delete':
@@ -57,6 +57,15 @@
                     $str .= '</tr>';
                 }
                 
+                echo $str;
+            break;
+
+            case 'getsC':
+                $arrCat = $operacao->getCategorias();
+                $str = "";
+            
+                while($row = mysqli_fetch_array($arrCat)) 
+                    $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
                 echo $str;
             break;
 
