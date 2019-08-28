@@ -35,20 +35,19 @@
 			</div>
 		</header>
 		<nav>
-			<a href="index.php">Home</a> | <a href="cadastrar.php">Cadastrar</a>
+			<a href="index.php">Home</a> <a href="cadastrar.php">Cadastrar</a>
 		</nav>
 		<main>
 			<article>
-				<h1>Agenda de clientes/contato</h1>
+				<h1 style="color:#fff; text-align: center; margin: 30px 0;">Agenda de clientes/contato</h1>
 				
 				<section id="listar">
-					<h2>Novo cadastro</h2>
-					
 					<div id="newCad">
 					<form action="#" method="post" name="formCad" id="formCad">
-						<input type="text" name="txtNome" id="txtNome" placeholder="Nome">
-						<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone">
-						<input type="text" name="txtEmail" id="txtEmail" placeholder="E-Mail">
+						<h2 style="color: #fff">Novo cadastro</h2>
+						<input type="text" name="txtNome" id="txtNome" placeholder="Nome*" required autofocus>
+						<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Celular*" required>
+						<input type="email" name="txtEmail" id="txtEmail" placeholder="E-Mail*" required>
 						<input type="submit" name="btCad" id="btCad" value="Cadastrar">
 						</form>
 					</div>
@@ -58,4 +57,18 @@
 		</main>
 		<footer>Desenvolvido por seres supremos &reg; &copy;</footer>
 	</body>
+
+	<script 
+		src="https://code.jquery.com/jquery-3.3.1.min.js" 
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+	</script>
+
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js">
+	</script>
+
+	<script>
+		$(document).ready(() => $('#txtTelefone').mask('(00)00000-0000'));
+	</script>
 </html>
