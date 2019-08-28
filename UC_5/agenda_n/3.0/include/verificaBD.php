@@ -13,6 +13,7 @@
             $_SESSION['liberado'] = true;
             $_SESSION['login'] = $login;
             $_SESSION['nome'] = $row['nome'];
+            $_SESSION['idLogado'] = $row['idusers'];
         }
 
         header("location: ../ctrlweb/admin.php?sucesso=Bem vindo " . $row['nome']);

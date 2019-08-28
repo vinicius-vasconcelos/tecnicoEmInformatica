@@ -1,8 +1,6 @@
 <?php
 	require_once('../include/connectaBD.php');
-
-	if($_SESSION['liberado'] == false)
-		header("location: index.php?error=Você não está autorizado, logue-se !!!");
+	require_once('../include/validar.php');
 
 
 	if(isset($_GET['sucesso']) || isset($_GET['error']))
@@ -86,7 +84,6 @@
 						<input type="file" name="upFt" id="upFt" placeholder="Foto">
 						<input type="submit" name="btCad" id="btCad" value="Cadastrar">
 					</form>
-					
 				</section>
 			</article>
 		</main>

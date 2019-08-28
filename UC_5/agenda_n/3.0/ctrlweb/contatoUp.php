@@ -1,8 +1,6 @@
 <?php
-    require_once('../include/connectaBD.php');
-
-    if($_SESSION['liberado'] == false)
-        header("location: index.php?error=Você não está autorizado, logue-se !!!");
+	require_once('../include/connectaBD.php');
+	require_once('../include/validar.php');
 
     if(isset($_GET['id'])) {
         $sql = "SELECT * FROM contatos WHERE idcontatos = " . $_GET['id'];

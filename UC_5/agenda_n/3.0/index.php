@@ -1,5 +1,11 @@
 <?php 
-	require_once("./include/connectaBD.php")
+	require_once("./include/connectaBD.php");
+
+	$sql = "SELECT * FROM agendamentos WHERE data = CURDATE()  ORDER BY data DESC";
+	$sql2 = "SELECT * FROM contatos ORDER BY nome ASC";
+
+	$result = $banco->query($sql);
+	$result2 = $banco->query($sql2);
 ?>
 
 <!doctype html>
@@ -27,8 +33,8 @@
 		</nav>
 
 		<main>
-			<article>
-				<h1>Agenda de clientes/contato e eventos</h1>
+			<h1>Agenda de clientes/contato e eventos</h1>
+			<article id="index"> 
 				<section class="listAll">
 					<h2>Listando todos os Contatos</h2>
 
@@ -39,11 +45,19 @@
 						</form>
 					</div>
 
-					<div class="list">
-						<div class="listNome">Nome:</div>
-						<div class="listTel">Telefone:</div>
-						<div class="listEmail">Email:</div>
-					</div>
+					<?php while($row = mysqli_fetch_array($result2)) {?>
+						<div class="list-item-foto">
+							<div class="foto">
+								<img src="./image/<?= $row['foto']?>" alt="">
+							</div>
+							<div>
+								<div class="listNome">Nome:<?= $row['nome'] ?></div>
+								<div class="listTel">Telefone: <?= $row['tel']; ?></div>
+								<div class="listEmail"><?= $row['email']; ?></div>
+							</div>
+						</div>
+							
+					<?php } ?>
 				</section>
 
 				<section class="listAll">
@@ -56,10 +70,18 @@
 					</div>
 					
 					<div class="list">
-						<div class="listEvent">Titulo:</div>
-						<div class="listEvent">Local - Endereço:</div>
-						<div class="listEvent">Observações</div>
-						<div class="listEvent">Concluido</div>
+						<?php while($row = mysqli_fetch_array($result)) {?>
+							<div class="list-item2">
+								<div class="listEvent">Título: <?= $row['titulo'] ?></div>
+								<div class="listEvent">Local: <?= $row['local'] ?></div>
+								<div class="listEvent">Obs: <?= $row['obs'] ?></div>
+								<?php if($row['concluido'] == 0) {?>
+									<div class="listEvent">Inacabado</div>
+								<?php } else { ?>
+									<div class="listEvent">Concluído</div>
+								<?php } ?>
+							</div>
+						<?php } ?>
 					</div>
 				</section>
 			</article>

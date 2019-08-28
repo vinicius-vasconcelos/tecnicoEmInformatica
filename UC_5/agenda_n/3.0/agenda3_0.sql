@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14-Ago-2019 às 03:20
+-- Generation Time: 28-Ago-2019 às 03:30
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -46,11 +46,12 @@ CREATE TABLE `agendamentos` (
 
 INSERT INTO `agendamentos` (`idagendamentos`, `titulo`, `data`, `hora`, `local`, `endereco`, `obs`, `concluido`, `users_idusers`) VALUES
 (6, 'Fut pesadão', '2019-08-10', '17:00', 'PQP', 'rua loka', 'Vai ser locura, vai cola o pelé, mané, josé e o Thierry', '0', 2),
-(7, 'Aula top', '2019-08-13', '20:30', 'Senac', 'Rua senac', 'aula top', '0', 1),
+(7, 'Aula top', '2019-08-27', '20:30', 'Senac', 'Rua senac', 'aula top', '1', 1),
 (8, 'Aula de hospedagem', '2019-08-14', '19:00', 'senac', 'rua senac', 'A aula vai ser lokura catioro, falta não !', '0', 1),
-(9, 'Baile da lokura total', '2019-08-13', '22:00', 'ali na lokura vile', 'rua muito top', 'Só vai ter catiora de qualidade monstra !', '0', 2),
-(10, 'Viajem da doideira', '2019-08-31', '10:00', 'ali perto', 'rua pertinho', 'porra vai ser doideira memo ', '0', 3),
-(11, 'Fut mais pesado das catioras monstras', '2019-08-13', '23:00', 'parque do fut monstro', 'rua de qualidade monstra', 'Vai ser pesado de mais, vai ter só bagulho doido, qualidade total e de excelência sem igual.', '0', 2);
+(9, 'Baile da lokura total', '2019-08-27', '22:00', 'ali na lokura vile', 'rua muito top', 'Só vai ter catiora de qualidade monstra !', '0', 2),
+(10, 'Viajem da doideira', '2019-08-31', '10:00', 'ali perto', 'rua pertinho', 'porra vai ser doideira memo ', '1', 3),
+(11, 'Fut mais pesado das catioras monstras', '2019-08-13', '23:00', 'parque do fut monstro', 'rua de qualidade monstra', 'Vai ser pesado de mais, vai ter só bagulho doido, qualidade total e de excelência sem igual.', '0', 2),
+(12, 'Estudos Hard', '2019-08-27', '23:00', 'Em casa ', 'Rua dos Manés', 'vai ser doideira !', '0', 2);
 
 -- --------------------------------------------------------
 
@@ -72,10 +73,13 @@ CREATE TABLE `contatos` (
 --
 
 INSERT INTO `contatos` (`idcontatos`, `nome`, `tel`, `email`, `foto`, `users_idusers`) VALUES
-(1, 'Eduardo', '18997601158', 'edu@gmail.com', 'default.jpg', 2),
-(2, 'carlos', '18997601158', 'carlos@hotmail.com', 'default.jpg', 1),
-(3, 'pele', '1899767678', 'pelezera@gmail.com', 'default.jpg', 2),
-(4, 'josé', '189979666321', 'jose@hotmail.com', 'default.jpg', 4);
+(2, 'carlos', '18997601159', 'carlos2@hotmail.com', '076922d2b8be534ee14c5413868884abc.jpg', 1),
+(4, 'josé', '189979666321', 'jose@hotmail.com', '0ee07ae5b551ed7db560cfc90c81c1a02.jpg', 4),
+(12, 'Hermilio', '6518478498', 'nilão@gmail.cão', '06b31b333f3be352cf0618254006b1d2c.jpg', 1),
+(13, 'danilo', '44984', 'dan@hotmail.com', '0c376926371b5d4d9575209c34c0a5bdb.jpg', 1),
+(14, 'anderson', '511651', 'an@gmail.com', '0f664cd64c2f028f3ef14316f804e564b.png', 1),
+(15, 'Eduardo', '654984984', 'edu@edu.edu', '0d92d8beaf5ac52d4c170d78d1a5dbb85.jpg', 1),
+(16, 'pele', '516516', 'pele@xuxa.com', '07b9b76ffaa784882dac79034791f5523.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -130,10 +134,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `agendamentos`
+--
+ALTER TABLE `agendamentos`
+  MODIFY `idagendamentos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `contatos`
 --
 ALTER TABLE `contatos`
-  MODIFY `idcontatos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idcontatos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
