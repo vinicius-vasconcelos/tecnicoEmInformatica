@@ -4,6 +4,18 @@
 
 	if(isset($_GET['sucesso']) || isset($_GET['error']))
 		header("refresh:3; admin.php");
+
+	$sqlU = "SELECT COUNT(*) AS qtde FROM users";
+	$resultU = $banco->query($sqlU);
+	$rowU = mysqli_fetch_assoc($resultU);
+
+	$sqlC = "SELECT COUNT(*) AS qtde FROM contatos";
+	$resultC = $banco->query($sqlC);
+	$rowC = mysqli_fetch_assoc($resultC);
+
+	$sqlA = "SELECT COUNT(*) AS qtde FROM agendamentos";
+	$resultA = $banco->query($sqlA);
+	$rowA = mysqli_fetch_assoc($resultA);
 ?>
 <!doctype html>
 	<html lang="pt-br">
@@ -54,13 +66,45 @@
 
 				<h1>DASHBOARD</h1>
 				<section id="dashboard">
-					<div class="cxDash"><a href="users.php">Usuários</a></div>
-					<div class="cxDash"><a href="contatos.php">Contatos</a></div>
-					<div class="cxDash"><a href="event.php">Eventos</a></div>
+					<div class="cxDash"><a href="users.php">Usuários</a> <?= $rowU['qtde']?></div>
+					<div class="cxDash"><a href="contatos.php">Contatos</a> <?= $rowC['qtde']?></div>
+					<div class="cxDash"><a href="event.php">Eventos</a> <?= $rowA['qtde']?></div>
+
+					<div id="chart_div"></div>
 				</section>
 			</article>
 		</main>
 		<footer>Desenvolvido por seres supremos &reg; &copy;</footer>
 	</body>
+
+	<!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Usuarios', <?= $rowU['qtde']?>],
+          ['Contatos', <?= $rowC['qtde']?>],
+          ['Agendamentos', <?= $rowA['qtde']?>],
+         
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 
 </html>

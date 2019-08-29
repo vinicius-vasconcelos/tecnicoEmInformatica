@@ -19,8 +19,6 @@
 		
 		$sql = "INSERT INTO agendamentos VALUES (null, '$titulo', '$data', '$hora', '$local', '$end', '$obs', '$con', $logado)";
 
-		echo $sql;
-
 		if(mysqli_query($banco, $sql))
 			header("location: event.php?sucesso=Evento cadastrado com sucesso !!!");
 		else

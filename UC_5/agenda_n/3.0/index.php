@@ -26,9 +26,10 @@
 
 		<nav>
 			<ul>
-				<li><a href="index.php">Inicio</a></li>
-				<li><a href="ctrlweb/index.php">Administração</a></li>
-				<li><a href="javascript:history.back();">Voltar</a></li>
+				<li><a href="index.php"> | Inicio | </a></li>
+				<li><a href="ctrlweb/index.php"> | Administração | </a></li>
+				<li><a href="fale.php"> | Fale Conosco | </a></li>
+				<li><a href="javascript:history.back();"> | Voltar | </a></li>
 			</ul>
 		</nav>
 
