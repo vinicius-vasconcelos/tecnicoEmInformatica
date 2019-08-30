@@ -17,7 +17,11 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<body onload="getForCombo('ctrCategoria')">
+<?php if (isset($_GET['idCat'])) { ?>
+    <body onload="getForCombo('ctrCategoria#<?= $_GET['idCat']?>')">
+<?php } else  { ?>
+    <body onload="getForCombo('ctrCategoria')">
+<?php }?>
     <?php include_once("./header.php") ?>
 
     <div class="d-flex">

@@ -63,9 +63,18 @@
             case 'getsC':
                 $arrCat = $operacao->getCategorias();
                 $str = "";
-            
-                while($row = mysqli_fetch_array($arrCat)) 
-                    $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+
+                if(isset($_GET['idCat']) && $_GET['idCat'] == 0) 
+                    while($row = mysqli_fetch_array($arrCat)) 
+                        $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+                else
+                    while($row = mysqli_fetch_array($arrCat))
+                        if($_GET['idCat'] == $row["id"]) 
+                            $str .= '<option value="'.$row["id"].'" selected>'.$row["nome"].'</option>';
+                        else
+                            $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+
+                
                 echo $str;
             break;
 

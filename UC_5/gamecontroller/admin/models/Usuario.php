@@ -1,5 +1,5 @@
 <?php
-    require_once("Pessoa.php");
+    require_once("Administrador.php");
 
     class Usuario extends Administrador {
         private $foto;
@@ -8,8 +8,17 @@
 
         function __construct($nome = "", $email = "", $senha = "", $foto = "", $bio = "", $id = 0) {
             parent::__construct($nome, $email, $senha, $id);
+            $this->setBio($bio);
             $this->setFoto($foto);
-            $this->jogos = [];
+           // $this->jogos = [];
+        }
+
+        public function getBio() {
+            return $this->bio;
+        }
+
+        public function setBio($bio) {
+            $this->bio = $bio;
         }
 
         public function getFoto() {
@@ -20,12 +29,12 @@
             $this->foto = $foto;
         }
 
-        public function getJogos() {
+        /*public function getJogos() {
             return $this->jogos;
         }
 
         public function setJogo($jogo) {
             $this->jogos[] = $jogo;
-        }
+        }*/
     }
 ?>

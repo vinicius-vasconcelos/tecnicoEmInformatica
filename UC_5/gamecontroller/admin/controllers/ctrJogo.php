@@ -21,8 +21,8 @@
  
             case 'update':
                 $jog = new Jogo($_POST['nome'], $_POST['categoria'], $_POST['codigo']);
-                $strError = 'id='.$jog->getId().'&nome='.$jog->getNome().'&categoria='.$jog->getCategoria()->getId();
-                
+                $strError = 'id='.$jog->getId().'&nome='.$jog->getNome().'&categoria='.$jog->getCategoria();
+
                 if($operacao->update($jog))
                     header("location: ../listJogos.php?sucesso=Alterado com sucesso !!!");
                 else
@@ -65,8 +65,8 @@
                 $jog = $operacao->getJogo($_GET['id']);
                 $str = "";
             
-                if($row = mysqli_fetch_assoc($jos))
-                    $str .= 'id='.$row["idJogo"].'&nome='.$row["nome"].'&idCat='.$row["idCategoria"];
+                if($row = mysqli_fetch_assoc($jog))
+                    $str .= 'id='.$row["idJogo"].'&nome='.$row["nomeJogo"].'&idCat='.$row["idCategoria"];
                 
                 echo $str;
             break;

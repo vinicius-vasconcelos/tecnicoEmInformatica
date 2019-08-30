@@ -59,9 +59,9 @@
                 
             
                 <?php if(isset($_GET['id'])) {?>
-                    <form method="POST" action="./controllers/ctrUsuario.php?op=update">
+                    <form method="POST" action="./controllers/ctrUsuario.php?op=update" enctype="multipart/form-data">
                 <?php } else { ?>
-                    <form method="POST" action="./controllers/ctrUsuario.php?op=insert">
+                    <form method="POST" action="./controllers/ctrUsuario.php?op=insert" enctype="multipart/form-data">
                 <?php } ?>   
                     
                     <?php if(isset($_GET['id'])) { ?>

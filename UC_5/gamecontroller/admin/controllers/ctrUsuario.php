@@ -10,15 +10,38 @@
 
         switch($_GET['op']) {
             case 'insert':
-                $adm = new Usuario($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['foto']);
+                $data = date('d-m-YH:i:s');
+                $sup = $_FILES['foto']['size'];
+
+               //var_dump(($sup));
                 
-                if($operacao->insert($adm))
-                    header("location: ../cadAdministrador.php?sucesso=Cadastrado com sucesso !!!");
+               if($sup != 0) {
+                    $nomeFoto = $_FILES['foto']['name'];
+                    $completo = $nomeFoto . "_" . $data;
+                    $path_parts = pathinfo($nomeFoto);
+                    $targetPath = 0;
+                    $nome_foto_md5 = md5($completo);
+                    $nome_final = $nome_foto_md5 . "." . $path_parts['extension'];
+        
+                    $targetFile = str_replace('//', '/', $targetPath).$nome_final;
+                    $temporario = $_FILES['foto']['tmp_name'];
+                    $diretorio = "../imagens/upload" . $targetFile;
+                    
+                    move_uploaded_file($temporario, $diretorio);
+                    $foto = $targetFile;
+                }
                 else
-                    header("location: ../cadAdministrador.php?erro=Erro ao cadastrar !!!");
+                    $foto = "";
+                    
+                $usu = new Usuario($_POST['nome'], $_POST['email'], $_POST['senha'], $foto, $_POST['bio']);
+                
+                if($operacao->insert($usu))
+                    header("location: ../listUsuario.php?sucesso=Cadastrado com sucesso !!!");
+                else
+                    header("location: ../cadUsuario.php?erro=Erro ao cadastrar !!!");
             break;
  
-            case 'update':
+            /*case 'update':
                 $adm = new Administrador($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['codigo']);
                 $strError = 'id='.$adm->getId().'&nome='.$adm->getNome().'&email='.$adm->getEmail();
                 
@@ -89,6 +112,6 @@
                     $str .= 'id='.$row["id"].'&nome='.$row["nome"].'&email='.$row["email"];
                 
                 echo $str;
-            break;
+            break;*/
         }
      }

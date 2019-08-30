@@ -10,16 +10,18 @@
 
         public function insert($usu) {
             $nome = $usu->getNome();
-            $telefone = $usu->getTelefone();
+            $bio = $usu->getBio();
             $email = $usu->getEmail();
+            $senha = $usu->getSenha();
+            $foto = $usu->getFoto();
 
             $this
                 ->conexao
                 ->getBanco()
-                ->query("INSERT INTO administradores VALUES(null, '$nome', '$telefone', '$email')");
+                ->query("INSERT INTO usuarios VALUES(null, '$nome', '$foto', '$bio', '$email', '$senha')");
         }
 
-        public function update($usu) {
+        /*public function update($usu) {
             $id = $usu->getId();
             $nome = $usu->getNome();
             $telefone = $usu->getTelefone();
@@ -43,7 +45,7 @@
                     ->conexao
                     ->getBanco()
                     ->query("SELECT * FROM administradores WHERE email = '$login' AND senha = '$senha'");
-        }
+        }*/
 }
 
 ?>
