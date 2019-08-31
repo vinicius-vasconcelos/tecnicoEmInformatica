@@ -20,17 +20,17 @@
 <body onload="getForList('ctrCategoria.php')">
     <?php include_once("./header.php") ?>
 
-    <div class="d-flex">
+    <div class="d-flex bg-color-primary">
         <?php include_once("./sidenav.php") ?>
 
 
         <!--INICIO APRESENTAR CONTEUDO-->
         <div class="content p-3">
-            <div class="list-group-item">
+            <div class="list-group-item bg-color-secundary">
 
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Categorias</h2>
+                        <h2 class="display-4 titulo-pagina text-white">Categorias</h2>
                     </div>
                     <a href="cadCategoria.php">
                         <div class="p-1">
@@ -57,9 +57,9 @@
                     </div>
                 <?php }?>
                 
-                <div class="table-responsive">
+                <div class="table-responsive mt-3">
                     <table class="table table-hover table-striped table-bordered">
-                        <thead>
+                        <thead class="thead-light">
                             <tr>
                                 <th class="d-none d-md-table-cell">ID</th>
                                 <th>Nome Completo</th>

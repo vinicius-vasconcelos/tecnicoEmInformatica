@@ -20,16 +20,16 @@
 <body>
     <?php include_once("./header.php") ?>
 
-    <div class="d-flex">
+    <div class="d-flex bg-color-primary">
         <?php include_once("./sidenav.php") ?>
 
 
         <!--INICIO APRESENTAR CONTEUDO-->
         <div class="content p-3">
-            <div class="list-group-item">
+            <div class="list-group-item bg-color-secundary">
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Cadastrar Usuário</h2>
+                        <h2 class="display-4 titulo-pagina text-white">Cadastrar Usuário</h2>
                     </div>
                     <a href="listUsuarios.php">
                         <div class="p-1">
@@ -132,9 +132,9 @@
                             <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
                         </div>
 
-                        <div class="form-group col-md-6 d-flex flex-column">
-                            <label for="confSenha">Confirmar Senha(*):</label>
-                            <input type="password" class="form-control" id="confSenha" name="confSenha" placeholder="Reescreva a senha" required>
+                        <div class="form-group col-md-2 d-flex flex-column">
+                            <label for="senha">Escolhas os Games Aqui:</label>
+                            <button type="button" class="btn btn-primary">Add Games</button>
                         </div>
                     </div>
                     
@@ -144,6 +144,29 @@
             </div>
         </div>
     </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalViewGames" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title text-white" id="exampleModalCenterTitle">Dados do Administrador</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fas fa-check"></i> Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Fim conteudo -->
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="popper/popper.min.js"></script>

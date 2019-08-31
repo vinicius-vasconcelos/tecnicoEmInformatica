@@ -25,7 +25,7 @@
 <body>
     <?php include_once("./header.php") ?>
 
-    <div class="d-flex">
+    <div class="d-flex bg-color-primary">
         
         <?php include_once("./sidenav.php") ?>
 

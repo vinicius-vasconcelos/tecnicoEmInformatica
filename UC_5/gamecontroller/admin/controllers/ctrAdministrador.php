@@ -73,7 +73,7 @@
                         $str .= '<td class="text-center">';
                             $str .= '<button type="button" class="btn btn-sm btn-outline-info mx-1" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
                             $str .= '<button type="button" class="btn btn-sm btn-outline-warning mx-1" onclick="updateForm('.$row["id"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
-                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="showPreviewDelete('.$row["id"].')"><i class="far fa-trash-alt"></i></a>';
+                            $str .= '<button type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="showPreviewDelete('.$row["id"].')"><i class="far fa-trash-alt"></i></button>';
                         $str .= '</td>';
 
                     $str .= '</tr>';

@@ -24,16 +24,16 @@
 <?php }?>
     <?php include_once("./header.php") ?>
 
-    <div class="d-flex">
+    <div class="d-flex bg-color-primary">
         <?php include_once("./sidenav.php") ?>
 
 
         <!--INICIO APRESENTAR CONTEUDO-->
         <div class="content p-3">
-            <div class="list-group-item">
+            <div class="list-group-item bg-color-secundary">
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina">Cadastrar Jogo</h2>
+                        <h2 class="display-4 titulo-pagina text-white">Cadastrar Jogo</h2>
                     </div>
                     <a href="listJogos.php">
                         <div class="p-1">

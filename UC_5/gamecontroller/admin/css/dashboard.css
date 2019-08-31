@@ -23,16 +23,16 @@ body{
 
 .sidebar ul .active a{
     color: #ffffff;
-    background-color:  #e15024;    
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .sidebar ul li a:hover{
-    color: #ffffff;
-    background-color:  #ff5722;
+    color: #4c4747;
+    background-color: rgba(0, 0, 0, .5);
 }
 .sidebar ul ul a{
     padding-left: 2.5rem;
-    background-color: #c0c0c0;
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .sidebar.toggled{
@@ -58,7 +58,7 @@ body{
     right: 1rem;
 }
 .sidebar [aria-expanded="true"]{
-    background-color: #fa430b;
+    background-color: rgba(0, 0, 0, .5);
     color: #ffffff;
 }
 .sidebar [aria-expanded="true"]::before{
@@ -162,23 +162,39 @@ img{max-width: 100%;}
     border-radius: 5px;
 }
 
-#div-foto input[type="file"] {color: transparent; width: 15%;}
+#div-foto input[type="file"] {color: transparent; width: 30%;}
 #div-foto input[type="file"]::-webkit-file-upload-button{visibility: hidden;}
 #div-foto input[type="file"]::before {
-content: '+';
-color: #000;
-background: -webkit-linear-gradient(top, #f5f6fa, #dcdde1);
-border: none;
-padding: 5px;
-border-radius: 50%;
-outline: none;
-white-space: nowrap;
--webkit-user-select: none;
-cursor: pointer;
-text-shadow: 1px 1px #fff;
-font-weight: bold;
-font-size: 1rem;
+    content: '+';
+    color: #AAA;
+    background: -webkit-linear-gradient(top, #27293D, #27293D);
+    border: none;
+    padding: 5px;
+    border-radius: 80%;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #1E1E2F;
+    font-weight: bold;
+    font-size: 5rem;
 }
-#div-foto input[type="file"]:hover::before {border-color: #000;}
+#div-foto input[type="file"]:hover::before {border-color: #27293D;}
 #div-foto input[type="file"]:active {outline: 0;}
-#div-foto input[type="file"]:active::before {background: -webkit-linear-gradient(top, #f5f6fa, #dcdde1);}
+#div-foto input[type="file"]:active::before {background: -webkit-linear-gradient(top, #27293D, #27293D);}
+
+
+/*----------------------------------------- cores*/
+.bg-color-primary {background-color: #1E1E2F;}
+.bg-color-secundary {background-color: #27293D}
+.bg-color-dropdown {background-color: #FFFFFF;}
+.bg-color-dropdown-secundary {background-color: rgba(0, 0, 0, .5);}
+.bg-color-details {background-color: #D950D3;}
+
+
+input, select, textarea {background-color: #27293D !important; color: #FFF !important;}
+input::placeholder, select::placeholder, textarea::placeholder {color: #AAA !important;}
+label {color: #FFF !important;}
+
+table tbody tr td, table tbody tr th {color: #FFF !important; border-left: none !important; border-right: none !important;}
+table thead tr th {border-left: none !important; border-right: none !important;}

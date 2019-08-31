@@ -5,16 +5,16 @@
 		    header("location: index.php?erro=Você não está autorizado, logue-se !!!");
     }
 ?>
-<nav class="navbar navbar-expand navbar-dark bg-secondary">
+<nav class="navbar navbar-expand navbar-dark bg-color-primary">
     <a class="sidebar-toggle text-ligth mr-3">
         <span class="navbar-toggler-icon"></span>
     </a>
-    <a class="navbar-brand" href="#">Painel Administrativo</a>
+    <a class="navbar-brand text-white" href="#">Painel Administrativo</a>
 
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item dropdown mr-2">
+            <!--li class="nav-item dropdown mr-2">
                 <a class="nav-link dropdown-toggle menu-header" id="navbarDropdownMenuNotificacoes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bullhorn"></i>
                 </a>
@@ -28,11 +28,11 @@
                     <a class="dropdown-item text-center text-muted" href="#"><i class="far fa-user-circle"></i> Ver
                         totas as notificações</a>
                 </div>
-            </li>
+            </li-->
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuUsuario" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="imagens/sistema/geral/no-avatar.png" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline ml-2"><?= $_SESSION['nome'] ?></span>
+                    <img src="imagens/sistema/geral/no-avatar.png" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline ml-2 text-white"><?= $_SESSION['nome'] ?></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuUsuario">
                     <a class="dropdown-item" href="#"><i class="far fa-user-circle"></i> Perfil</a>

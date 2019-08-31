@@ -50,9 +50,9 @@
                         $str .= '<td>'. $row["nomeJogo"] .'</td>';
                         $str .= '<td>'. $row["nomeCategoria"] .'</td>';
                         $str .= '<td class="text-center">';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-info mx-1" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
-                            $str .= '<button type="button" class="btn btn-sm btn-outline-warning mx-1" onclick="updateForm('.$row["idJogo"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
-                            $str .= '<a href="" type="button" class="btn btn-sm btn-outline-danger mx-1" onclick="showPreviewDelete('.$row["idJogo"].')"><i class="far fa-trash-alt"></i></a>';
+                            $str .= '<button type="button" class="btn btn-sm btn-info mx-1" onclick="showPreview('.$arguments.')"><i class="fas fa-eye"></i></button>';
+                            $str .= '<button type="button" class="btn btn-sm btn-warning mx-1" onclick="updateForm('.$row["idJogo"].', '.$urlView.', '. $urlCtr.')"><i class="far fa-edit"></i></button>';
+                            $str .= '<button type="button" class="btn btn-sm btn-danger mx-1" onclick="showPreviewDelete('.$row["idJogo"].')"><i class="far fa-trash-alt"></i></button>';
                         $str .= '</td>';
 
                     $str .= '</tr>';

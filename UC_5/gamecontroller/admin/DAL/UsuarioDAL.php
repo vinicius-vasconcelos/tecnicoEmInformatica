@@ -15,10 +15,10 @@
             $senha = $usu->getSenha();
             $foto = $usu->getFoto();
 
-            $this
-                ->conexao
-                ->getBanco()
-                ->query("INSERT INTO usuarios VALUES(null, '$nome', '$foto', '$bio', '$email', '$senha')");
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("INSERT INTO usuarios VALUES(null, '$nome', '$foto', '$bio', '$email', '$senha')");
         }
 
         /*public function update($usu) {
