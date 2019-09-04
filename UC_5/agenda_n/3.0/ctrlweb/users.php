@@ -1,6 +1,13 @@
 <?php
+	require_once('../include/connectaBD.php');
+	require_once('../include/validar.php');
+
 	if(isset($_GET['sucesso']) || isset($_GET['error']))
-		header("refresh:3; users.php");
+			header("refresh:3; users.php");
+
+	$sql = "SELECT * FROM users";
+	$result = mysqli_query($banco, $sql);
+	
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -45,15 +52,18 @@
 					</div>
 				<?php }?>
 
+				<h2>Listando Usuarios</h2>
+				<h3><a href="usersAdd.php">Cadastrar novos Usuários</a></h3>
+
 				<section id="listar">
-					<h2>Listando Usuarios</h2>
-					<h3><a href="usersAdd.php">Cadastrar novos Usuários</a></h3>
-					<div class="listUsers">
-						<div class="listNome">Nome:</div>
-						<div class="listTel">Login:</div>
-						<div class="up"><a href="usersUp.php">Editar</a></div>
-						<div class="del"><a href="usersDel.php">Excluir</a></div>
-					</div>
+					<?php while($row = mysqli_fetch_array($result)) {?>
+						<div class="list-item">
+							<div class="listNome"><?= $row['nome']?></div>
+							<div class="listLogin"><?= $row['login']?></div>
+							<div class="up btn"><a href="usersUp.php?id=<?= $row['idusers'] ?>">Editar</a></div>
+							<div class="del btn"><a href="usersDel.php?id=<?= $row['idusers'] ?>">Excluir</a></div>
+						</div>
+					<?php }?>
 				</section>
 			</article>
 		</main>

@@ -1,21 +1,26 @@
 <?php
-require_once('../include/connectaBD.php');
-require_once('../include/validar.php');
+	require_once('../include/connectaBD.php');
+	require_once('../include/validar.php');
 
-if (isset($_GET['sucesso']) || isset($_GET['error']))
-	header("refresh:3; event.php");
-if (isset($_GET['op']))
-	header("refresh:1; event.php");
+	if (isset($_GET['sucesso']) || isset($_GET['error']))
+		header("refresh:3; event.php");
+	if (isset($_GET['op']))
+		header("refresh:1; event.php");
 
-$sql = "SELECT * FROM agendamentos ORDER BY data DESC";
+	$sql = "SELECT * FROM agendamentos ORDER BY data DESC";
 
-$result = $banco->query($sql);
+	$result = $banco->query($sql);
 
 
-if (isset($_GET['op'])) {
-	$sql = "UPDATE agendamentos SET concluido = '" . $_GET['concluido'] . "' WHERE idagendamentos = " . $_GET['id'];
-	$banco->query($sql);
-}
+	if (isset($_GET['op'])) {
+		$sql = "UPDATE agendamentos SET concluido = '" . $_GET['concluido'] . "' WHERE idagendamentos = " . $_GET['id'];
+		$banco->query($sql);
+	}
+
+	
+	//capturando número de registros por mês
+	$sql = $sql = "SELECT month(a.data) as 'mes', count(*) as 'qtde' FROM agendamentos a WHERE a.data between '2019-01-01' AND '2019-12-31' GROUP BY mes";
+	$data = $banco->query($sql);
 ?>
 
 <!doctype html>
@@ -71,6 +76,7 @@ if (isset($_GET['op'])) {
 					<div id="chart_div" class="graphc-style"></div>
 					<div id="chart_div2" class="graphc-style"></div>
 				</div>
+
 				<div class="todos-eventos">
 					<div id="listar">
 						<?php while ($row = mysqli_fetch_array($result)) { ?>
@@ -111,24 +117,40 @@ if (isset($_GET['op'])) {
 	});
 	google.charts.setOnLoadCallback(drawVisualization);
 
-	function drawVisualization() {
+	let dados = new Array();
+
+	<?php while($row = mysqli_fetch_array($data)) {?>
+		dados.push({
+			mes: parseInt(<?= $row["mes"]?>) - 1,
+			qtde: <?= $row["qtde"]?>
+		});
+	<?php }?>
+
+	async function drawVisualization() {
 		// Some raw data (not necessarily accurate)
-		var data = google.visualization.arrayToDataTable([
-			['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
-			['2004/05', 165, 938, 522, 998, 450, 614.6],
-			['2005/06', 135, 1120, 599, 1268, 288, 682],
-			['2006/07', 157, 1167, 587, 807, 397, 623],
-			['2007/08', 139, 1110, 615, 968, 215, 609.4],
-			['2008/09', 136, 691, 629, 1026, 366, 569.6]
+		var data = await google.visualization.arrayToDataTable([
+			['Month', 'Eventos Cad.'],
+	
+			['Jan.', 0],
+			['Fev.', 0],
+			['Mar.', 0],
+			['Abr.', 0],
+			['Mai.', 0],
+			['Jun.', 0],
+			['Jul.', 0],
+			['Ago.', 0],
+			['Set.', 0],
+			['Out.', 0],
+			['Dez.', 0],
 		]);
 
-		var options = {
-			title: 'Monthly Coffee Production by Country',
+		var options = await {
+			title: 'Número de eventos cadastrados por mês',
 			vAxis: {
-				title: 'Cups'
+				title: 'Qtde'
 			},
 			hAxis: {
-				title: 'Month'
+				title: 'meses'
 			},
 			seriesType: 'bars',
 			series: {
@@ -137,7 +159,11 @@ if (isset($_GET['op'])) {
 				}
 			}
 		};
-
+		for (let i = 0; i < dados.length; i++) {
+			console.log(data.wg[dados[i].mes].c)
+			//data.wg[dados[i].mes].c[1].v = dados[i].qtde;
+		}
+		
 		var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
 		chart.draw(data, options);
 	}
