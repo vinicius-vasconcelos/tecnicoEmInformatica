@@ -1,3 +1,28 @@
+<?php
+	require_once('../include/connectaBD.php');
+	require_once('../include/validar.php');
+
+	if (isset($_GET['sucesso']) || isset($_GET['error']))
+		header("refresh:3; event.php");
+	if (isset($_GET['op']))
+		header("refresh:1; event.php");
+
+	if(isset($_POST['btCad'])) {
+
+		$nome = $_POST['txtNome'];
+		$telefone = $_POST['txtLogin'];
+		$email = $_POST['txtSenha'];
+		$nivel = $_POST['selNivel'];
+
+		$sql = "INSERT INTO users VALUES(null, '$nome', '$login', '$senha', 'nivel')";
+
+		if(mysqli_query($banco, $sql))
+			header("location: users.php?sucesso=Contato cadastrado com sucesso !!!");
+		else
+			header("location: users.php?error=Erro ao cadastrar contato");
+	}
+?>
+
 <!doctype html>
 <html lang="pt-br">
 

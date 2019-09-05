@@ -46,6 +46,8 @@
 							<input type="text" name="txtLogin" id="txtLogin" placeholder="Login">  
 							<input type="password" name="txtSenha" id="txtSenha" placeholder="Senha">
 							<input type="submit" name="btEntrar" id="btEntrar" value="Entrar">
+
+							<a href="recuperarSenha.php" style="margin: 5px;">Esqueci minha senha</a>
 						</form>
 					</div>
 				</section>
