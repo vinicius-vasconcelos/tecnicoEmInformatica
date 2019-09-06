@@ -22,7 +22,7 @@ function showPreview(...args) {
 }
 
 function showDelete(idDelete) {
-    $('td.text-center a.btn-outline-danger').attr({
+    $('td.text-center button.btn-outline-danger').attr({
         'data-toggle':'modal',
         'data-target': '#modalConfirmaExcluir'
     });
