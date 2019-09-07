@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- FontWaesome -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap" rel="stylesheet">
     <!-- Custom login css -->
     <link rel="stylesheet" href="css/dashboard.css">
 </head>

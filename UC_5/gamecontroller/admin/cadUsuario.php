@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- FontWaesome -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap" rel="stylesheet">
     <!-- Custom login css -->
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -134,7 +135,7 @@
 
                         <div class="form-group col-md-2 d-flex flex-column">
                             <label for="senha">Escolhas os Games Aqui:</label>
-                            <button type="button" class="btn btn-primary">Add Games</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalViewGames">Add Games</button>
                         </div>
                     </div>
                     
@@ -151,14 +152,13 @@
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <h5 class="modal-title text-white" id="exampleModalCenterTitle">Dados do Administrador</h5>
+                <div class="modal-header bg-color-details">
+                    <h5 class="modal-title text-white" id="exampleModalCenterTitle">Jogos</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fas fa-check"></i> Ok</button>
