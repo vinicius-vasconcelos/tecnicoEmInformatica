@@ -45,7 +45,18 @@
             </ul>
         </li>
 
-        <li><a class="text-white" href="#"><i class="fas fa-project-diagram"></i> Atividades</a></li>
+        <li>
+            <a class="text-white" href="#jogosUsu" data-toggle="collapse">
+                <i class="fas fa-project-diagram"></i> Jogos do Usuário
+            </a>
+            <ul class="list-unstyled collapse" id="jogosUsu">
+                <li><a class="text-white" href="listJogosDoUsuarios.php"><i class="fas fa-list-ol"></i> Listar</a></li>
+                <li><a class="text-white" href="cadJogosDoUsuario.php"><i class="far fa-plus-square"></i> Novo Dado</a></li>
+            </ul>
+        </li>
+
+        <li><a class="text-white" href="#"><i class="fas fa-trophy"></i> Atividades</a></li>
+
         <li>
             <a class="text-white" href="#submenu2" data-toggle="collapse">
                 <i class="fas fa-cogs"></i> Configurações

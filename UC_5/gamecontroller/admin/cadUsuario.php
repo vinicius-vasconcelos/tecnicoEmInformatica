@@ -130,12 +130,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6 d-flex flex-column">
                             <label for="senha">Senha(*):</label>
-                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha..." required>
                         </div>
 
                         <div class="form-group col-md-2 d-flex flex-column">
-                            <label for="senha">Escolhas os Games Aqui:</label>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalViewGames">Add Games</button>
+                            <label for="senhaConf">Escolhas os Games Aqui:</label>
+                            <input type="password" class="form-control" id="senhaConf" name="senhaConf" placeholder="Reedigite a senha..." required>
                         </div>
                     </div>
                     

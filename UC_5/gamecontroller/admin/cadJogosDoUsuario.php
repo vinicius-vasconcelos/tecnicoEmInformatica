@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Cadastro de Jogo</title>
+    <title>Cadastro de Jogos para Usuário</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/floating-labels/">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -18,11 +18,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<?php if (isset($_GET['idCat'])) { ?>
-    <body onload="getForCombo('ctrCategoria#<?= $_GET['idCat']?>')">
-<?php } else  { ?>
-    <body onload="getForCombo('ctrCategoria')">
-<?php }?>
+<body>
     <?php include_once("./header.php") ?>
 
     <div class="d-flex bg-color-primary">
@@ -34,12 +30,12 @@
             <div class="list-group-item bg-color-secundary">
                 <div class="d-flex">
                     <div class="mr-auto p-1">
-                        <h2 class="display-4 titulo-pagina text-white">Cadastrar Jogo</h2>
+                        <h2 class="display-4 titulo-pagina text-white">Cadastrar Jogos para o Usuário</h2>
                     </div>
-                    <a href="listJogos.php">
+                    <a href="listJogosDoUsuarios.php">
                         <div class="p-1">
                             <button class="btn btn-sm btn-outline-secondary">
-                                <i class="fas fa-undo-alt"></i> Listar todos
+                                    <i class="fas fa-undo-alt"></i> Listar todos
                             </button>
                         </div>
                     </a>
@@ -64,9 +60,9 @@
                 
             
                 <?php if(isset($_GET['id'])) {?>
-                    <form method="POST" action="./controllers/ctrJogo.php?op=update">
+                    <form method="POST" action="./controllers/ctrJogosDoUsuario.php?op=update">
                 <?php } else { ?>
-                    <form method="POST" action="./controllers/ctrJogo.php?op=insert">
+                    <form method="POST" action="./controllers/ctrJogosDoUsuario.php?op=insert">
                 <?php } ?>   
                     
                     <?php if(isset($_GET['id'])) { ?>
@@ -80,24 +76,14 @@
                         </div>
                     <?php } ?>
 
-
-                    <?php if(isset($_GET['nome'])) { ?>
-                        <div class="form-group">
-                            <label for="nome">Nome do Jogo(*):</label>
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="FIFA, Call Of Duty, GTA..." 
-                                value="<?= $_GET['nome']?>" required autofocus>
-                        </div>
-                    <?php } else { ?>
-                        <div class="form-group">
-                            <label for="nome">Nome do Jogo(*):</label>
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="FIFA, Call Of Duty, GTA..." 
-                                required autofocus>
-                        </div>
-                    <?php } ?>
+                    <div class="form-group">
+                        <label for="usuarios">Usuários(*):</label>
+                        <select class="form-control" name="usuarios" id="usuarios"></select>
+                    </div>
 
                     <div class="form-group">
-                        <label for="categoria">Categorias(*):</label>
-                        <select class="form-control" name="categoria" id="categoria"></select>
+                        <label for="jogos">Jogos(*):</label>
+                        <select class="form-control" name="jogos" id="jogos"></select>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
