@@ -4,10 +4,22 @@
     if(isset($_POST['btRecuperar'])) {
         $senha = md5($_POST['novaSenha']);
         $nome = $_POST['nome'];
-        $sql = "UPDATE users SET senha = '$senha' WHERE nome= '$nome' AND login ='" . $_POST['login']."'";
+        $login = $_POST['login'];
 
-        if(mysqli_query($banco, $sql))
-            header("location: index.php?sucesso=Senha alterada com sucesso !!!");
+        $sql = "SELECT * from users WHERE nome = '$nome' AND login ='" . $_POST['login']."'";
+        
+        
+
+        echo $sql;
+
+        if(mysqli_num_rows($banco->query($sql)) > 0) {
+            $sql = "UPDATE users SET senha = '$senha' WHERE nome = '$nome' AND login ='" . $_POST['login']."'";
+            
+            if(mysqli_query($banco, $sql))
+                header("location: index.php?sucesso=Senha alterada com sucesso !!!");
+            else
+                header("location: index.php?error=Falha na recuperação de senha !!!");
+        }
         else
             header("location: index.php?error=Falha na recuperação de senha !!!");
     }
