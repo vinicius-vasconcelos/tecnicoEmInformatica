@@ -38,9 +38,16 @@
             ->conexao
             ->getBanco()
             ->query("DELETE FROM administradores WHERE id = $id");
+        }*/
+
+        public function getUsuarios() {
+            return $this
+                    ->conexao
+                    ->getBanco()
+                    ->query("SELECT * FROM usuarios");
         }
 
-        public function getLogar($login, $senha) {
+        /*public function getLogar($login, $senha) {
             return $this
                     ->conexao
                     ->getBanco()

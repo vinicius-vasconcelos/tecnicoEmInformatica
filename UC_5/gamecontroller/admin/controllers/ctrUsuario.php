@@ -80,10 +80,11 @@
             break;
  
             case 'gets':
-                $arrAdms = $operacao->getAdministradores();
+           
+                $arrUsu = $operacao->getUsuarios();
                 $str = "";
             
-                while($row = mysqli_fetch_array($arrAdms)) {
+                while($row = mysqli_fetch_array($arrUsu)) {
                     $arguments = "'".$row["id"]."', '".$row["nome"]."','".$row["email"]."'";
                     $urlView = "'"."cadAdministrador.php"."'";
                     $urlCtr = "'"."ctrAdministrador.php"."'";
@@ -102,9 +103,27 @@
                 }
                 
                 echo $str;
+            break;*/
+
+            case 'getsC':
+                $arrUsu = $operacao->getUsuarios();
+                $str = "";
+
+                if(isset($_GET['idUsu']) && $_GET['idUsu'] == 0) 
+                    while($row = mysqli_fetch_array($arrUsu)) 
+                        $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+                else
+                    while($row = mysqli_fetch_array($arrUsu))
+                        if($_GET['idCat'] == $row["id"]) 
+                            $str .= '<option value="'.$row["id"].'" selected>'.$row["nome"].'</option>';
+                        else
+                            $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+
+                
+                echo $str;
             break;
 
-            case 'get':
+            /*case 'get':
                 $adm = $operacao->getAdministrador($_GET['id']);
                 $str = "";
             

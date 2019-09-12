@@ -61,6 +61,24 @@
                 echo $str;
             break;
 
+            case 'getsC':
+                $arrJog = $operacao->getJogos();
+                $str = "";
+
+                if(isset($_GET['idJog']) && $_GET['idJog'] == 0) 
+                    while($row = mysqli_fetch_array($arrJog)) 
+                        $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+                else
+                    while($row = mysqli_fetch_array($arrJog))
+                        if($_GET['idCat'] == $row["id"]) 
+                            $str .= '<option value="'.$row["id"].'" selected>'.$row["nome"].'</option>';
+                        else
+                            $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+
+                
+                echo $str;
+            break;
+
             case 'get':
                 $jog = $operacao->getJogo($_GET['id']);
                 $str = "";

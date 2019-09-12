@@ -18,7 +18,11 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<body>
+<?php if (isset($_GET['idUsu'])) { ?>
+    <body onload="getForCombo2('ctrUsuario#<?= $_GET['idUsu']?>', 'ctrJogo#<?= $_GET['idJog']?>')">
+<?php } else  { ?>
+    <body onload="getForCombo2('ctrUsuario', 'ctrJogo')">
+<?php }?>
     <?php include_once("./header.php") ?>
 
     <div class="d-flex bg-color-primary">
@@ -97,7 +101,7 @@
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/showHidePopUp.js"></script>
-    <script src="js/loadCombo.js"></script>
+    <script src="js/loadCombo2.js"></script>
 </body>
 
 </html>
