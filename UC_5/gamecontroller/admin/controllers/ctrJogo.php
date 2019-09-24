@@ -67,15 +67,13 @@
 
                 if(isset($_GET['idJog']) && $_GET['idJog'] == 0) 
                     while($row = mysqli_fetch_array($arrJog)) 
-                        $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
+                        $str .= '<option value="'.$row["id"].'">'.$row["nomeJogo"].'</option>';
                 else
                     while($row = mysqli_fetch_array($arrJog))
-                        if($_GET['idCat'] == $row["id"]) 
-                            $str .= '<option value="'.$row["id"].'" selected>'.$row["nome"].'</option>';
+                        if($_GET['idjogo'] == $row["id"]) 
+                            $str .= '<option value="'.$row["idJogo"].'" selected>'.$row["nomeJogo"].'</option>';
                         else
-                            $str .= '<option value="'.$row["id"].'">'.$row["nome"].'</option>';
-
-                
+                            $str .= '<option value="'.$row["idJogo"].'">'.$row["nomeJogo"].'</option>';
                 echo $str;
             break;
 

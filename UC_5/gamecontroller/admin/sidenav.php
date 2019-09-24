@@ -3,7 +3,7 @@
     <ul class="list-unstyled">
         <li><a class="text-white" href="painel.php"><i class="fas fa-home"></i> Home</a></li>
 
-        <li><a class="text-white" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a class="text-white" href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
 
         <li>
             <a class="text-white" href="#subUsuario" data-toggle="collapse">

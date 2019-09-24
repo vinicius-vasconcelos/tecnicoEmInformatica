@@ -3,8 +3,16 @@
     require_once("../models/Administrador.php");
     require_once("../DAL/AdministradorDAL.php");
 
+    require_once("../DAL/CategoriaDAL.php");
+    require_once("../DAL/JogoDAL.php");
+    require_once("../DAL/UsuarioDAL.php");
+
     $conexao = new Conexao("localhost", "root", "", "gameControllerDB");
     $operacao = new AdministradorDAL($conexao);
+
+    $operacaoCat = new CategoriaDAL($conexao);
+    $operacaoJog = new JogoDAL($conexao);
+    $operacaoUsu = new UsuarioDAL($conexao);
 
     if(isset($_GET['op'])) {
 
@@ -89,6 +97,26 @@
                 if($row = mysqli_fetch_assoc($adm))
                     $str .= 'id='.$row["id"].'&nome='.$row["nome"].'&email='.$row["email"];
                 
+                echo $str;
+            break;
+
+            case 'countData':
+                $countCat = $operacaoCat->getCategorias();
+                $countJog = $operacaoJog->getJogos();
+                $countUsu = $operacaoUsu->getUsuarios();
+                $countAdm = $operacao->getAdministradores();
+
+                $str = "";
+            
+                $row = mysqli_num_rows($countCat);
+                    $str .= $row.'#';
+                $row = mysqli_num_rows($countJog);
+                    $str .= $row.'#';
+                $row = mysqli_num_rows($countUsu);
+                    $str .= $row.'#';
+                $row = mysqli_num_rows($countAdm);
+                    $str .= $row;
+
                 echo $str;
             break;
         }
