@@ -7,7 +7,10 @@
 	if (isset($_GET['op']))
 		header("refresh:1; event.php");
 
-	$sql = "SELECT * FROM users WHERE idusers = " . $_GET['id'];
+	$id = addslashes($_GET['id']);
+	$id = mysqli_real_escape_string($banco, $id);
+
+	$sql = "SELECT * FROM users WHERE idusers = " . $id;
 	$result = $banco->query($sql);
 	
 	if(isset($_POST['btCad'])) {

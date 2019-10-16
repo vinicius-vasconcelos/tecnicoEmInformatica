@@ -1,5 +1,5 @@
 <?php
-    $banco = new mysqli("localhost", "root", "", "agenda3.0");
+    $banco = new mysqli("localhost", "root", "", "agenda3_0");
 
     mysqli_set_charset($banco, "UTF8");
 

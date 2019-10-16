@@ -3,22 +3,35 @@
 	require_once('../include/validar.php');
 
 	if(isset($_GET['id'])) {
-		$sql = "SELECT * FROM agendamentos WHERE idagendamentos = " . $_GET['id'];
+		$id = addslashes($_GET['id']);
+		$id = mysqli_real_escape_string($banco, $id);
+
+		$sql = "SELECT * FROM agendamentos WHERE idagendamentos = '$id'" ;
 
 		$result = $banco->query($sql);
 	}
 
 	if(isset($_POST['btCad'])) {
 
-		$id = $_POST['keyEvent'];
-		$titulo = $_POST['txtTitulo'];
-		$data = $_POST['txtData'];
-		$hora = $_POST['txtHora'];
-		$local = $_POST['txtLocal'];
-		$end = $_POST['txtEnd'];
-		$obs = $_POST['obs'];
-		$con = $_POST['selConcluido'];
-		$logado = $_SESSION['idLogado'];
+		$id = addslashes($_POST['keyEvent']) ;
+		$titulo = addslashes($_POST['txtTitulo']) ;
+		$data = addslashes($_POST['txtData']) ;
+		$hora = addslashes($_POST['txtHora']) ;
+		$local = addslashes($_POST['txtLocal']) ;
+		$end = addslashes($_POST['txtEnd']) ;
+		$obs = addslashes($_POST['obs']) ;
+		$con = addslashes($_POST['selConcluido']) ;
+		$logado = addslashes($_SESSION['idLogado']) ;
+
+		$id = mysqli_real_escape_string($banco, $id);
+		$titulo = mysqli_real_escape_string($banco, $titulo);
+		$data = mysqli_real_escape_string($banco, $data);
+		$hora = mysqli_real_escape_string($banco, $hora);
+		$local = mysqli_real_escape_string($banco, $local);
+		$end = mysqli_real_escape_string($banco, $end);
+		$obs = mysqli_real_escape_string($banco, $obs);
+		$con = mysqli_real_escape_string($banco, $con);
+		$logado = mysqli_real_escape_string($banco, $logado);
 		
 		$sql = "UPDATE agendamentos SET titulo = '$titulo', data = '$data', hora = '$hora', local = '$local', endereco = '$end', obs = '$obs', concluido = '$con', users_idusers = $logado WHERE idagendamentos = $id";
 

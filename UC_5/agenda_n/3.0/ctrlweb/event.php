@@ -13,7 +13,10 @@
 
 
 	if (isset($_GET['op'])) {
-		$sql = "UPDATE agendamentos SET concluido = '" . $_GET['concluido'] . "' WHERE idagendamentos = " . $_GET['id'];
+		$id = addslashes($_GET['id']);
+		$id = mysqli_real_escape_string($banco, $id);
+
+		$sql = "UPDATE agendamentos SET concluido = '" . $_GET['concluido'] . "' WHERE idagendamentos = '$id'";
 		$banco->query($sql);
 	}
 

@@ -2,8 +2,10 @@
     require_once('../include/connectaBD.php');
     require_once('../include/validar.php');
 
-   
-    $sql = "DELETE FROM agendamentos WHERE idagendamentos = " . $_GET['id'];
+    $id = addslashes($_GET['id']);
+    $id = mysqli_real_escape_string($banco, $id);
+    
+    $sql = "DELETE FROM agendamentos WHERE idagendamentos = '$id'";
 
     if(mysqli_query($banco, $sql))
         header("location: event.php?sucesso=Agendamento excluido com sucesso !!!");

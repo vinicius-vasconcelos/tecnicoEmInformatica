@@ -34,7 +34,10 @@
 			$foto = "ftDefault.png";
 		}
 
-		$sql = "UPDATE contatos SET  foto = '$foto' WHERE idcontatos = " . $_GET['contatoId'];
+		$id = addslashes($_GET['contatoId']);
+		$id = mysqli_real_escape_string($banco, $id);
+
+		$sql = "UPDATE contatos SET  foto = '$foto' WHERE idcontatos = '$id'";
 
 		if(mysqli_query($banco, $sql))
 			header("location: contatos.php?sucesso=Foto alterado com sucesso !!!");

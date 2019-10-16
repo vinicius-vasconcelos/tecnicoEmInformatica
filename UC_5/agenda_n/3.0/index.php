@@ -1,6 +1,7 @@
 <?php 
 	require_once("./include/connectaBD.php");
 
+	date_default_timezone_get('America/Sao_Paulo');
 	$sql = "SELECT * FROM agendamentos WHERE data = CURDATE()  ORDER BY data DESC";
 	$sql2 = "SELECT * FROM contatos ORDER BY nome ASC";
 

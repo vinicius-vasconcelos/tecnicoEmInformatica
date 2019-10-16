@@ -3,7 +3,10 @@
 	require_once('../include/validar.php');
 
     if(isset($_GET['id'])) {
-        $sql = "SELECT * FROM contatos WHERE idcontatos = " . $_GET['id'];
+		$id = addslashes($_GET['id']);
+		$id = mysqli_real_escape_string($banco, $id);
+
+        $sql = "SELECT * FROM contatos WHERE idcontatos = '$id'";
 		$row = mysqli_fetch_array(mysqli_query($banco, $sql));
 	}
 

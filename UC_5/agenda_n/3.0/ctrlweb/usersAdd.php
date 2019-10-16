@@ -14,7 +14,7 @@
 		$email = $_POST['txtSenha'];
 		$nivel = $_POST['selNivel'];
 
-		$sql = "INSERT INTO users VALUES(null, '$nome', '$login', '$senha', 'nivel')";
+		$sql = "INSERT INTO users VALUES(null, '$nome', '$login', '$senha', '$nivel')";
 
 		if(mysqli_query($banco, $sql))
 			header("location: users.php?sucesso=Contato cadastrado com sucesso !!!");

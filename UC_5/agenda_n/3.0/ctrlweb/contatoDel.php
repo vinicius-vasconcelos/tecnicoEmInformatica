@@ -8,7 +8,10 @@
         if(mysqli_num_rows(mysqli_query($banco, $sql)) > 0)
             header("location: contatos.php?error=Este contato possui vínculos, não pode ser excluido !!!");
         else {*/
-            $sql = "DELETE FROM contatos WHERE idcontatos = " . $_GET['id'];
+            $id = addslashes($_GET['id']);
+            $id = mysqli_real_escape_string($banco, $id);
+            
+            $sql = "DELETE FROM contatos WHERE idcontatos = '$id'";
 
             if(mysqli_query($banco, $sql))
                 header("location: contatos.php?sucesso=Contato excluido com sucesso !!!");
